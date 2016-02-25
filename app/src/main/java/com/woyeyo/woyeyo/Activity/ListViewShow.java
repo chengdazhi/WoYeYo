@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import com.woyeyo.woyeyo.R;
 import com.woyeyo.woyeyo.bean.TradeInfo;
-import com.woyeyo.woyeyo.model.TradeInfoAdpater;
+import com.woyeyo.woyeyo.adapter.TradeInfoAdpater;
 import com.woyeyo.woyeyo.presenter.TradeInfoPresenter;
 import com.woyeyo.woyeyo.view.SellView;
 

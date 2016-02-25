@@ -1,4 +1,4 @@
-package com.woyeyo.woyeyo.Activity;
+package com.woyeyo.woyeyo.utils;
 
 import android.app.Application;
 import android.content.Context;

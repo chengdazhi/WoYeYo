@@ -1,4 +1,4 @@
-package com.woyeyo.woyeyo.model;
+package com.woyeyo.woyeyo.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

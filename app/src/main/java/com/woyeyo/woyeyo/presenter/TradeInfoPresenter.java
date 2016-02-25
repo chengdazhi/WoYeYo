@@ -4,7 +4,6 @@ import android.os.Handler;
 
 import com.woyeyo.woyeyo.model.GetTrade;
 import com.woyeyo.woyeyo.model.GetTradeInfo;
-import com.woyeyo.woyeyo.model.OnTradeInfoListener;
 import com.woyeyo.woyeyo.view.SellView;
 
 import java.util.List;
