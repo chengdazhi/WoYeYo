@@ -1,9 +1,8 @@
 package com.woyeyo.woyeyo.model;
 
-import android.app.Application;
-
 import com.woyeyo.woyeyo.R;
 import com.woyeyo.woyeyo.bean.TradeInfo;
+import com.woyeyo.woyeyo.presenter.OnTradeInfoListener;
 import com.woyeyo.woyeyo.utils.BitmapResource;
 
 import java.util.ArrayList;

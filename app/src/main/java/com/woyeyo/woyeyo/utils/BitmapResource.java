@@ -3,8 +3,6 @@ package com.woyeyo.woyeyo.utils;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-import com.woyeyo.woyeyo.Activity.MyApplication;
-
 /**
  * Created by fam_000 on 2016/2/24.
  */

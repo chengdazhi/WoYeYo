@@ -1,4 +1,4 @@
-package com.woyeyo.woyeyo.model;
+package com.woyeyo.woyeyo.presenter;
 
 import com.woyeyo.woyeyo.bean.TradeInfo;
 
