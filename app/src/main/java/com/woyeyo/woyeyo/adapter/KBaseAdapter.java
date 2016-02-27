@@ -1,10 +1,10 @@
 package com.woyeyo.woyeyo.adapter;
 
 import android.content.Context;
-import android.text.Layout;
 import android.util.Log;
-import
 import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import java.util.ArrayList;
@@ -27,9 +27,28 @@ public abstract class KBaseAdapter<T> extends BaseAdapter {
     public boolean isEmpty(){
         return itemList.isEmpty();
     }
-    public void addItem(List<T> itemList){
-        this.itemList.addAll(itemList);
-        Timber.d("addItemList");
+    public void addItem(List<T> newList){
+        itemList.addAll(newList);
     }
-
+    public void setItems(List<T> itemList){
+        this.itemList.clear();
+        this.itemList=itemList;
+    }
+    public void clearItems(){
+        itemList.clear();
+    }
+    @Override
+    public int getCount(){
+        return itemList.size();
+    }
+    @Override
+    public Object getItem(int position){
+        return itemList.get(position);
+    }
+    @Override
+    public long getItemId(int i){
+        return i;
+    }
+    @Override
+    abstract public View getView(int position,View convertview,ViewGroup parent);
 }

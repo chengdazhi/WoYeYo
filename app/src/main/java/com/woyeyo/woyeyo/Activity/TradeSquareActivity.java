@@ -4,120 +4,138 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.adapter.MyViewPagerAdapter;
+import com.woyeyo.woyeyo.adapter.TradeInfoAdpater;
+import com.woyeyo.woyeyo.bean.TradeInfo;
+import com.woyeyo.woyeyo.presenter.TradeInfoPresenter;
+import com.woyeyo.woyeyo.view.SellView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TradeSquareActivity extends AppCompatActivity {
+public class TradeSquareActivity extends AppCompatActivity implements SellView{
 
-    private ViewPager viewPager;//页卡内容
-    private TextView textView1,textView2;
-    private List<View> views;// Tab页面列表
-    private int offset = 0;// 动画图片偏移量
-    private int currIndex = 0;// 当前页卡编号
-    private int bmpW;// 动画图片宽度
-    private View view1,view2;//各个页卡
-
+    private ViewPager viewPager;
+    private TextView textViewBuy,textViewSell;
+    private List<View> views;
+    private int currIndex = 0;
+    private View viewBuy, viewSell;
+    private String tradeName;
+    //TODO get tradeName from intent
+    private LinearLayout sellLayout;
+    private LinearLayout buyLayout;
+    private ListView buyListView;
+    private ListView sellListView;
+    private List<TradeInfo> tradeInfoList=new ArrayList<TradeInfo>();
+    private TradeInfoAdpater buyInfoAdpater;
+    private TradeInfoAdpater sellInfoAdapter;
+    private Animation animation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trade_square);
         InitTextView();
         InitViewPager();
+        buyInfoAdpater=new TradeInfoAdpater(TradeSquareActivity.this);
+        sellInfoAdapter=new TradeInfoAdpater(TradeSquareActivity.this);
+        TradeInfoPresenter tradeInfoPresenter=new TradeInfoPresenter(this);
+        tradeInfoPresenter.getTradeInfointoView(tradeName);
     }
+    private void InitTextView() {
+        sellLayout=(LinearLayout)findViewById(R.id.sellLayout);
+        buyLayout=(LinearLayout)findViewById(R.id.buyLayout);
+        textViewBuy = (TextView) findViewById(R.id.textBuy);
+        textViewSell = (TextView) findViewById(R.id.textSell);
+        sellLayout.setOnClickListener(new MyOnClickListener(0));
+        buyLayout.setOnClickListener(new MyOnClickListener(1));
 
-
+    }
     private void InitViewPager() {
         viewPager = (ViewPager) findViewById(R.id.vPager);
         views = new ArrayList<View>();
         LayoutInflater inflater=getLayoutInflater();
-        view1=inflater.inflate(R.layout.activity_trade_square_buy, null);
-        views.add(view1);
-        views.add(view2);
-        viewPager.setAdapter(new MyViewPagerAdapter(views));
+        viewBuy = inflater.inflate(R.layout.activity_trade_square_buy, null);
+        viewSell = inflater.inflate(R.layout.activity_trade_square_sell, null);
+        buyListView=(ListView)viewBuy.findViewById(R.id.BuyListView);
+        sellListView=(ListView)viewSell.findViewById(R.id.SellListView);//warn！
+        views.add(viewBuy);
+        views.add(viewSell);
+        MyViewPagerAdapter myViewPagerAdapter=new MyViewPagerAdapter(views);
+        viewPager.setAdapter(myViewPagerAdapter);
         viewPager.setCurrentItem(0);
-        viewPager.setOnPageChangeListener(new MyOnPageChangeListener());
-    }
-    /**
-    *  初始化头标
-    */
+        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-    private void InitTextView() {
-        textView1 = (TextView) findViewById(R.id.text1);
-        textView2 = (TextView) findViewById(R.id.text2);
-        textView1.setOnClickListener(new MyOnClickListener(0));
-        textView2.setOnClickListener(new MyOnClickListener(1));
-    }
+            }
 
+            @Override
+            public void onPageSelected(int position) {
+                switch (position){
+                    case 0:
+                        buyLayout.setBackgroundColor(getResources().getColor(R.color.lightcyan));
+                        sellLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+
+                        break;
+                    case 1:
+                        buyLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                        sellLayout.setBackgroundColor(getResources().getColor(R.color.lightcyan));
+                        break;
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+    }
     private class MyOnClickListener implements View.OnClickListener {
         private int index = 0;
         public MyOnClickListener(int i){
             index = i;
         }
         public void onClick(View v) {
-            if(index < 3)
+            //只能index为0/1
+            if(index ==0) {
+                buyLayout.setBackgroundColor(getResources().getColor(R.color.lightcyan));
+                sellLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 viewPager.setCurrentItem(index);
-            else
-                Toast.makeText(TradeSquareActivity.this, "index Error", Toast.LENGTH_SHORT).show();
+            }
+            else if(index == 1){
+                buyLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                sellLayout.setBackgroundColor(getResources().getColor(R.color.lightcyan));
+                viewPager.setCurrentItem(index);
+            }
+            else {
+                //Toast.makeText(TradeSquareActivity.this, "index Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(TradeSquareActivity.this, "对不起，切换失败", Toast.LENGTH_SHORT).show();
+            }
         }
     }
-
-    public class MyViewPagerAdapter extends PagerAdapter {
-        private List<View> mListViews;
-
-        public MyViewPagerAdapter(List<View> mListViews) {
-            this.mListViews = mListViews;
-        }
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) 	{
-            container.removeView(mListViews.get(position));
-        }
-
-
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-            container.addView(mListViews.get(position), 0);
-            return mListViews.get(position);
-        }
-
-        @Override
-        public int getCount() {
-            return  mListViews.size();
-        }
-
-        @Override
-        public boolean isViewFromObject(View arg0, Object arg1) {
-            return arg0==arg1;
-        }
+    @Override
+    public void toActivity(List<TradeInfo> tradeInfoList){
+        buyInfoAdpater.addItem(tradeInfoList);
+        sellInfoAdapter.addItem(tradeInfoList);
+        sellListView.setAdapter(buyInfoAdpater);
+        buyListView.setAdapter(sellInfoAdapter);
     }
-
-    public class MyOnPageChangeListener implements ViewPager.OnPageChangeListener {
-        int one = offset * 2 + bmpW;// 页卡1 -> 页卡2 偏移量
-        int two = one * 2;// 页卡1 -> 页卡3 偏移量
-        public void onPageScrollStateChanged(int arg0) {
-
-        }
-
-        public void onPageScrolled(int arg0, float arg1, int arg2) {
-
-        }
-
-        public void onPageSelected(int arg0) {
-            Animation animation = new TranslateAnimation(one*currIndex, one*arg0, 0, 0);//显然这个比较简洁，只有一行代码。
-            currIndex = arg0;
-            //animation.setDuration(300);
-            //Toast.makeText(TradeSquareActivity.this, "您选择了"+ viewPager.getCurrentItem()+"页卡", Toast.LENGTH_SHORT).show();
-        }
+    @Override
+    public void showFailedError(){
+        Toast.makeText(TradeSquareActivity.this,"show error",Toast.LENGTH_SHORT).show();
     }
 
 }

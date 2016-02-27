@@ -2,6 +2,7 @@ package com.woyeyo.woyeyo.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -19,18 +20,22 @@ public class ListViewShow extends AppCompatActivity implements SellView {
     //TODO get tradeName from intent
     private ListView listView;
     private List<TradeInfo> tradeInfoList=new ArrayList<TradeInfo>();
+    private TradeInfoAdpater tradeInfoAdpater;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.trade_info_listview);
-        listView=(ListView)findViewById(R.id.uni_ListView);
+        listView=(ListView)findViewById(R.id.my_ListView);
+        tradeInfoAdpater=new TradeInfoAdpater(ListViewShow.this);//warn!
         TradeInfoPresenter tradeInfoPresenter=new TradeInfoPresenter(this);
         tradeInfoPresenter.getTradeInfointoView(tradeName);
+
     }
     @Override
     public void toActivity(List<TradeInfo> tradeInfoList){
-        TradeInfoAdpater tradeInfoAdpater=new TradeInfoAdpater(ListViewShow.this,
-                R.layout.trade_info_item,tradeInfoList);
+        Log.d("f", "test");
+        Log.d("f", tradeInfoList.get(1).toString());
+        tradeInfoAdpater.setItems(tradeInfoList);
         listView.setAdapter(tradeInfoAdpater);
     }
     @Override
