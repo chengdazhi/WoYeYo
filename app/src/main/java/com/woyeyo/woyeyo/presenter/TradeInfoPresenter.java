@@ -24,22 +24,19 @@ public class TradeInfoPresenter {
         this.sellView=sellView;
         this.getTrade=new GetTradeInfo();
     }
-    public void getTradeInfointoView(String tradeName){
-        getTrade.getTradeInfo(tradeName, new OnTradeInfoListener() {
+    public void getTradeInfointoView(long tradeId, final int itemCount){
+        getTrade.getTradeInfo(tradeId,itemCount,new OnTradeInfoListener() {
             @Override
             public void getTradeInfoSuccess(final List tradeInfoList) {
                 mHandler.post(new Runnable() {
                     @Override
                     public void run() {
-                        Log.d("f","a");
-                        if(!tradeInfoList.isEmpty()){
-                            Log.d("f","bug");
+                        if(itemCount==0){
+                            sellView.toPullFresh(tradeInfoList);
                         }
                         else{
-                            Log.d("f", tradeInfoList.get(1).toString());
+                            sellView.toLoadMore(tradeInfoList);
                         }
-                        sellView.toActivity(tradeInfoList);
-
                     }
                 });
             }

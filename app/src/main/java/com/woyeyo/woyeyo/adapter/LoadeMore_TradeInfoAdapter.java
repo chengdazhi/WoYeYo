@@ -16,8 +16,8 @@ import com.woyeyo.woyeyo.utils.BitmapResource;
 /**
  * Created by fam_000 on 2016/2/25.
  */
-public class TradeInfoAdpater extends KBaseAdapter<TradeInfo>{
-    public TradeInfoAdpater(Context context){
+public class LoadeMore_TradeInfoAdapter extends KBaseAdapter<TradeInfo>{
+    public LoadeMore_TradeInfoAdapter(Context context){
         super(context);
     }
     @Override

@@ -15,7 +15,9 @@ public class MyViewPagerAdapter extends PagerAdapter{
     public MyViewPagerAdapter(List<View> mListViews) {
         this.mListViews = mListViews;
     }
-
+    public View getItem(int positon){
+        return mListViews.get(positon);
+    }
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) 	{
         container.removeView(mListViews.get(position));

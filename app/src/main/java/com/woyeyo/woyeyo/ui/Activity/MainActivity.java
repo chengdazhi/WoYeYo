@@ -1,4 +1,4 @@
-package com.woyeyo.woyeyo.Activity;
+package com.woyeyo.woyeyo.ui.Activity;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;

@@ -46,8 +46,8 @@ public abstract class KBaseAdapter<T> extends BaseAdapter {
         return itemList.get(position);
     }
     @Override
-    public long getItemId(int i){
-        return i;
+    public long getItemId(int positon){
+        return positon;
     }
     @Override
     abstract public View getView(int position,View convertview,ViewGroup parent);
