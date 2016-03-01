@@ -8,17 +8,18 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".ui.Activity.MainActivity"
-            android:label="@string/app_name" />
         <activity android:name=".ui.Activity.ListViewShow">
+
+        </activity>
+        <activity android:name=".ui.Activity.TradeSquareActivity"></activity>
+        <activity android:name=".ui.Activity.TestTradeSquare" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Activity.TradeSquareActivity">
+        <activity android:name=".ui.Activity.TestFragmentActivity">
 
         </activity>
     </application>

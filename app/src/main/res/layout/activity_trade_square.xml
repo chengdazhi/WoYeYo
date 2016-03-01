@@ -50,7 +50,6 @@
     </LinearLayout>
     </LinearLayout>
 
-
     <android.support.v4.view.ViewPager
         android:id="@+id/vPager"
         android:layout_width="wrap_content"

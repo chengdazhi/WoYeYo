@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">WoYeYo</string>
-<string name="tradeSquare">交易广场</string>
+    <string name="tradeSquare">交易广场</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

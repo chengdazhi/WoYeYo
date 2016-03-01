@@ -81,13 +81,12 @@ public class TradeSquareActivity extends AppCompatActivity implements SellView{
             public void onPageSelected(int position) {
                 switch (position){
                     case 0:
-                        buyLayout.setBackgroundColor(getResources().getColor(R.color.lightcyan));
-                        sellLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-
-                        break;
-                    case 1:
                         buyLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                         sellLayout.setBackgroundColor(getResources().getColor(R.color.lightcyan));
+                        break;
+                    case 1:
+                        buyLayout.setBackgroundColor(getResources().getColor(R.color.lightcyan));
+                        sellLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                         break;
                 }
             }
@@ -106,13 +105,13 @@ public class TradeSquareActivity extends AppCompatActivity implements SellView{
         public void onClick(View v) {
             //只能index为0/1
             if(index ==0) {
-                buyLayout.setBackgroundColor(getResources().getColor(R.color.lightcyan));
-                sellLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                buyLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                sellLayout.setBackgroundColor(getResources().getColor(R.color.lightcyan));
                 viewPager.setCurrentItem(index);
             }
             else if(index == 1){
-                buyLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-                sellLayout.setBackgroundColor(getResources().getColor(R.color.lightcyan));
+                buyLayout.setBackgroundColor(getResources().getColor(R.color.lightcyan));
+                sellLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 viewPager.setCurrentItem(index);
             }
             else {
