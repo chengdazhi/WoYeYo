@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <include
+        android:id="@+id/originTitle"
+        layout="@layout/origin_title">
+    </include>
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="15" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:text="担保说明"
+                />
+            <TextView
+                android:id="@+id/guaranteeContent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="4"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:padding="8dp"
+                android:textSize="20sp"
+                android:hint="担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5">
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,5 +1,7 @@
 package com.woyeyo.woyeyo.ui.Activity;
 
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -108,19 +110,19 @@ public class TestTradeSquare extends AppCompatActivity{
         }
         public void onClick(View v) {
             //只能index为0/1
-            if(index == 0) {
+            if(index == 0&&viewPager.getCurrentItem()!=0) {
                 buyLayout.setBackgroundColor(getResources().getColor(R.color.lightcyan));
                 sellLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 viewPager.setCurrentItem(index);
+
+
+
+
             }
-            else if(index == 1){
+            else if(index == 1&&viewPager.getCurrentItem()!=1){
                 buyLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 sellLayout.setBackgroundColor(getResources().getColor(R.color.lightcyan));
                 viewPager.setCurrentItem(index);
-            }
-            else {
-                //Toast.makeText(TradeSquareActivity.this, "index Error", Toast.LENGTH_SHORT).show();
-                Toast.makeText(TestTradeSquare.this, "对不起，切换失败", Toast.LENGTH_SHORT).show();
             }
         }
     }

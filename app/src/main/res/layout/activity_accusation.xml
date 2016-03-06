@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <include
+        android:id="@+id/originTitle"
+        layout="@layout/origin_title">
+    </include>
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="15" >
+
+
+            <EditText
+                android:id="@+id/accusationContent"
+                android:layout_weight="4"
+                android:gravity="top|left"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:padding="6dp"
+                android:textSize="20sp"
+                android:hint="请输入举报原因..." />
+
+            <EditText
+                android:id="@+id/accusationContact"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/textview_border"
+                android:paddingLeft="5dp"
+                android:textSize="18sp"
+                android:hint="电话/邮箱"/>
+
+            <Button
+                android:id="@+id/accusationSubmit"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:background="@color/mediumslateblue"
+                android:textSize="20sp"
+                android:text="发送"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5">
+    </LinearLayout>
+
+</LinearLayout>

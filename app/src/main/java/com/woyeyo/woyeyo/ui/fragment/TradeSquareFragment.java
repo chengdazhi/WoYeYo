@@ -108,16 +108,16 @@ public class TradeSquareFragment extends Fragment implements SellView {
             }
         });
     }
-    public void initTitle(){
-        titleBar = (RelativeLayout) view.findViewById(R.id.title);
-        titleText = (TextView) view.findViewById(R.id.title_text);
-        titleText.setText(R.string.tradeSquare);
-        titleBar.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                listView.setSelection(0);
-            }
-        });
-    }
+//    public void initTitle(){
+//        titleBar = (RelativeLayout) view.findViewById(R.id.title);
+//        titleText = (TextView) view.findViewById(R.id.title_text);
+//        titleText.setText(R.string.tradeSquare);
+//        titleBar.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                listView.setSelection(0);
+//            }
+//        });
+//    }
     public void initPulltoFresh(){
         ptrFrameLayout=(PtrFrameLayout)view.findViewById(
                 R.id.material_style_ptr_frame);
