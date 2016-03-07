@@ -12,6 +12,9 @@ public class TradeInfo {
     private float price;
     private int starNum;
 
+    private long SquareId;
+    private long personId;
+
     public Bitmap getPhoto() {
         return photo;
     }
@@ -39,5 +42,21 @@ public class TradeInfo {
     }
     public void setStarNum(int starNum){
         this.starNum=starNum;
+    }
+
+    public long getSquareId() {
+        return SquareId;
+    }
+
+    public void setSquareId(long squareId) {
+        SquareId = squareId;
+    }
+
+    public long getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(long personId) {
+        this.personId = personId;
     }
 }

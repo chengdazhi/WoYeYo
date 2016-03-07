@@ -58,9 +58,9 @@ public class BuyFragment extends TradeSquareFragment implements SellView {
     }
     protected void load() {
         int count=tradeInfoAdpater.getCount()+1;
-        tradeInfoPresenter.getTradeInfointoView(tradeId, count);
+        tradeInfoPresenter.getInfoIntoView(tradeId, count);
     }
     private void getNewData(){
-        tradeInfoPresenter.getTradeInfointoView(tradeId, 0);
+        tradeInfoPresenter.getInfoIntoView(tradeId, 0);
     }
 }

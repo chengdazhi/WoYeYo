@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by fam_000 on 2016/2/24.
  */
-public interface OnTradeInfoListener {
-    void getTradeInfoSuccess(List tradeInfoList);
-    void getTradeInfoFailed();
+public interface OnInfoListener {
+    void getInfoSuccess(List list);
+    void getInfoFailed();
 }

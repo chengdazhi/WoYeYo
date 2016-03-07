@@ -132,6 +132,7 @@ public class TradeSquareFragment extends Fragment implements SellView {
         ptrFrameLayout.setDurationToCloseHeader(100);
         ptrFrameLayout.setHeaderView(header);
         ptrFrameLayout.addPtrUIHandler(header);
+        ptrFrameLayout.setPinContent(true);
         ptrFrameLayout.setPtrHandler(new PtrHandler() {
             @Override
             public void onRefreshBegin(final PtrFrameLayout frame) {
@@ -190,9 +191,9 @@ public class TradeSquareFragment extends Fragment implements SellView {
     }
     protected void load() {
         int count=tradeInfoAdpater.getCount()+1;
-        tradeInfoPresenter.getTradeInfointoView(tradeId, count);
+        tradeInfoPresenter.getInfoIntoView(tradeId, count);
     }
     private void getNewData(){
-        tradeInfoPresenter.getTradeInfointoView(tradeId, 0);
+        tradeInfoPresenter.getInfoIntoView(tradeId, 0);
     }
 }

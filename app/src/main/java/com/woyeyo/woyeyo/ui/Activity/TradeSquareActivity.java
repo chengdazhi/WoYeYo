@@ -47,7 +47,7 @@ public class TradeSquareActivity extends AppCompatActivity implements SellView{
         buyInfoAdpater=new TradeInfoAdpater(TradeSquareActivity.this);
         sellInfoAdapter=new TradeInfoAdpater(TradeSquareActivity.this);
         TradeInfoPresenter tradeInfoPresenter=new TradeInfoPresenter(this);
-        tradeInfoPresenter.getTradeInfointoView(tradeId,0);
+        tradeInfoPresenter.getInfoIntoView(tradeId,0);
     }
     private void InitTextView() {
         sellLayout=(LinearLayout)findViewById(R.id.sellLayout);

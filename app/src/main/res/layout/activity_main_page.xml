@@ -3,11 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.woyeyo.woyeyo.ui.Activity.MainPageActivity">
+    tools:context="com.woyeyo.woyeyo.ui.Activity.MainPageActivity"
+    android:background="#ffffff">
     <fragment
         android:name="com.woyeyo.woyeyo.ui.fragment.MainPageFragment"
         android:id="@+id/scroll_view_title"

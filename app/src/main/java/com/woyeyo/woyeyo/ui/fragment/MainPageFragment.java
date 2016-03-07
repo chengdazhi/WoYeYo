@@ -16,7 +16,7 @@ public class MainPageFragment extends TradeSquareFragment {
     public void initListView(LayoutInflater inflater){
         listView = (ListView) view.findViewById(R.id.my_ListView);
         footView = inflater.inflate(R.layout.foot_view, null);
-        headView=inflater.inflate(R.layout.test_scroll_view,null);
+        headView=inflater.inflate(R.layout.test_scroll_view_fragment,null);
         loading = (RelativeLayout) footView.findViewById(R.id.loading);
         isLoading = (RelativeLayout) footView.findViewById(R.id.isLoading);
         listView.addFooterView(footView);
