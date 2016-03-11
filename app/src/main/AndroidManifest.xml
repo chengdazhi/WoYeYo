@@ -26,14 +26,16 @@
         <activity android:name=".ui.Activity.TestActivity" />
         <activity android:name=".ui.Activity.TestCouponListViewFragment" />
         <activity android:name=".ui.Activity.TestBaseListViewFragmentActivity">
+
+        </activity>
+        <activity android:name=".ui.Activity.TestDrawerActivity" />
+        <activity android:name=".ui.Activity.TestWholeMainPAGE">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Activity.TestDrawerActivity" />
-        <activity android:name=".ui.Activity.TestWholeMainPAGE"></activity>
     </application>
 
 </manifest>

@@ -14,6 +14,7 @@ import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.woyeyo.woyeyo.R;
 import com.woyeyo.woyeyo.bean.Coupon;
 import com.woyeyo.woyeyo.utils.AutoScrollViewPager;
+import com.woyeyo.woyeyo.utils.CirclePageIndicator;
 import com.woyeyo.woyeyo.utils.UrlConstants;
 
 import java.util.ArrayList;
@@ -72,6 +73,7 @@ public class CouponAdapter extends KBaseAdapter<Coupon> {
             if(convertView==null){
                 view=LayoutInflater.from(context).inflate(R.layout.test_scroll_view,null);
                 AutoScrollViewPager pager=(AutoScrollViewPager)view.findViewById(R.id.scroll_pager);
+                CirclePageIndicator indicator = (CirclePageIndicator)view.findViewById(R.id.indicator);
                 ScrollViewPageAdapter viewPageAdapter=new ScrollViewPageAdapter(scrollImgs);
                 pager.setAdapter(viewPageAdapter);
                 pager.setScrollFactor(5);
@@ -82,6 +84,8 @@ public class CouponAdapter extends KBaseAdapter<Coupon> {
                     public void onPageClick(AutoScrollViewPager autoScrollPager, int position) {
                     }
                 });
+                indicator.setViewPager(pager);
+                indicator.setSnap(true);
             } else{
                 view=convertView;
                 viewPagerHolder=(ViewPagerHolder)view.getTag();

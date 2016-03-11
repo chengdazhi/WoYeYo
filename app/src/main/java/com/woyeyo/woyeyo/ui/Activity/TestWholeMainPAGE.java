@@ -1,5 +1,6 @@
 package com.woyeyo.woyeyo.ui.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -18,7 +19,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.woyeyo.woyeyo.R;
 
 public class TestWholeMainPAGE extends AppCompatActivity {
-
+    private Drawer result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +31,10 @@ public class TestWholeMainPAGE extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         new DrawerBuilder().withActivity(this).build();
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName(R.string.drawer_item1_name);
-        SecondaryDrawerItem item2 = new SecondaryDrawerItem().withName(R.string.drawer_item2_name);
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName(R.string.drawer_item1_name).withIdentifier(1);
+        SecondaryDrawerItem item2 = new SecondaryDrawerItem().
+                withName(R.string.drawer_item2_name).withIdentifier(2);
+
 
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
@@ -48,7 +51,8 @@ public class TestWholeMainPAGE extends AppCompatActivity {
                     }
                 })
                 .build();
-        Drawer result = new DrawerBuilder()
+
+            result = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(toolbar)
                 .withAccountHeader(headerResult)
@@ -56,7 +60,7 @@ public class TestWholeMainPAGE extends AppCompatActivity {
                         item1,
                         new DividerDrawerItem(),
                         item2,
-                        new SecondaryDrawerItem().withName(R.string.app_name)
+                        new PrimaryDrawerItem().withName(R.string.app_name)
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
@@ -65,6 +69,35 @@ public class TestWholeMainPAGE extends AppCompatActivity {
                         return true;
                     }
                 })
-                .build();
+                .withOnDrawerItemClickListener(
+                        new Drawer.OnDrawerItemClickListener() {
+                            @Override
+                            public boolean onItemClick(
+                                    View view, int position, IDrawerItem drawerItem) {
+                                if (drawerItem != null) {
+                                    Intent intent = null;
+                                    if (drawerItem.getIdentifier() == 1) {
+                                        intent = new Intent(
+                                                TestWholeMainPAGE.this, TradeSquareActivity.class);
+                                    } else if (drawerItem.getIdentifier() == 2) {
+                                        intent = new Intent(
+                                                TestWholeMainPAGE.this, AboutActivity.class);
+                                    }
+                                    if (intent != null) {
+                                        TestWholeMainPAGE.this.startActivity(intent);
+                                    }
+                                }
+                                return false;
+                            }
+                        }).build();
+        }
+    @Override
+    public void onBackPressed() {
+        //handle the back press :D close the drawer first and if the drawer is closed close the activity
+        if (result != null && result.isDrawerOpen()) {
+            result.closeDrawer();
+        } else {
+            super.onBackPressed();
+        }
     }
 }

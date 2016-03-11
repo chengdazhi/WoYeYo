@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import com.woyeyo.woyeyo.R;
 import com.woyeyo.woyeyo.adapter.ScrollViewPageAdapter;
 import com.woyeyo.woyeyo.utils.AutoScrollViewPager;
+import com.woyeyo.woyeyo.utils.CirclePageIndicator;
 import com.woyeyo.woyeyo.utils.UrlConstants;
 
 import java.util.Arrays;
@@ -27,6 +28,7 @@ public class TestScrollViewFragment extends Fragment {
         super.onViewCreated(view,saveInstanceState);
         AutoScrollViewPager pager=(AutoScrollViewPager)getView().findViewById(R.id.scroll_pager);
         ScrollViewPageAdapter viewPageAdapter=new ScrollViewPageAdapter(Arrays.asList(imgs));
+        CirclePageIndicator indicator = (CirclePageIndicator) getView().findViewById(R.id.indicator);
         pager.setAdapter(viewPageAdapter);
         pager.setScrollFactor(5);
         pager.setOffscreenPageLimit(4);
@@ -36,5 +38,7 @@ public class TestScrollViewFragment extends Fragment {
             public void onPageClick(AutoScrollViewPager autoScrollPager, int position) {
             }
         });
+        indicator.setViewPager(pager);
+        indicator.setSnap(true);
     }
 }
