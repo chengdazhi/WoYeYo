@@ -1,9 +1,6 @@
 package com.woyeyo.woyeyo.ui.Activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.mikepenz.materialdrawer.AccountHeader;
@@ -18,18 +15,20 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.woyeyo.woyeyo.R;
 
-public class TestWholeMainPAGE extends AppCompatActivity {
+/**
+ * Created by fam_000 on 2016/3/12.
+ */
+public class WholeMainPage extends KBaseActivity {
     private Drawer result;
+    public void setResId(){
+        mainResId= R.layout.activity_test_whole_main_page;
+        toolbarResId=R.id.test_main_page_toolbar;
+    }
+    public void setToolBarTitle(){
+        title=R.string.mainpage_title;
+    }
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_whole_main_page);
-
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.test_main_page_toolbar);
-        toolbar.setTitle("MainPage");
-        setSupportActionBar(toolbar);
-
+    public void initSpecialView(){
         new DrawerBuilder().withActivity(this).build();
         PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName(R.string.drawer_item1_name).withIdentifier(1);
         SecondaryDrawerItem item2 = new SecondaryDrawerItem().
@@ -53,7 +52,7 @@ public class TestWholeMainPAGE extends AppCompatActivity {
                 })
                 .build();
 
-            result = new DrawerBuilder()
+        result = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(toolbar)
                 .withAccountHeader(headerResult)
@@ -80,25 +79,25 @@ public class TestWholeMainPAGE extends AppCompatActivity {
                                     Intent intent = null;
                                     if (drawerItem.getIdentifier() == 3) {
                                         intent = new Intent(
-                                                TestWholeMainPAGE.this, TradeSquareActivity.class);
+                                                WholeMainPage.this, TestTradeSquare.class);
                                     } else if (drawerItem.getIdentifier() == 1) {
                                         intent = new Intent(
-                                                TestWholeMainPAGE.this, CategoryCouponActivity.class);
+                                                WholeMainPage.this, CategoryCouponActivity.class);
                                         intent.putExtra("category","buy");
                                     }
                                     else if(drawerItem.getIdentifier()==2){
-                                        intent = new Intent(TestWholeMainPAGE.this,
+                                        intent = new Intent(WholeMainPage.this,
                                                 CategoryCouponActivity.class);
                                         intent.putExtra("category","mov");
                                     }
                                     if (intent != null) {
-                                        TestWholeMainPAGE.this.startActivity(intent);
+                                        WholeMainPage.this.startActivity(intent);
                                     }
                                 }
                                 return false;
                             }
                         }).build();
-        }
+    }
     @Override
     public void onBackPressed() {
         //handle the back press :D close the drawer first and if the drawer is closed close the activity

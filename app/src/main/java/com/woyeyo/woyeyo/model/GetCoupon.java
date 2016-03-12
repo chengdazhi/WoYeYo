@@ -3,6 +3,7 @@ package com.woyeyo.woyeyo.model;
 import com.woyeyo.woyeyo.R;
 import com.woyeyo.woyeyo.bean.Coupon;
 import com.woyeyo.woyeyo.bean.TradeInfo;
+import com.woyeyo.woyeyo.presenter.OnCategoryCouponListener;
 import com.woyeyo.woyeyo.presenter.OnCouponInfoListener;
 import com.woyeyo.woyeyo.presenter.OnInfoListener;
 import com.woyeyo.woyeyo.utils.BitmapResource;
@@ -78,5 +79,41 @@ public class GetCoupon implements IGetCoupon {
     }
     public void getTopCoupon(){
 
+    }
+    public void getCategoryCoupon(final long couponTopId,final String category,
+                                  final int itemCount,final OnCategoryCouponListener listener){
+        new Thread(){
+            @Override
+            public void run(){
+                try{
+                    Thread.sleep(1000);
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+                if(true){
+                    //TODO judge if get proper info
+                    List<Coupon> list=new ArrayList<Coupon>();
+                    String[] imgUrl=UrlConstants.imgs;
+                    for(int i=0;i<showNum;i++){
+                        Coupon coupon=new Coupon();
+                        if(i+itemCount<imgUrl.length){
+                            coupon.setCouponImageUrl(imgUrl[i+itemCount]);
+                            Clog.d("f",""+ i + itemCount);
+                        }
+                        else{
+                            coupon.setCouponImageUrl(UrlConstants.noMoreResult);
+                        }
+                        SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss ");
+                        Date curDate=new Date(System.currentTimeMillis()+itemCount*1000);
+                        coupon.setCouponDesc("good!" +formatter.format(curDate) );
+                        list.add(coupon);
+                    }
+                    listener.getInfoSuccess(list);
+                }
+                else {
+                    listener.getInfoFailed();
+                }
+            }
+        }.start();
     }
 }

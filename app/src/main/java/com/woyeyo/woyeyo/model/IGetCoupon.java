@@ -1,5 +1,6 @@
 package com.woyeyo.woyeyo.model;
 
+import com.woyeyo.woyeyo.presenter.OnCategoryCouponListener;
 import com.woyeyo.woyeyo.presenter.OnCouponInfoListener;
 
 /**
@@ -10,4 +11,6 @@ public interface IGetCoupon {
     void getAllCoupon(final long couponTopId,long scrollImgTopId,
                       final int itemCount,OnCouponInfoListener listener);
     void getCouponDetail(final long couponId);
+    void getCategoryCoupon(final long couponTopId,final String Category,
+                           final int itemCount,OnCategoryCouponListener listener);
 }

@@ -54,11 +54,16 @@ public abstract class BaseListViewFragment extends Fragment{
     public void onActivityCreated(Bundle saveInsatanceState){
         super.onActivityCreated(saveInsatanceState);
         context = getActivity();
+
+        //you can finish some extra things here by override it as an option
+        initFactorsAtFirst();
+
         initAdapter();
         initPrensenter();
         initListViewFromResource();
         initPtrAndLoad(inflater);
         initFloatButton();
+
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
@@ -164,7 +169,9 @@ public abstract class BaseListViewFragment extends Fragment{
     public RelativeLayout getLoading(){
         return loading;
     }
+    public void initFactorsAtFirst(){
 
+    }
     //child class must implement all the abstract method!
     abstract void load();
     abstract void getNewData();
