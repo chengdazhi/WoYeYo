@@ -7,4 +7,4 @@ http://stackoverflow.com/questions/18044277/android-navigation-drawer-bug-using-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="true"
-    android:fitsSystemWindows="true" /><!-- From: file:/Users/chengdazhi/AndroidStudioProjects/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialize/0.8.2/res/layout/materialize.xml -->
+    android:fitsSystemWindows="true" /><!-- From: file:/E:/GitHub/ToolBar/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialize/0.8.2/res/layout/materialize.xml -->
