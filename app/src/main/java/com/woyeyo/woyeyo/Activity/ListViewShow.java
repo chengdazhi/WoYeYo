@@ -27,12 +27,14 @@ public class ListViewShow extends AppCompatActivity implements SellView {
         TradeInfoPresenter tradeInfoPresenter=new TradeInfoPresenter(this);
         tradeInfoPresenter.getTradeInfointoView(tradeName);
     }
+
     @Override
     public void toActivity(List<TradeInfo> tradeInfoList){
         TradeInfoAdpater tradeInfoAdpater=new TradeInfoAdpater(ListViewShow.this,
                 R.layout.trade_info_item,tradeInfoList);
         listView.setAdapter(tradeInfoAdpater);
     }
+
     @Override
     public void showFailedError(){
         Toast.makeText(ListViewShow.this,"show error",Toast.LENGTH_SHORT).show();
