@@ -1,36 +1,31 @@
 package com.woyeyo.woyeyo.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.woyeyo.woyeyo.R;
 import com.woyeyo.woyeyo.bean.TradeInfo;
+import com.woyeyo.woyeyo.presenter.TradeInfoPresenter;
 import com.woyeyo.woyeyo.utils.BitmapResource;
 
-import java.util.List;
-
 /**
- * Created by fam_000 on 2016/2/24.
+ * Created by fam_000 on 2016/2/25.
  */
-public class TradeInfoAdpater extends ArrayAdapter<TradeInfo> {
-    private int resourceid;
-    private ViewHolder viewHolder;
-    public TradeInfoAdpater(Context context,int myResourceid,List<TradeInfo> objects){
-        super(context,myResourceid,objects);
-        resourceid=myResourceid;
+public class TradeInfoAdpater extends KBaseAdapter<TradeInfo>{
+    public TradeInfoAdpater(Context context){
+        super(context);
     }
     @Override
     public View getView(int position,View convertView,ViewGroup parent){
-        TradeInfo tradeInfo=getItem(position);
         ViewHolder viewHolder;
         View view;
         if(convertView==null){
-            view= LayoutInflater.from(getContext()).inflate(resourceid,null);
+            view= LayoutInflater.from(context).inflate(R.layout.trade_info_item,null);
             viewHolder=new ViewHolder();
             viewHolder.description=(TextView)view.findViewById(R.id.good_detail_description_sell);
             viewHolder.price=(TextView)view.findViewById(R.id.good_description_sell_price);
@@ -38,10 +33,11 @@ public class TradeInfoAdpater extends ArrayAdapter<TradeInfo> {
             viewHolder.Star=(ImageView)view.findViewById(R.id.good_description_sell_user_star);
             view.setTag(viewHolder);
         }
-        else{
+        else   {
             view=convertView;
             viewHolder=(ViewHolder)view.getTag();
         }
+        TradeInfo tradeInfo=itemList.get(position);
         viewHolder.description.setText(tradeInfo.getDescription());
         viewHolder.price.setText(tradeInfo.getPrice());
         viewHolder.Photo.setImageBitmap(tradeInfo.getPhoto());
@@ -56,6 +52,4 @@ public class TradeInfoAdpater extends ArrayAdapter<TradeInfo> {
         TextView description;
         TextView price;
     }
-
-
 }

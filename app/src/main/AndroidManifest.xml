@@ -2,20 +2,36 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.woyeyo.woyeyo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:name=".utils.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
-        <activity
-            android:name=".Activity.MainActivity"
-            android:label="@string/app_name" />
-        <activity android:name=".Activity.ListViewShow">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".ui.Activity.ListViewShow" />
+        <activity android:name=".ui.Activity.TradeSquareActivity" />
+        <activity android:name=".ui.Activity.TestTradeSquare" />
+        <activity android:name=".ui.Activity.TestFragmentActivity" />
+        <activity android:name=".ui.Activity.TestImageLoader" />
+        <activity android:name=".ui.Activity.AboutActivity" />
+        <activity android:name=".ui.Activity.AccusationActivity" />
+        <activity android:name=".ui.Activity.FeedbackActivity" />
+        <activity android:name=".ui.Activity.GuaranteeInstructionActivity" />
+        <activity android:name=".ui.Activity.UserInfoActivity" />
+        <activity android:name=".ui.Activity.MainPageActivity" />
+        <activity android:name=".ui.Activity.TestActivity" />
+        <activity android:name=".ui.Activity.TestCouponListViewFragment" />
+        <activity android:name=".ui.Activity.TestBaseListViewFragmentActivity" />
+        <activity android:name=".ui.Activity.TestDrawerActivity" />
+        <activity android:name=".ui.Activity.TestWholeMainPAGE">
 
         </activity>
-        <activity android:name=".Activity.TestPullToFreshActivity"></activity>
-        <activity android:name=".Activity.TradeSquareActivity">
+        <activity android:name=".ui.Activity.CategoryCouponActivity" />
+        <activity android:name=".ui.Activity.WholeMainPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

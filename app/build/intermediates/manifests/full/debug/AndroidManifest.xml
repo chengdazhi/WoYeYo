@@ -6,21 +6,37 @@
 
     <uses-sdk
         android:minSdkVersion="15"
-        android:targetSdkVersion="22" />
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name="com.woyeyo.woyeyo.utils.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.woyeyo.woyeyo.Activity.MainActivity"
-            android:label="@string/app_name" />
-        <activity android:name="com.woyeyo.woyeyo.Activity.ListViewShow" >
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.ListViewShow" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.TradeSquareActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.TestTradeSquare" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.TestFragmentActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.TestImageLoader" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.AboutActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.AccusationActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.FeedbackActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.GuaranteeInstructionActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.UserInfoActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.MainPageActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.TestActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.TestCouponListViewFragment" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.TestBaseListViewFragmentActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.TestDrawerActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.TestWholeMainPAGE" >
         </activity>
-        <activity android:name="com.woyeyo.woyeyo.Activity.TestPullToFreshActivity" />
-        <activity android:name="com.woyeyo.woyeyo.Activity.TradeSquareActivity" >
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.CategoryCouponActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.WholeMainPage" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

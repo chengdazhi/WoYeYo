@@ -10,11 +10,10 @@
     android:background="@color/gainsboro"
     tools:context="com.woyeyo.woyeyo.TradeSquareBuyActivity">
 
-    <TextView
+    <ListView
+        android:id="@+id/BuyListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="layout1"
-        />
+        android:layout_height="match_parent"></ListView>
 
 
 </LinearLayout>

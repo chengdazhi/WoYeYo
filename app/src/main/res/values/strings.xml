@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">WoYeYo</string>
-
+    <string name="tradeSquare">交易广场</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_item1_name">电影票</string>
+    <string name="drawer_item2_name">购物券</string>
+    <string name="message_button">消息</string>
+    <string name="coupon_category_move_title">电影优惠</string>
+    <string name="mainpage_title">我也有</string>
 </resources>
