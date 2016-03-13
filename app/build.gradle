@@ -17,6 +17,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    
 }
 
 
@@ -39,4 +41,6 @@ dependencies {
     compile 'com.jakewharton.timber:timber:4.1.1'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     compile 'com.android.support:support-v4:23.2.0'
+
+    compile project(path: ':uikit')
 }
