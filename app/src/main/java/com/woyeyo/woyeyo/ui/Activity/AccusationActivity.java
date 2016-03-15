@@ -1,36 +1,62 @@
 package com.woyeyo.woyeyo.ui.Activity;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.ImageButton;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.presenter.AccusationPresenter;
+import com.woyeyo.woyeyo.utils.CheckEditText;
+import com.woyeyo.woyeyo.view.ISendInfoView;
 
 /**
  * Created by DongBaishun on 2016/3/4.
  */
-public class AccusationActivity extends AppCompatActivity {
+public class AccusationActivity extends KBaseActivity implements ISendInfoView{
+    private AccusationPresenter presenter;
+    public void setResId(){
+        mainResId=R.layout.activity_accusation;
+    }
+    public void setToolBarTitle(){
+        title=R.string.accusation_title;
+    }
+    public void initSpecialView(){
+        final EditText contentText=(EditText)findViewById(R.id.accusationContent);
+        final EditText contactText=(EditText)findViewById(R.id.accusationContact);
 
-    ///标题栏
-    private TextView titleText;
-    private ImageButton titleImageBack;
-    private ImageButton titleImageShare;
-    private ImageButton titleImageMessage;
-
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accusation);
-        InitTextTitle();
+        Button submit=(Button)findViewById(R.id.accusationSubmit);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String content=contentText.getText().toString();
+                String contact=contactText.getText().toString();
+                if(content.equals("")){
+                    Toast.makeText(AccusationActivity.this,
+                            R.string.accusation_no_content,Toast.LENGTH_SHORT).show();
+                }
+                else if(contact.equals("")){
+                    Toast.makeText(AccusationActivity.this,
+                            R.string.no_mobile_number,Toast.LENGTH_SHORT).show();
+                }
+                else if(!CheckEditText.isMobileNum(contact)){
+                    Toast.makeText(AccusationActivity.this,
+                            R.string.wrong_mobile_number,Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    presenter=new AccusationPresenter(AccusationActivity.this);
+                    presenter.sendAccsationtoServer(content,contact);
+                }
+            }
+        });
+    }
+    @Override
+    public void showSendSuccess(){
+        Toast.makeText(AccusationActivity.this,"提交成功",Toast.LENGTH_SHORT).show();
+    }
+    public void showSendError(){
+        Toast.makeText(AccusationActivity.this,"提交失败，请检查网络后重试",Toast.LENGTH_SHORT).show();
     }
 
-    private void InitTextTitle() {
-        titleText = (TextView) findViewById(R.id.titleText);
-        titleText.setText("举报");
-        titleImageBack = (ImageButton)this.findViewById(R.id.titleImgBack);
-        titleImageBack.setImageDrawable(getResources().getDrawable(R.drawable.back_icon));
-        titleImageMessage = (ImageButton)this.findViewById(R.id.titleImgMessage);
-        titleImageMessage.setImageDrawable(getResources().getDrawable(R.drawable.message));
-    }
 
 }

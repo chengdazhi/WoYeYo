@@ -32,7 +32,13 @@ public abstract class KBaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setResId();
         setContentView(mainResId);
-        toolbar=(Toolbar)findViewById(toolbarResId);
+
+        if(toolbarResId!=0){
+            toolbar=(Toolbar)findViewById(toolbarResId);
+        }
+        else{
+            toolbar=(Toolbar)findViewById(R.id.base_toolbar);
+        }
 
         titleTextView=(TextView)findViewById(R.id.my_toolbar_title);
 
@@ -43,7 +49,7 @@ public abstract class KBaseActivity extends AppCompatActivity {
         else{
             titleTextView.setText(title);
         }
-
+        toolbar.setBackgroundColor(getResources().getColor(R.color.orange));
         setSupportActionBar(toolbar);
 
         ActionBar actionBar=getSupportActionBar();

@@ -39,8 +39,12 @@ public class CategoryCouponPresenter {
 
             @Override
             public void getInfoFailed() {
-                iCategoryCouponView.showFailedError();
-
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        iCategoryCouponView.showFailedError();
+                    }
+                });
             }
         });
 
