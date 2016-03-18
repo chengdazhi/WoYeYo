@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="270"
+        android:endColor="#40000000"
+        android:startColor="@android:color/transparent" />
+</shape><!-- From: file:/C:/Users/fam_000/Documents/GitHub/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/drawable/material_drawer_shadow_top.xml -->

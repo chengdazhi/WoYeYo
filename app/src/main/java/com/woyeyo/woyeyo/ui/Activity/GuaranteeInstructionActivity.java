@@ -5,30 +5,18 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.mikepenz.materialdrawer.Drawer;
 import com.woyeyo.woyeyo.R;
 
-public class GuaranteeInstructionActivity extends AppCompatActivity {
+public class GuaranteeInstructionActivity extends KBaseActivity {
 
-    ///标题栏
-    private TextView titleText;
-    private ImageButton titleImageBack;
-    private ImageButton titleImageShare;
-    private ImageButton titleImageMessage;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guarantee_instruction);
-        InitTextTitle();
+    public void setResId() {
+        mainResId = R.layout.activity_guarantee_instruction;
+        toolbarResId = R.id.test_main_page_toolbar;
     }
 
-    private void InitTextTitle() {
-        titleText = (TextView) findViewById(R.id.titleText);
-        titleText.setText("担保说明");
-        titleImageBack = (ImageButton)this.findViewById(R.id.titleImgBack);
-        titleImageBack.setImageDrawable(getResources().getDrawable(R.drawable.back_icon));
-        titleImageMessage = (ImageButton)this.findViewById(R.id.titleImgMessage);
-        titleImageMessage.setImageDrawable(getResources().getDrawable(R.drawable.message));
+    public void setToolBarTitle() {
+        title = R.string.guarantee_title;
     }
 
 }

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.mikepenz.materialdrawer.Drawer;
 import com.woyeyo.woyeyo.R;
 
 /**
@@ -12,27 +13,18 @@ import com.woyeyo.woyeyo.R;
  */
 
 
-public class AboutActivity extends AppCompatActivity{
+public class AboutActivity extends KBaseActivity {
 
-    ///标题栏
-    private TextView titleText;
-    private ImageButton titleImageBack;
-    private ImageButton titleImageShare;
-    private ImageButton titleImageMessage;
-
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
-        InitTextTitle();
+    public void setResId() {
+        mainResId = R.layout.activity_about;
     }
 
-    private void InitTextTitle(){
-        titleText = (TextView) findViewById(R.id.titleText);
-        titleText.setText("关于我们");
-        titleImageBack = (ImageButton)this.findViewById(R.id.titleImgBack);
-        titleImageBack.setImageDrawable(getResources().getDrawable(R.drawable.back_icon));
-        titleImageMessage = (ImageButton)this.findViewById(R.id.titleImgMessage);
-        titleImageMessage.setImageDrawable(getResources().getDrawable(R.drawable.message));
+    public void setToolBarTitle() {
+        title = R.string.about_title;
+    }
+    public void initSpecialView(){
+        //TODO:get view from resource xml
+
     }
 
 }

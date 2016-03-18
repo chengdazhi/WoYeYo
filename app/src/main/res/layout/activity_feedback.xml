@@ -6,10 +6,18 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <include
-        android:id="@+id/originTitle"
-        layout="@layout/origin_title">
-    </include>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/base_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toolbar Title"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/my_toolbar_title" />
+    </android.support.v7.widget.Toolbar>
     <LinearLayout
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
@@ -37,7 +45,7 @@
                 android:gravity="top|left"
                 android:padding="6dp"
                 android:textSize="20sp"
-                android:hint="请输入反馈内容..." />
+                android:hint="@string/feedback_content_hint" />
 
             <EditText
                 android:id="@+id/feedbackContact"
@@ -50,7 +58,7 @@
                 android:background="@drawable/textview_border"
                 android:paddingLeft="5dp"
                 android:textSize="18sp"
-                android:hint="电话/邮箱"/>
+                android:hint="@string/content_contact_hint"/>
 
             <Button
                 android:id="@+id/feedbackSubmit"
@@ -62,7 +70,7 @@
                 android:gravity="center"
                 android:background="@color/mediumslateblue"
                 android:textSize="20sp"
-                android:text="发送"/>
+                android:text="@string/feedback_content_send"/>
 
             <TextView
                 android:layout_width="match_parent"

@@ -43,13 +43,13 @@
             android:layout_width="230dp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="商品描述" />
+            android:text="@string/trade_info_publish_description" />
         <TextView
             android:id="@+id/good_description_sell_price"
             android:layout_width="70dp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="价格" />
+            android:text="@string/trade_info_price" />
 
     </LinearLayout>
 </LinearLayout>

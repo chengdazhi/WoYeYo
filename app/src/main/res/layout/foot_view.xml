@@ -8,7 +8,7 @@
     android:layout_height="30dp"
     android:background="@color/gainsboro">
     <TextView
-        android:text="加载更多"
+        android:text="@string/foot_view_more"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -25,6 +25,6 @@
             android:gravity="center_horizontal"
             android:layout_centerInParent="true"
             android:padding="3.0px"
-            android:text="加载中...请稍后" />
+            android:text="@string/foot_view_wait" />
     </RelativeLayout>
 </LinearLayout>

@@ -67,17 +67,17 @@ public abstract class BaseListViewFragment extends Fragment{
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
-                if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
-                    fab.show();
-                    if (view.getLastVisiblePosition() == view.getCount() - 1) {
-                        loadData();
-                    }
-                }
+
+//                if (view.getFirstVisiblePosition()>1&&scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
+//                    fab.show();
+//                }
+
                 if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_FLING) {
-                    fab.hide();
+                    //fab.hide();
                 }
                 if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL) {
                     //  fab.hide(false);
+                    fab.setVisibility(View.VISIBLE);
                 }
             }
 
@@ -85,6 +85,15 @@ public abstract class BaseListViewFragment extends Fragment{
             public void onScroll(AbsListView view, int firstVisibleItem,
                                  int visibleItemCount, int totalItemCount) {
                 lastItem = firstVisibleItem + visibleItemCount - 1;
+                if (view.getLastVisiblePosition() == view.getCount() - 1) {
+                    loadData();
+                }
+                if(view.getFirstVisiblePosition()<=2){
+                    fab.hide();
+                }
+                if(view.getFirstVisiblePosition()>2){
+                    fab.show();
+                }
             }
         });
 
@@ -105,6 +114,7 @@ public abstract class BaseListViewFragment extends Fragment{
                 listView.setSelection(0);
             }
         });
+
     }
     public void initPulltoFresh(){
         ptrFrameLayout=(PtrFrameLayout)view.findViewById(

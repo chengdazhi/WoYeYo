@@ -27,11 +27,13 @@
         <activity android:name=".ui.Activity.TestCouponListViewFragment" />
         <activity android:name=".ui.Activity.TestBaseListViewFragmentActivity" />
         <activity android:name=".ui.Activity.TestDrawerActivity" />
-        <activity android:name=".ui.Activity.TestWholeMainPAGE">
-
-        </activity>
+        <activity android:name=".ui.Activity.TestWholeMainPAGE"></activity>
         <activity android:name=".ui.Activity.CategoryCouponActivity" />
         <activity android:name=".ui.Activity.WholeMainPage">
+
+        </activity>
+        <activity android:name=".ui.Activity.SettingActivity" />
+        <activity android:name=".ui.Activity.TradeInfoPublishActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

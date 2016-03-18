@@ -20,4 +20,16 @@ public class CheckEditText {
         Matcher m = p.matcher(emailAd);
         return m.matches();
     }
+    public static boolean isPositiveFloat(String price){
+        String strPattern="^[1-9]\\d*\\.\\d*|0\\.\\d*[1-9]\\d*$";
+        Pattern p=Pattern.compile(strPattern);
+        Matcher m=p.matcher(price);
+        return m.matches();
+    }
+    public static boolean isPositiveInt(String price){
+        String strPattern="^[1-9]\\d*$";
+        Pattern p=Pattern.compile(strPattern);
+        Matcher m=p.matcher(price);
+        return m.matches();
+    }
 }

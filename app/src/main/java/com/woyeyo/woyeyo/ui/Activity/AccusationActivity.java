@@ -13,6 +13,7 @@ import com.woyeyo.woyeyo.view.ISendInfoView;
 /**
  * Created by DongBaishun on 2016/3/4.
  */
+
 public class AccusationActivity extends KBaseActivity implements ISendInfoView{
     private AccusationPresenter presenter;
     public void setResId(){
@@ -32,15 +33,15 @@ public class AccusationActivity extends KBaseActivity implements ISendInfoView{
                 String content=contentText.getText().toString();
                 String contact=contactText.getText().toString();
                 if(content.equals("")){
-                    Toast.makeText(AccusationActivity.this,
+                    Toast.makeText(mContext,
                             R.string.accusation_no_content,Toast.LENGTH_SHORT).show();
                 }
                 else if(contact.equals("")){
-                    Toast.makeText(AccusationActivity.this,
+                    Toast.makeText(mContext,
                             R.string.no_mobile_number,Toast.LENGTH_SHORT).show();
                 }
                 else if(!CheckEditText.isMobileNum(contact)){
-                    Toast.makeText(AccusationActivity.this,
+                    Toast.makeText(mContext,
                             R.string.wrong_mobile_number,Toast.LENGTH_SHORT).show();
                 }
                 else{
@@ -49,13 +50,14 @@ public class AccusationActivity extends KBaseActivity implements ISendInfoView{
                 }
             }
         });
+
     }
     @Override
     public void showSendSuccess(){
-        Toast.makeText(AccusationActivity.this,"提交成功",Toast.LENGTH_SHORT).show();
+        Toast.makeText(mContext,"提交成功",Toast.LENGTH_SHORT).show();
     }
     public void showSendError(){
-        Toast.makeText(AccusationActivity.this,"提交失败，请检查网络后重试",Toast.LENGTH_SHORT).show();
+        Toast.makeText(mContext,"提交失败，请检查网络后重试",Toast.LENGTH_SHORT).show();
     }
 
 

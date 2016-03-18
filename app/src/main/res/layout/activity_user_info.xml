@@ -5,10 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="fill_parent">
 
-    <include
-        android:id="@+id/originTitle"
-        layout="@layout/origin_title">
-    </include>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/base_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toolbar Title"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/my_toolbar_title" />
+    </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -133,7 +141,7 @@
                     />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/usereedback"
+                android:id="@+id/user_feed_back"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"

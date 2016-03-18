@@ -7,10 +7,18 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#ffffff">
-    <include
-        android:id="@+id/originTitle"
-        layout="@layout/origin_title">
-    </include>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/base_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toolbar Title"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/my_toolbar_title" />
+    </android.support.v7.widget.Toolbar>
     <LinearLayout
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
@@ -37,7 +45,7 @@
                 android:layout_gravity="center_vertical"
                 android:textSize="28sp"
                 android:textStyle="bold"
-                android:text="公司介绍"
+                android:text="@string/about_content_title"
                 />
             <TextView
                 android:id="@+id/aboutContent"
@@ -47,7 +55,7 @@
                 android:layout_height="0px"
                 android:padding="8dp"
                 android:textSize="20sp"
-                android:hint="关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们" />
+                android:hint="@string/about_content" />
 
 
         </LinearLayout>
