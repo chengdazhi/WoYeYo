@@ -10,6 +10,7 @@ import com.netease.nim.uikit.common.activity.TActivity;
 import com.netease.nim.uikit.common.util.log.LogUtil;
 import com.netease.nimlib.sdk.NimIntent;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
+import com.woyeyo.woyeyo.R;
 import com.woyeyo.woyeyo.im.DemoCache;
 import com.woyeyo.woyeyo.im.avchat.activity.AVChatActivity;
 import com.woyeyo.woyeyo.im.common.util.sys.SysInfoUtil;

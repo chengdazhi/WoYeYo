@@ -9,8 +9,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.session.SessionHelper;
 import com.netease.nim.uikit.cache.TeamDataCache;
 import com.netease.nim.uikit.common.activity.TActionBarActivity;
 import com.netease.nim.uikit.contact.core.item.AbsContactItem;
@@ -26,6 +24,8 @@ import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.team.TeamService;
 import com.netease.nimlib.sdk.team.constant.TeamTypeEnum;
 import com.netease.nimlib.sdk.team.model.Team;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.session.SessionHelper;
 
 import java.util.List;
 
