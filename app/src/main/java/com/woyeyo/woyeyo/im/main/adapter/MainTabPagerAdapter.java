@@ -1,15 +1,15 @@
 package com.woyeyo.woyeyo.im.main.adapter;
 
-import java.util.List;
-
-import com.netease.nim.demo.common.ui.viewpager.SlidingTabPagerAdapter;
-import com.netease.nim.demo.main.fragment.MainTabFragment;
-import com.netease.nim.demo.main.model.MainTab;
-
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+
+import com.woyeyo.woyeyo.im.common.ui.viewpager.SlidingTabPagerAdapter;
+import com.woyeyo.woyeyo.im.main.fragment.MainTabFragment;
+import com.woyeyo.woyeyo.im.main.model.MainTab;
+
+import java.util.List;
 
 public class MainTabPagerAdapter extends SlidingTabPagerAdapter {
 

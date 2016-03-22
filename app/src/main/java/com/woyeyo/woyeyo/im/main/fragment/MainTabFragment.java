@@ -6,8 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.netease.nim.uikit.common.fragment.TabFragment;
-import com.netease.nim.demo.main.model.MainTab;
-import com.netease.nim.demo.R;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.main.model.MainTab;
 
 
 public abstract class MainTabFragment extends TabFragment {

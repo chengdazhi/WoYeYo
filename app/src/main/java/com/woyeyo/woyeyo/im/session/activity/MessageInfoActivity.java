@@ -1,6 +1,5 @@
 package com.woyeyo.woyeyo.im.session.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +7,6 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.netease.nim.demo.DemoCache;
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.contact.activity.UserProfileActivity;
-import com.netease.nim.demo.team.TeamCreateHelper;
 import com.netease.nim.uikit.NimUIKit;
 import com.netease.nim.uikit.cache.NimUserInfoCache;
 import com.netease.nim.uikit.common.activity.TActionBarActivity;
@@ -23,6 +18,8 @@ import com.netease.nim.uikit.team.helper.TeamHelper;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
 import com.netease.nimlib.sdk.friend.FriendService;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.contact.activity.UserProfileActivity;
 
 import java.util.ArrayList;
 
@@ -142,7 +139,7 @@ public class MessageInfoActivity extends TActionBarActivity {
         ContactSelectActivity.Option option = TeamHelper.getCreateContactSelectOption(memberAccounts, 50);
         NimUIKit.startContactSelect(this, option, REQUEST_CODE_NORMAL);// 创建群
     }
-
+/*
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -172,4 +169,5 @@ public class MessageInfoActivity extends TActionBarActivity {
             }
         }
     }
+    */
 }

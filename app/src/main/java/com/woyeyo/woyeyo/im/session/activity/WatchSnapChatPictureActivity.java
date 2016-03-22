@@ -10,8 +10,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
 
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.session.extension.SnapChatAttachment;
 import com.netease.nim.uikit.common.activity.TActionBarActivity;
 import com.netease.nim.uikit.common.ui.dialog.CustomAlertDialog;
 import com.netease.nim.uikit.common.ui.imageview.BaseZoomableImageView;
@@ -23,6 +21,8 @@ import com.netease.nimlib.sdk.msg.MsgService;
 import com.netease.nimlib.sdk.msg.MsgServiceObserve;
 import com.netease.nimlib.sdk.msg.constant.AttachStatusEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.session.extension.SnapChatAttachment;
 
 
 /**

@@ -4,14 +4,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.netease.nim.demo.R;
 import com.netease.nim.uikit.cache.NimUserInfoCache;
-import com.netease.nim.demo.main.helper.MessageHelper;
 import com.netease.nim.uikit.common.adapter.TViewHolder;
 import com.netease.nim.uikit.common.ui.imageview.HeadImageView;
 import com.netease.nim.uikit.common.util.sys.TimeUtil;
 import com.netease.nimlib.sdk.msg.constant.SystemMessageStatus;
 import com.netease.nimlib.sdk.msg.model.SystemMessage;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.main.helper.MessageHelper;
 
 /**
  * Created by huangjun on 2015/3/18.

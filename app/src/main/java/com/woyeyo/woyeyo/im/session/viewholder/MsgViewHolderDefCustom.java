@@ -1,7 +1,7 @@
 package com.woyeyo.woyeyo.im.session.viewholder;
 
-import com.netease.nim.demo.session.extension.DefaultCustomAttachment;
 import com.netease.nim.uikit.session.viewholder.MsgViewHolderText;
+import com.woyeyo.woyeyo.im.session.extension.DefaultCustomAttachment;
 
 /**
  * Created by zhoujianghua on 2015/8/4.

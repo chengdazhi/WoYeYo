@@ -6,17 +6,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.session.activity.WatchSnapChatPictureActivity;
-import com.netease.nim.demo.session.extension.SnapChatAttachment;
 import com.netease.nim.uikit.common.util.file.AttachmentStore;
 import com.netease.nim.uikit.common.util.string.StringUtil;
 import com.netease.nim.uikit.session.viewholder.MsgViewHolderBase;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.msg.MsgService;
 import com.netease.nimlib.sdk.msg.constant.AttachStatusEnum;
-import com.netease.nimlib.sdk.msg.constant.MsgDirectionEnum;
 import com.netease.nimlib.sdk.msg.constant.MsgStatusEnum;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.session.activity.WatchSnapChatPictureActivity;
+import com.woyeyo.woyeyo.im.session.extension.SnapChatAttachment;
 
 /**
  * Created by zhoujianghua on 2015/8/7.

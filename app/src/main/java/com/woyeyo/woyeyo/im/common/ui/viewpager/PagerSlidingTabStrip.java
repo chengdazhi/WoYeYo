@@ -16,8 +16,6 @@
 
 package com.woyeyo.woyeyo.im.common.ui.viewpager;
 
-import java.util.Locale;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
@@ -43,10 +41,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.main.reminder.ReminderItem;
-import com.netease.nim.demo.main.reminder.ReminderSettings;
 import com.netease.nim.uikit.common.util.sys.ScreenUtil;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.main.reminder.ReminderItem;
+import com.woyeyo.woyeyo.im.main.reminder.ReminderSettings;
+
+import java.util.Locale;
 
 public class PagerSlidingTabStrip extends HorizontalScrollView implements OnPageChangeListener {
 

@@ -8,17 +8,6 @@ import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.TextView;
 
-import com.netease.nim.demo.DemoCache;
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.contact.activity.BlackListActivity;
-import com.netease.nim.demo.main.activity.SystemMessageActivity;
-import com.netease.nim.demo.main.activity.TeamListActivity;
-import com.netease.nim.demo.main.helper.SystemMessageUnreadManager;
-import com.netease.nim.demo.main.model.MainTab;
-import com.netease.nim.demo.main.reminder.ReminderId;
-import com.netease.nim.demo.main.reminder.ReminderItem;
-import com.netease.nim.demo.main.reminder.ReminderManager;
-import com.netease.nim.demo.session.SessionHelper;
 import com.netease.nim.uikit.common.activity.TActionBarActivity;
 import com.netease.nim.uikit.contact.ContactsCustomization;
 import com.netease.nim.uikit.contact.ContactsFragment;
@@ -26,6 +15,16 @@ import com.netease.nim.uikit.contact.core.item.AbsContactItem;
 import com.netease.nim.uikit.contact.core.item.ItemTypes;
 import com.netease.nim.uikit.contact.core.model.ContactDataAdapter;
 import com.netease.nim.uikit.contact.core.viewholder.AbsContactViewHolder;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.DemoCache;
+import com.woyeyo.woyeyo.im.contact.activity.BlackListActivity;
+import com.woyeyo.woyeyo.im.main.activity.SystemMessageActivity;
+import com.woyeyo.woyeyo.im.main.helper.SystemMessageUnreadManager;
+import com.woyeyo.woyeyo.im.main.model.MainTab;
+import com.woyeyo.woyeyo.im.main.reminder.ReminderId;
+import com.woyeyo.woyeyo.im.main.reminder.ReminderItem;
+import com.woyeyo.woyeyo.im.main.reminder.ReminderManager;
+import com.woyeyo.woyeyo.im.session.SessionHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -142,11 +141,11 @@ public class ContactListFragment extends MainTabFragment {
         static void handle(Context context, AbsContactItem item) {
             if (item == VERIFY) {
                 SystemMessageActivity.start(context);
-            } else if (item == NORMAL_TEAM) {
+            }/* else if (item == NORMAL_TEAM) {
                 TeamListActivity.start(context, ItemTypes.TEAMS.NORMAL_TEAM);
             } else if (item == ADVANCED_TEAM) {
                 TeamListActivity.start(context, ItemTypes.TEAMS.ADVANCED_TEAM);
-            } else if (item == MY_COMPUTER) {
+            }*/ else if (item == MY_COMPUTER) {
                 SessionHelper.startP2PSession(context, DemoCache.getAccount());
             } else if (item == BLACK_LIST) {
                 BlackListActivity.start(context);

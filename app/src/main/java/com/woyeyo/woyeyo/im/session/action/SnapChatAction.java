@@ -1,11 +1,11 @@
 package com.woyeyo.woyeyo.im.session.action;
 
-import com.netease.nim.demo.R;
 import com.netease.nim.uikit.session.actions.PickImageAction;
-import com.netease.nim.demo.session.extension.SnapChatAttachment;
 import com.netease.nimlib.sdk.msg.MessageBuilder;
 import com.netease.nimlib.sdk.msg.model.CustomMessageConfig;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.session.extension.SnapChatAttachment;
 
 import java.io.File;
 

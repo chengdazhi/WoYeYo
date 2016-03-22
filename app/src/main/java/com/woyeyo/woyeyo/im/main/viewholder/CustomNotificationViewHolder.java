@@ -4,14 +4,14 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.main.helper.MessageHelper;
 import com.netease.nim.uikit.common.adapter.TViewHolder;
 import com.netease.nim.uikit.common.ui.imageview.HeadImageView;
 import com.netease.nim.uikit.common.util.sys.ScreenUtil;
 import com.netease.nim.uikit.common.util.sys.TimeUtil;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.CustomNotification;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.main.helper.MessageHelper;
 
 public class CustomNotificationViewHolder extends TViewHolder {
 

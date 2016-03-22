@@ -1,16 +1,15 @@
 package com.woyeyo.woyeyo.im.main.model;
 
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.main.fragment.ChatRoomListFragment;
-import com.netease.nim.demo.main.fragment.ContactListFragment;
-import com.netease.nim.demo.main.fragment.MainTabFragment;
-import com.netease.nim.demo.main.fragment.SessionListFragment;
-import com.netease.nim.demo.main.reminder.ReminderId;
+
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.main.fragment.ContactListFragment;
+import com.woyeyo.woyeyo.im.main.fragment.MainTabFragment;
+import com.woyeyo.woyeyo.im.main.fragment.SessionListFragment;
+import com.woyeyo.woyeyo.im.main.reminder.ReminderId;
 
 public enum MainTab {
     RECENT_CONTACTS(0, ReminderId.SESSION, SessionListFragment.class, R.string.main_tab_session, R.layout.session_list),
-    CONTACT(1, ReminderId.CONTACT, ContactListFragment.class, R.string.main_tab_contact, R.layout.contacts_list),
-    CHAT_ROOM(2, ReminderId.INVALID, ChatRoomListFragment.class, R.string.chat_room, R.layout.chat_room_tab);
+    CONTACT(1, ReminderId.CONTACT, ContactListFragment.class, R.string.main_tab_contact, R.layout.contacts_list);
 
     public final int tabIndex;
 

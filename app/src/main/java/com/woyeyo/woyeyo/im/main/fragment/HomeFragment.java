@@ -7,14 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.common.ui.viewpager.FadeInOutPageTransformer;
-import com.netease.nim.demo.common.ui.viewpager.PagerSlidingTabStrip;
-import com.netease.nim.demo.main.adapter.MainTabPagerAdapter;
-import com.netease.nim.demo.main.helper.SystemMessageUnreadManager;
-import com.netease.nim.demo.main.model.MainTab;
-import com.netease.nim.demo.main.reminder.ReminderItem;
-import com.netease.nim.demo.main.reminder.ReminderManager;
 import com.netease.nim.uikit.common.fragment.TFragment;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.Observer;
@@ -22,6 +14,14 @@ import com.netease.nimlib.sdk.msg.MsgService;
 import com.netease.nimlib.sdk.msg.SystemMessageObserver;
 import com.netease.nimlib.sdk.msg.SystemMessageService;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.common.ui.viewpager.FadeInOutPageTransformer;
+import com.woyeyo.woyeyo.im.common.ui.viewpager.PagerSlidingTabStrip;
+import com.woyeyo.woyeyo.im.main.adapter.MainTabPagerAdapter;
+import com.woyeyo.woyeyo.im.main.helper.SystemMessageUnreadManager;
+import com.woyeyo.woyeyo.im.main.model.MainTab;
+import com.woyeyo.woyeyo.im.main.reminder.ReminderItem;
+import com.woyeyo.woyeyo.im.main.reminder.ReminderManager;
 
 /**
  * 云信主界面（导航页）
