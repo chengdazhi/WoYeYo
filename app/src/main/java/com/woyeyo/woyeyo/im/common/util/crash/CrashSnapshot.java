@@ -1,5 +1,21 @@
 package com.woyeyo.woyeyo.im.common.util.crash;
 
+import android.annotation.SuppressLint;
+import android.app.ActivityManager;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Build;
+import android.os.Environment;
+import android.os.StatFs;
+import android.provider.Settings.Secure;
+import android.text.TextUtils;
+
+import com.netease.nim.uikit.NimUIKit;
+import com.netease.nim.uikit.common.util.sys.NetworkUtil;
+import com.woyeyo.woyeyo.im.common.util.sys.InstallUtil;
+import com.woyeyo.woyeyo.im.common.util.sys.SysInfoUtil;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -9,23 +25,6 @@ import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Pattern;
-
-import com.netease.nim.uikit.NimUIKit;
-import com.netease.nim.demo.common.util.sys.InstallUtil;
-import com.netease.nim.demo.common.util.sys.SysInfoUtil;
-import com.netease.nim.uikit.common.util.sys.NetworkUtil;
-
-import android.annotation.SuppressLint;
-import android.app.ActivityManager;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.os.Build;
-import android.os.Environment;
-import android.os.StatFs;
-import android.provider.Settings;
-import android.provider.Settings.Secure;
-import android.text.TextUtils;
 
 
 

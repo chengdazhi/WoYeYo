@@ -1,10 +1,10 @@
 package com.woyeyo.woyeyo.im.common.infra;
 
+import android.content.Context;
+
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
-
-import android.content.Context;
 
 public class TaskManagerRegistry {
     private static List<WeakReference<TaskManager>> managers = new ArrayList<WeakReference<TaskManager>>();
@@ -18,13 +18,13 @@ public class TaskManagerRegistry {
     public static void waitAll(final Context context, final Runnable done, final int max, final int interval) {
 		cancelAll(true);
 
-		com.netease.nim.demo.common.infra.Handlers.sharedHandler(context).postDelayed(new Runnable() {
+        com.woyeyo.woyeyo.im.common.infra.Handlers.sharedHandler(context).postDelayed(new Runnable() {
 			int count;
 
 			@Override
 			public void run() {
 				if (!idle() && count++ < max) {
-					com.netease.nim.demo.common.infra.Handlers.sharedHandler(context).postDelayed(this, interval);
+                    com.woyeyo.woyeyo.im.common.infra.Handlers.sharedHandler(context).postDelayed(this, interval);
 				} else {
 					done.run();
 				}

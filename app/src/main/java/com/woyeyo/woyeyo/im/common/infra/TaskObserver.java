@@ -6,12 +6,12 @@ public interface TaskObserver {
 	 * @param task
 	 * @param results
 	 */
-	public void onTaskResult(com.netease.nim.demo.common.infra.Task task, Object[] results);
+	public void onTaskResult(com.woyeyo.woyeyo.im.common.infra.Task task, Object[] results);
 
 	/**
 	 * on task progress
 	 * @param task
 	 * @param params
 	 */
-	public void onTaskProgress(com.netease.nim.demo.common.infra.Task task, Object[] params);
+	public void onTaskProgress(com.woyeyo.woyeyo.im.common.infra.Task task, Object[] params);
 }

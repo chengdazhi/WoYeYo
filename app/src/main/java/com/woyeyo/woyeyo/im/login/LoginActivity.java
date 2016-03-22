@@ -16,12 +16,6 @@ import android.view.View.OnKeyListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.netease.nim.demo.DemoCache;
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.config.preference.Preferences;
-import com.netease.nim.demo.config.preference.UserPreferences;
-import com.netease.nim.demo.contact.ContactHttpClient;
-import com.netease.nim.demo.main.activity.MainActivity;
 import com.netease.nim.uikit.cache.DataCacheManager;
 import com.netease.nim.uikit.common.activity.TActionBarActivity;
 import com.netease.nim.uikit.common.ui.dialog.DialogMaker;
@@ -38,6 +32,12 @@ import com.netease.nimlib.sdk.RequestCallback;
 import com.netease.nimlib.sdk.auth.AuthService;
 import com.netease.nimlib.sdk.auth.ClientType;
 import com.netease.nimlib.sdk.auth.LoginInfo;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.DemoCache;
+import com.woyeyo.woyeyo.im.config.preference.Preferences;
+import com.woyeyo.woyeyo.im.config.preference.UserPreferences;
+import com.woyeyo.woyeyo.im.contact.ContactHttpClient;
+import com.woyeyo.woyeyo.im.main.activity.MainActivity;
 
 /**
  * 登录/注册界面

@@ -16,8 +16,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.session.SessionHelper;
 import com.netease.nim.uikit.common.activity.TActionBarActivity;
 import com.netease.nim.uikit.common.util.string.StringUtil;
 import com.netease.nim.uikit.contact.core.item.AbsContactItem;
@@ -25,10 +23,12 @@ import com.netease.nim.uikit.contact.core.item.ContactItem;
 import com.netease.nim.uikit.contact.core.item.ItemTypes;
 import com.netease.nim.uikit.contact.core.model.ContactDataAdapter;
 import com.netease.nim.uikit.contact.core.model.ContactGroupStrategy;
-import com.netease.nim.uikit.contact.core.query.IContactDataProvider;
-import com.netease.nim.uikit.contact.core.viewholder.LabelHolder;
 import com.netease.nim.uikit.contact.core.provider.ContactDataProvider;
+import com.netease.nim.uikit.contact.core.query.IContactDataProvider;
 import com.netease.nim.uikit.contact.core.viewholder.ContactHolder;
+import com.netease.nim.uikit.contact.core.viewholder.LabelHolder;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.session.SessionHelper;
 
 /**
  * 全局搜索页面(目前仅支持通讯录搜索)

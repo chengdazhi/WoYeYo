@@ -39,10 +39,10 @@ public abstract class AbstractTaskWorker {
 			}
 		}
 
-		return com.netease.nim.demo.common.infra.TaskExecutor.IMMEDIATE_EXECUTOR;
+		return com.woyeyo.woyeyo.im.common.infra.TaskExecutor.IMMEDIATE_EXECUTOR;
 	}
 	
-	private final Runnable getRunnable(final com.netease.nim.demo.common.infra.Task task) {
+	private final Runnable getRunnable(final com.woyeyo.woyeyo.im.common.infra.Task task) {
 		return new Runnable() {
 			@Override
 			public void run() {

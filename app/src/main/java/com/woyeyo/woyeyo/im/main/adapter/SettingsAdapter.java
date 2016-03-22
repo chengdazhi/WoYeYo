@@ -10,13 +10,13 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.netease.nim.demo.DemoCache;
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.main.model.SettingTemplate;
-import com.netease.nim.demo.main.model.SettingType;
 import com.netease.nim.uikit.cache.NimUserInfoCache;
 import com.netease.nim.uikit.common.ui.imageview.HeadImageView;
 import com.netease.nim.uikit.common.ui.widget.SwitchButton;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.DemoCache;
+import com.woyeyo.woyeyo.im.main.model.SettingTemplate;
+import com.woyeyo.woyeyo.im.main.model.SettingType;
 
 import java.util.List;
 
@@ -31,6 +31,8 @@ public class SettingsAdapter extends BaseAdapter {
 
     private SwitchButton.OnChangedListener onchangeListener;
     private SwitchChangeListener switchChangeListener;
+
+
 
     public interface SwitchChangeListener {
         void onSwitchChange(SettingTemplate item, boolean checkState);

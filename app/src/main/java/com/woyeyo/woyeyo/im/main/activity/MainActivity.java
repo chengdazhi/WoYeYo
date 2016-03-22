@@ -11,18 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.netease.nim.demo.chatroom.helper.ChatRoomHelper;
 import com.netease.nim.uikit.LoginSyncDataStatusObserver;
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.avchat.AVChatProfile;
-import com.netease.nim.demo.avchat.activity.AVChatActivity;
-import com.netease.nim.demo.contact.activity.AddFriendActivity;
-import com.netease.nim.demo.login.LoginActivity;
-import com.netease.nim.demo.main.fragment.HomeFragment;
-import com.netease.nim.demo.login.LogoutHelper;
-import com.netease.nim.demo.session.SessionHelper;
-import com.netease.nim.demo.team.TeamCreateHelper;
-import com.netease.nim.demo.team.activity.AdvancedTeamSearchActivity;
 import com.netease.nim.uikit.NimUIKit;
 import com.netease.nim.uikit.common.activity.TActionBarActivity;
 import com.netease.nim.uikit.common.ui.dialog.DialogMaker;
@@ -31,6 +20,12 @@ import com.netease.nim.uikit.team.helper.TeamHelper;
 import com.netease.nimlib.sdk.NimIntent;
 import com.netease.nimlib.sdk.Observer;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.contact.activity.AddFriendActivity;
+import com.woyeyo.woyeyo.im.login.LoginActivity;
+import com.woyeyo.woyeyo.im.login.LogoutHelper;
+import com.woyeyo.woyeyo.im.main.fragment.HomeFragment;
+import com.woyeyo.woyeyo.im.session.SessionHelper;
 
 import java.util.ArrayList;
 
@@ -102,7 +97,7 @@ public class MainActivity extends TActionBarActivity {
         showMainFragment();
 
         // 聊天室初始化
-        ChatRoomHelper.init();
+//        ChatRoomHelper.init();
     }
 
     @Override
@@ -152,7 +147,7 @@ public class MainActivity extends TActionBarActivity {
                 NimUIKit.startContactSelect(MainActivity.this, advancedOption, REQUEST_CODE_ADVANCED);
                 break;
             case R.id.search_advanced_team:
-                AdvancedTeamSearchActivity.start(MainActivity.this);
+//                AdvancedTeamSearchActivity.start(MainActivity.this);
                 break;
             case R.id.add_buddy:
                 AddFriendActivity.start(MainActivity.this);
@@ -183,15 +178,15 @@ public class MainActivity extends TActionBarActivity {
         } else if (intent.hasExtra(EXTRA_APP_QUIT)) {
             onLogout();
             return;
-        } else if (intent.hasExtra(AVChatActivity.INTENT_ACTION_AVCHAT)) {
+        }/* else if (intent.hasExtra(AVChatActivity.INTENT_ACTION_AVCHAT)) {
             if (AVChatProfile.getInstance().isAVChatting()) {
                 Intent localIntent = new Intent();
                 localIntent.setClass(this, AVChatActivity.class);
                 startActivity(localIntent);
             }
-        } else if (intent.hasExtra(com.netease.nim.demo.main.model.Extras.EXTRA_JUMP_P2P)) {
-            Intent data = intent.getParcelableExtra(com.netease.nim.demo.main.model.Extras.EXTRA_DATA);
-            String account = data.getStringExtra(com.netease.nim.demo.main.model.Extras.EXTRA_ACCOUNT);
+        }*/ else if (intent.hasExtra(com.woyeyo.woyeyo.im.main.model.Extras.EXTRA_JUMP_P2P)) {
+            Intent data = intent.getParcelableExtra(com.woyeyo.woyeyo.im.main.model.Extras.EXTRA_DATA);
+            String account = data.getStringExtra(com.woyeyo.woyeyo.im.main.model.Extras.EXTRA_ACCOUNT);
             if (!TextUtils.isEmpty(account)) {
                 SessionHelper.startP2PSession(this, account);
             }
@@ -212,13 +207,13 @@ public class MainActivity extends TActionBarActivity {
             if (requestCode == REQUEST_CODE_NORMAL) {
                 final ArrayList<String> selected = data.getStringArrayListExtra(ContactSelectActivity.RESULT_DATA);
                 if (selected != null && !selected.isEmpty()) {
-                    TeamCreateHelper.createNormalTeam(MainActivity.this, selected, false, null);
+//                    TeamCreateHelper.createNormalTeam(MainActivity.this, selected, false, null);
                 } else {
                     Toast.makeText(MainActivity.this, "请选择至少一个联系人！", Toast.LENGTH_SHORT).show();
                 }
             } else if (requestCode == REQUEST_CODE_ADVANCED) {
                 final ArrayList<String> selected = data.getStringArrayListExtra(ContactSelectActivity.RESULT_DATA);
-                TeamCreateHelper.createAdvancedTeam(MainActivity.this, selected);
+//                TeamCreateHelper.createAdvancedTeam(MainActivity.this, selected);
             }
         }
 

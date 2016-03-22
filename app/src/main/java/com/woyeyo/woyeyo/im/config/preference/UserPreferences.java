@@ -5,8 +5,8 @@ import android.content.SharedPreferences;
 
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
-import com.netease.nim.demo.DemoCache;
 import com.netease.nimlib.sdk.StatusBarNotificationConfig;
+import com.woyeyo.woyeyo.im.DemoCache;
 
 /**
  * Created by hzxuwen on 2015/4/13.

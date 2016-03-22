@@ -3,8 +3,8 @@ package com.woyeyo.woyeyo.im.common.http;
 import android.os.Handler;
 import android.util.Log;
 
-import com.netease.nim.demo.DemoCache;
 import com.netease.nim.uikit.common.framework.NimTaskExecutor;
+import com.woyeyo.woyeyo.im.DemoCache;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -140,6 +140,8 @@ public class NimHttpClient {
         if (inited) {
             return;
         }
+
+
 
         // init thread pool
         executor = new NimTaskExecutor("NIM_HTTP_TASK_EXECUTOR", new NimTaskExecutor.Config(1, 3, 10 * 1000, true));

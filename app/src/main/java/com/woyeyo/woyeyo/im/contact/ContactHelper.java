@@ -2,9 +2,9 @@ package com.woyeyo.woyeyo.im.contact;
 
 import android.content.Context;
 
-import com.netease.nim.demo.contact.activity.UserProfileActivity;
 import com.netease.nim.uikit.NimUIKit;
 import com.netease.nim.uikit.contact.ContactEventListener;
+import com.woyeyo.woyeyo.im.contact.activity.UserProfileActivity;
 
 /**
  * UIKit联系人列表定制展示类

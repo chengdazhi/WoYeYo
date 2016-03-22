@@ -4,13 +4,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.contact.activity.BlackListAdapter;
+import com.netease.nim.uikit.cache.NimUserInfoCache;
 import com.netease.nim.uikit.common.adapter.TViewHolder;
 import com.netease.nim.uikit.common.ui.imageview.HeadImageView;
-import com.netease.nim.uikit.cache.NimUserInfoCache;
 import com.netease.nimlib.sdk.uinfo.UserInfoProvider;
 import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.contact.activity.BlackListAdapter;
 
 /**
  * Created by huangjun on 2015/9/22.

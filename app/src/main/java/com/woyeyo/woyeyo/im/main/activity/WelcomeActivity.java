@@ -12,7 +12,6 @@ import com.netease.nimlib.sdk.NimIntent;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
 import com.woyeyo.woyeyo.R;
 import com.woyeyo.woyeyo.im.DemoCache;
-import com.woyeyo.woyeyo.im.avchat.activity.AVChatActivity;
 import com.woyeyo.woyeyo.im.common.util.sys.SysInfoUtil;
 import com.woyeyo.woyeyo.im.config.preference.Preferences;
 import com.woyeyo.woyeyo.im.login.LoginActivity;
@@ -119,7 +118,8 @@ public class WelcomeActivity extends TActivity {
                 if (intent.hasExtra(NimIntent.EXTRA_NOTIFY_CONTENT)) {
                     parseNotifyIntent(intent);
                     return;
-                } else if (intent.hasExtra(Extras.EXTRA_JUMP_P2P) || intent.hasExtra(AVChatActivity.INTENT_ACTION_AVCHAT)) {
+                } else if (intent.hasExtra(Extras.EXTRA_JUMP_P2P)){
+//                } else if (intent.hasExtra(Extras.EXTRA_JUMP_P2P) || intent.hasExtra(AVChatActivity.INTENT_ACTION_AVCHAT)) {
                     parseNormalIntent(intent);
                 }
             }

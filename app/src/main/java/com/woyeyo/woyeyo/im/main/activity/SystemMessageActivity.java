@@ -10,9 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.main.adapter.SystemMessageAdapter;
-import com.netease.nim.demo.main.viewholder.SystemMessageViewHolder;
 import com.netease.nim.uikit.cache.NimUserInfoCache;
 import com.netease.nim.uikit.common.activity.TActionBarActivity;
 import com.netease.nim.uikit.common.adapter.TAdapterDelegate;
@@ -35,6 +32,9 @@ import com.netease.nimlib.sdk.msg.constant.SystemMessageType;
 import com.netease.nimlib.sdk.msg.model.SystemMessage;
 import com.netease.nimlib.sdk.team.TeamService;
 import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.main.adapter.SystemMessageAdapter;
+import com.woyeyo.woyeyo.im.main.viewholder.SystemMessageViewHolder;
 
 import java.util.ArrayList;
 import java.util.HashSet;

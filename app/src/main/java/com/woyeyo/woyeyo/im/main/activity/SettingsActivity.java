@@ -10,20 +10,20 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.netease.nim.demo.DemoCache;
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.config.preference.Preferences;
-import com.netease.nim.demo.config.preference.UserPreferences;
-import com.netease.nim.demo.contact.activity.UserProfileSettingActivity;
-import com.netease.nim.demo.main.adapter.SettingsAdapter;
-import com.netease.nim.demo.main.model.SettingTemplate;
-import com.netease.nim.demo.main.model.SettingType;
 import com.netease.nim.uikit.common.activity.TActionBarActivity;
 import com.netease.nim.uikit.session.audio.MessageAudioControl;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.StatusBarNotificationConfig;
 import com.netease.nimlib.sdk.auth.AuthService;
 import com.netease.nimlib.sdk.msg.MsgService;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.DemoCache;
+import com.woyeyo.woyeyo.im.config.preference.Preferences;
+import com.woyeyo.woyeyo.im.config.preference.UserPreferences;
+import com.woyeyo.woyeyo.im.contact.activity.UserProfileSettingActivity;
+import com.woyeyo.woyeyo.im.main.adapter.SettingsAdapter;
+import com.woyeyo.woyeyo.im.main.model.SettingTemplate;
+import com.woyeyo.woyeyo.im.main.model.SettingType;
 
 import java.util.ArrayList;
 import java.util.List;

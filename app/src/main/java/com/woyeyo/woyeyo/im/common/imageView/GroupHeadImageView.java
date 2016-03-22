@@ -12,8 +12,8 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.netease.nim.demo.R;
 import com.netease.nim.uikit.common.util.media.BitmapDecoder;
+import com.woyeyo.woyeyo.R;
 
 import java.util.ArrayList;
 import java.util.List;

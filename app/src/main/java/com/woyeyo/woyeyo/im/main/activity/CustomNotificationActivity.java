@@ -14,10 +14,6 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONObject;
-import com.netease.nim.demo.DemoCache;
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.main.helper.CustomNotificationCache;
-import com.netease.nim.demo.main.viewholder.CustomNotificationViewHolder;
 import com.netease.nim.uikit.NimUIKit;
 import com.netease.nim.uikit.common.activity.TActionBarActivity;
 import com.netease.nim.uikit.common.adapter.TAdapter;
@@ -34,6 +30,10 @@ import com.netease.nimlib.sdk.msg.MsgService;
 import com.netease.nimlib.sdk.msg.MsgServiceObserve;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.CustomNotification;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.DemoCache;
+import com.woyeyo.woyeyo.im.main.helper.CustomNotificationCache;
+import com.woyeyo.woyeyo.im.main.viewholder.CustomNotificationViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -15,9 +15,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.contact.constant.UserConstant;
-import com.netease.nim.demo.contact.helper.UserUpdateHelper;
 import com.netease.nim.uikit.cache.FriendDataCache;
 import com.netease.nim.uikit.common.activity.TActionBarActivity;
 import com.netease.nim.uikit.common.ui.dialog.DialogMaker;
@@ -33,6 +30,9 @@ import com.netease.nimlib.sdk.friend.constant.FriendFieldEnum;
 import com.netease.nimlib.sdk.friend.model.Friend;
 import com.netease.nimlib.sdk.uinfo.constant.GenderEnum;
 import com.netease.nimlib.sdk.uinfo.constant.UserInfoFieldEnum;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.contact.constant.UserConstant;
+import com.woyeyo.woyeyo.im.contact.helper.UserUpdateHelper;
 
 import java.io.Serializable;
 import java.util.Calendar;

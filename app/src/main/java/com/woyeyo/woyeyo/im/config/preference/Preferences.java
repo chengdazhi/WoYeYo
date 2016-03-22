@@ -3,7 +3,8 @@ package com.woyeyo.woyeyo.im.config.preference;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.netease.nim.demo.DemoCache;
+import com.woyeyo.woyeyo.im.DemoCache;
+
 
 /**
  * Created by hzxuwen on 2015/4/13.

@@ -11,14 +11,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import com.netease.nim.demo.R;
-import com.netease.nim.demo.config.preference.UserPreferences;
-import com.netease.nim.demo.main.adapter.SettingsAdapter;
-import com.netease.nim.demo.main.model.SettingTemplate;
-import com.netease.nim.demo.main.model.SettingType;
 import com.netease.nim.uikit.common.activity.TActionBarActivity;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.StatusBarNotificationConfig;
+import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.config.preference.UserPreferences;
+import com.woyeyo.woyeyo.im.main.adapter.SettingsAdapter;
+import com.woyeyo.woyeyo.im.main.model.SettingTemplate;
+import com.woyeyo.woyeyo.im.main.model.SettingType;
 
 import java.util.ArrayList;
 import java.util.List;

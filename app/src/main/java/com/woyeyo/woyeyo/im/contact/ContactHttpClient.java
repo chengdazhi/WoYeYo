@@ -5,11 +5,11 @@ import android.content.pm.PackageManager;
 
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
-import com.netease.nim.demo.DemoCache;
-import com.netease.nim.demo.common.http.NimHttpClient;
-import com.netease.nim.demo.config.DemoServers;
 import com.netease.nim.uikit.common.util.log.LogUtil;
 import com.netease.nim.uikit.common.util.string.MD5;
+import com.woyeyo.woyeyo.im.DemoCache;
+import com.woyeyo.woyeyo.im.common.http.NimHttpClient;
+import com.woyeyo.woyeyo.im.config.DemoServers;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
