@@ -34,4 +34,33 @@ public class GetUserInfo implements IGetUserInfo {
             }
         }.start();
     }
+    @Override
+    public void getSellerInfo(String token,final OnGetUserInfoListener listener){
+        new Thread(){
+            @Override
+            public void run(){
+                try{
+                    Thread.sleep(1000);
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+                if(true){
+                    //TODO judge if get proper info
+                    user.setCommentNum(10);
+                    user.setGender("female");
+                    user.setImageUrl("http://cdn.duitang.com/uploads/item/201505/03/20150503170953_5MS8s.png");
+                    user.setNickName("Tony");
+                    user.setPersonId(1120141132);
+                    user.setStarNum(5);
+                    user.setDealNum(7);
+
+                    listener.getInfoSuccess(user);
+                }
+                else {
+                    listener.getInfoFailed();
+                }
+            }
+        }.start();
+
+    }
 }

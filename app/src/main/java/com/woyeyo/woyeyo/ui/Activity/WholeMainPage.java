@@ -45,6 +45,21 @@ public class WholeMainPage extends KBaseActivity {
                                 withEmail("mikepenz@gmail.com").withIcon(getResources().
                                 getDrawable(R.drawable.userimage))
                 )
+                .withOnAccountHeaderProfileImageListener(new AccountHeader.
+                        OnAccountHeaderProfileImageListener(){
+                    @Override
+                    public boolean onProfileImageClick(View view, IProfile profile, boolean current){
+                        Intent intent=new Intent(mContext,UserInfoActivity.class);
+                        mContext.startActivity(intent);
+                        return true;
+                    }
+                    @Override
+                    public boolean onProfileImageLongClick(View view,
+                                                           IProfile profile, boolean current){
+                        return onProfileImageClick(view,profile,current);
+                    }
+
+                })
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
                     public boolean onProfileChanged(View view, IProfile profile, boolean currentProfile) {

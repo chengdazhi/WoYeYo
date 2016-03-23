@@ -1,9 +1,12 @@
 package com.woyeyo.woyeyo.model;
 
 import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.bean.Trade;
 import com.woyeyo.woyeyo.bean.TradeInfo;
 import com.woyeyo.woyeyo.presenter.OnInfoListener;
 import com.woyeyo.woyeyo.utils.BitmapResource;
+import com.woyeyo.woyeyo.utils.Token;
+import com.woyeyo.woyeyo.utils.UrlConstants;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -35,6 +38,8 @@ public class GetTradeInfo implements GetTrade{
 
                         tradeInfo.setDescription("好东西" +formatter.format(curDate) );
                         tradeInfo.setPhoto(BitmapResource.getBitmapFromResource(R.drawable.userimage));
+
+                        tradeInfo.setPersonId(123312313);
                         list.add(tradeInfo);
                     }
                     listener.getInfoSuccess(list);
@@ -45,5 +50,37 @@ public class GetTradeInfo implements GetTrade{
             }
         }.start();
     }
-
+    public void getTradeHistory(final int itemCount,final OnInfoListener listener){
+        new Thread(){
+            @Override
+            public void run(){
+                try{
+                    Thread.sleep(1000);
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+                if(true){
+                    //TODO judge if get proper info
+                    String token= Token.getToken();
+                    //TODO:get token
+                    List<Trade> list=new ArrayList<Trade>();
+                    for(int i=1;i<=5;i++){
+                        int j=i+itemCount;
+                        Trade trade=new Trade();
+                        trade.setCouponImageUrl(UrlConstants.imgs[j%6]);
+                        trade.setDesc("fortest"+j);
+                        trade.setNickname("Neo"+j);
+                        trade.setPrice(j);
+                        trade.setTradeState(0);
+                        trade.setUserImageUrl(UrlConstants.userImg);
+                        list.add(trade);
+                    }
+                    listener.getInfoSuccess(list);
+                }
+                else {
+                    listener.getInfoFailed();
+                }
+            }
+        }.start();
+    }
 }

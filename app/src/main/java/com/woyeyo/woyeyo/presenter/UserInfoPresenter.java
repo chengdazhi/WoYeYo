@@ -41,6 +41,29 @@ public class UserInfoPresenter {
             }
         });
     }
+    public void getSellerInfofromServer(String token){
+        iGetUserInfo.getSellerInfo(token, new OnGetUserInfoListener() {
+            @Override
+            public void getInfoSuccess(final User user) {
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        iUserInfoView.showUserInfo(user);
+                    }
+                });
+            }
+
+            @Override
+            public void getInfoFailed() {
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        iUserInfoView.showError();
+                    }
+                });
+            }
+        });
+    }
 
 
 }

@@ -11,6 +11,7 @@ import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.melnykov.fab.FloatingActionButton;
 import com.woyeyo.woyeyo.R;
@@ -42,6 +43,11 @@ public abstract class BaseListViewFragment extends Fragment{
     protected LayoutInflater inflater;
     protected ViewGroup container;
     protected Context context;
+
+    /***
+     *  must set isLoadmore=false in toLoadMore function!!!
+     */
+    protected boolean isLoadMore;
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle saveInstanceState){
         this.inflater=inflater;
@@ -59,15 +65,21 @@ public abstract class BaseListViewFragment extends Fragment{
         initFactorsAtFirst();
 
         initAdapter();
-        initPrensenter();
+        initPresenter();
         initListViewFromResource();
+        initOnItemClickListenr();
         initPtrAndLoad(inflater);
         initFloatButton();
 
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
-
+                if(scrollState==AbsListView.OnScrollListener.SCROLL_STATE_IDLE){
+                    if (!isLoadMore&&view.getLastVisiblePosition() == (view.getCount() - 1)) {
+                        isLoadMore=true;
+                        loadData();
+                    }
+                }
 //                if (view.getFirstVisiblePosition()>1&&scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE) {
 //                    fab.show();
 //                }
@@ -85,9 +97,7 @@ public abstract class BaseListViewFragment extends Fragment{
             public void onScroll(AbsListView view, int firstVisibleItem,
                                  int visibleItemCount, int totalItemCount) {
                 lastItem = firstVisibleItem + visibleItemCount - 1;
-                if (view.getLastVisiblePosition() == view.getCount() - 1) {
-                    loadData();
-                }
+
                 if(view.getFirstVisiblePosition()<=2){
                     fab.hide();
                 }
@@ -100,13 +110,16 @@ public abstract class BaseListViewFragment extends Fragment{
         initPulltoFresh();
         getNewData();
     }
-    public void initPtrAndLoad(LayoutInflater inflater){
+    protected void initOnItemClickListenr(){
+
+    }
+    protected void initPtrAndLoad(LayoutInflater inflater){
         footView = inflater.inflate(R.layout.foot_view, null);
         loading = (RelativeLayout) footView.findViewById(R.id.loading);
         isLoading = (RelativeLayout) footView.findViewById(R.id.isLoading);
         listView.addFooterView(footView);
     }
-    public void initFloatButton(){
+    protected void initFloatButton(){
         fab = (FloatingActionButton) view.findViewById(R.id.fab);
         fab.attachToListView(listView);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -116,7 +129,7 @@ public abstract class BaseListViewFragment extends Fragment{
         });
 
     }
-    public void initPulltoFresh(){
+    protected void initPulltoFresh(){
         ptrFrameLayout=(PtrFrameLayout)view.findViewById(
                 R.id.material_style_ptr_frame);
         ptrFrameLayout.disableWhenHorizontalMove(true);
@@ -179,15 +192,17 @@ public abstract class BaseListViewFragment extends Fragment{
     public RelativeLayout getLoading(){
         return loading;
     }
-    public void initFactorsAtFirst(){
+    protected void initFactorsAtFirst(){
 
     }
     //child class must implement all the abstract method!
-    abstract void load();
-    abstract void getNewData();
-    abstract void inflateViewFromResource();
-    abstract void initListViewFromResource();
-    abstract void initAdapter();
-    abstract void initPrensenter();
+
+
+    abstract protected void load();
+    abstract protected void getNewData();
+    abstract protected void inflateViewFromResource();
+    abstract protected void initListViewFromResource();
+    abstract protected void initAdapter();
+    abstract protected void initPresenter();
 
 }

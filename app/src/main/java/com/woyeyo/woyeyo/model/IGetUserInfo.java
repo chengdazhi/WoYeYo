@@ -8,4 +8,5 @@ import com.woyeyo.woyeyo.presenter.OnInfoListener;
  */
 public interface IGetUserInfo {
     void getUserInfo(String token,OnGetUserInfoListener listener);
+    void getSellerInfo(String token,OnGetUserInfoListener listener);
 }

@@ -68,6 +68,24 @@
         android:background="#ffffff"
         android:flipInterval="30"
         android:persistentDrawingCache="animation" />
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:background="@color/orange"
+        android:layout_width="match_parent"
+        android:layout_height="42dp">
+        <Button
+            android:background="@color/md_orange_800"
+            android:id="@+id/publish_button"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:text="@string/publish_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
 
 </LinearLayout>
 <!-- From: file:/C:/Users/fam_000/Documents/GitHub/WoYeYo/app/src/main/res/layout/activity_trade_square.xml -->

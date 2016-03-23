@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/base_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toolbar Title"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/my_toolbar_title" />
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="15" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="2">
+                <ImageView
+                    android:id="@+id/coupon_activity_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:src="@drawable/userimage"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="这里是昵称"
+                    android:id="@+id/nickname" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/fivestar"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="楼上是5颗星"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:background="@color/gainsboro"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:id="@+id/coupon_detail_description"
+                    android:layout_height="match_parent"
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:gravity="center_vertical"
+                    android:text="@string/seller_info_trade_num_title"
+                    />
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.6"
+                    android:gravity="right|center_vertical"
+                    android:textSize="20sp"
+                    android:text="5"
+                    android:id="@+id/dealNum" />
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@color/gainsboro"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:id="@+id/coupon_detail_seller"
+                    android:layout_height="match_parent"
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:text="@string/seller_info_comment_num_title"
+                    />
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.6"
+                    android:gravity="center_vertical|right"
+                    android:textSize="20sp"
+                    android:text="8条"
+                    android:id="@+id/commentNum" />
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/accusation"
+                android:background="@color/gainsboro"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0px"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:text="@string/seller_info_accusation"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="0px"
+                android:layout_width="match_parent"
+                android:layout_weight="4">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="0px"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="@string/seller_info_button"
+                    android:id="@+id/sendInfo" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

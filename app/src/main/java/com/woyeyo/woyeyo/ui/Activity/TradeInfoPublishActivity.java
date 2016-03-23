@@ -1,7 +1,9 @@
 package com.woyeyo.woyeyo.ui.Activity;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.widget.LinearLayout;
@@ -14,6 +16,7 @@ import com.woyeyo.woyeyo.ui.fragment.BuyFragment;
 import com.woyeyo.woyeyo.ui.fragment.PublishBuyFragment;
 import com.woyeyo.woyeyo.ui.fragment.PublishSellFragment;
 import com.woyeyo.woyeyo.ui.fragment.SellFragment;
+import com.woyeyo.woyeyo.utils.Clog;
 
 import java.util.ArrayList;
 
@@ -26,9 +29,13 @@ public class TradeInfoPublishActivity extends KBaseActivity {
     //TODO get tradeId from intent
     private LinearLayout sellLayout;
     private LinearLayout buyLayout;
+    private Intent intent;
+    private boolean isBuy;
     @Override
     public void setResId(){
         mainResId= R.layout.activity_trade_info_publish;
+        intent=getIntent();
+        isBuy=intent.getBooleanExtra("isbuy", true);
     }
     @Override
     public void setToolBarTitle(){
@@ -65,7 +72,18 @@ public class TradeInfoPublishActivity extends KBaseActivity {
         SquarePageAdapter squarePageAdapter=new SquarePageAdapter(
                 getSupportFragmentManager(),fragments);
         viewPager.setAdapter(squarePageAdapter);
-        viewPager.setCurrentItem(0);
+        if(isBuy){
+            buyLayout.setBackgroundColor(getResources().getColor(R.color.md_deep_orange_400));
+            sellLayout.setBackgroundColor(getResources().getColor(R.color.md_deep_orange_100));
+
+            viewPager.setCurrentItem(0);
+        }
+        else{
+            buyLayout.setBackgroundColor(getResources().getColor(R.color.md_deep_orange_100));
+            sellLayout.setBackgroundColor(getResources().getColor(R.color.md_deep_orange_400));
+            viewPager.setCurrentItem(1);
+        }
+
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

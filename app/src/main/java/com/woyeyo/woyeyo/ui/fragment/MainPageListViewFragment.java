@@ -1,7 +1,9 @@
 package com.woyeyo.woyeyo.ui.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -9,6 +11,7 @@ import com.woyeyo.woyeyo.R;
 import com.woyeyo.woyeyo.adapter.CouponAdapter;
 import com.woyeyo.woyeyo.bean.Coupon;
 import com.woyeyo.woyeyo.presenter.CouponListPresenter;
+import com.woyeyo.woyeyo.ui.Activity.CouponDetailActivity;
 import com.woyeyo.woyeyo.view.ICouponListView;
 
 import java.util.List;
@@ -30,11 +33,24 @@ public class MainPageListViewFragment extends BaseListViewFragment implements IC
     protected void initAdapter(){
         couponAdapter = new CouponAdapter(context);
     }
-    protected void initPrensenter(){
+    @Override
+    public void initOnItemClickListenr(){
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Coupon coupon=(Coupon)listView.getAdapter().getItem(position);
+                long sendId=coupon.getCouponId();
+                Intent sendIntent=new Intent(context, CouponDetailActivity.class);
+                sendIntent.putExtra("couponId",sendId);
+                context.startActivity(sendIntent);
+            }
+        });
+    }
+    protected void initPresenter(){
         couponListPresenter = new CouponListPresenter(this);
     }
     protected void load() {
-        int count=couponAdapter.getCount()+1;
+        int count=couponAdapter.getCount();
         couponTopId=couponAdapter.getCouponTopId();
         scrollImgTopId=couponAdapter.getScrollImgTopId();
         couponListPresenter.getInfoIntoView(couponTopId,scrollImgTopId,count);
@@ -59,6 +75,7 @@ public class MainPageListViewFragment extends BaseListViewFragment implements IC
         couponAdapter.addItem(list);
         couponAdapter.notifyDataSetChanged();
         loading.setVisibility(View.GONE);
+        isLoadMore=false;
     }
     @Override
     public void showFailedError(){

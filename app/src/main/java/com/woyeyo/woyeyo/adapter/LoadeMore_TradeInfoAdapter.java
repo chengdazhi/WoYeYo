@@ -46,7 +46,7 @@ public class LoadeMore_TradeInfoAdapter extends KBaseAdapter<TradeInfo>{
         viewHolder.Star.setImageBitmap(BitmapResource.getBitmapFromResource(R.drawable.fivestar));
         return view;
     }
-    class ViewHolder{
+    private class ViewHolder{
         ImageView Photo;
         ImageView Star;
         TextView description;

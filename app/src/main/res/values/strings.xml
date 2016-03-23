@@ -61,4 +61,54 @@
     <string name="empty_price">价格不能为空</string>
     <string name="empty_sell_desc">请输入商品描述</string>
     <string name="empty_buy_desc">请输入需求描述</string>
+    <string name="buy_right_now">马上购买</string>
+    <string name="publish_button">立即发布</string>
+    <string name="address_text">地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地址地</string>
+    <string name="address_number">13883151725</string>
+    <string name="address_name">小李</string>
+    <string name="detail_title">活动详情</string>
+    <string name="detail_description">活动描述</string>
+    <string name="detail_seller">卖家</string>
+    <string name="detail_details">活动详情</string>
+    <string name="detail_rules">交易规则</string>
+    <string name="user_agreement_title">用户协议</string>
+    <string name="user_agreement_content_title">《用户协议》</string>
+    <string name="user_agreement_content">北京我也有科技有限公司（以下简称“陌陌科技”）在此特别提醒您（用户）在注册成为用户之前，请认真阅读本《用户协议》（以下简称“协议”），确保您充分理解本协议中各条款。请您审慎阅读并选择接受或不接受本协议。除非您接受本协议所有条款，否则您无权注册、登录或使用本协议所涉服务。您的注册、登录、使用等行为将视为对本协议的接受，并同意接受本协议各项条款的约束。
+                                        本协议约定陌陌科技与用户之间关于“陌陌”软件服务（以下简称“服务”）的权利义务。“用户”是指注册、登录、使用本服务的个人。本协议可由陌陌科技随时更新，更新后的协议条款一旦公布即代替原来的协议条款，恕不再另行通知，用户可在本网站查阅最新版协议条款。在陌陌科技修改协议条款后，如果用户不接受修改后的条款，请立即停止使用陌陌科技提供的服务，用户继续使用陌陌科技提供的服务将被视为接受修改后的协议。
+    </string>
+    <string name="coupon_detail_title">活动详情</string>
+    <string name="coupon_detail_activity_description">活动描述</string>
+    <string name="coupon_detail_seller">商家</string>
+    <string name="coupon_detail_activity_details">活动详情</string>
+    <string name="coupon_detail_trade_rules">交易规则</string>
+    <string name="coupon_detail_button_get">领取</string>
+    <string name="coupon_detail_button_trade">交易</string>
+    <string name="seller_info_title">卖家信息</string>
+    <string name="seller_info_trade_num_title">成交数量</string>
+    <string name="seller_info_comment_num_title">个人评价</string>
+    <string name="seller_info_accusation">举报</string>
+    <string name="seller_info_button">发送消息</string>
+    <string name="trade_history_title">交易记录</string>
+    <string name="trade_history_contact_seller">联系卖家</string>
+    <string name="trade_history_contact_buyer">联系买家</string>
+    <string name="trade_history_status_is_finish">确认收货</string>
+    <string name="trade_history_status_is_start">确认发货</string>
+    <string name="choose_address_title">选择收获地址</string>
+    <string name="manage_address_title">管理地址</string>
+    <string name="tiao">条</string>
+    <string name="comment_detail_title">评论详情</string>
+    <string name="comment_detail_reply_hint">请输入回复内容</string>
+    <string name="comment_starnum">综合评分</string>
+    <string name="comment_content">商品评价</string>
+    <string name="comment_submit">提交评价</string>
+    <string name="comment_title">评价</string>
+    <string name="person_comment_title">个人评价</string>
+    <string name="status_orderd_button">取消发布</string>
+    <string name="status_paid_button"></string>
+    <string name="status_sent_button"></string>
+    <string name="status_recived_button"></string>
+    <string name="status_comment_button"></string>
+    <string name="status_complete_button"></string>
+    <string name="status_close_button"></string>
+
 </resources>

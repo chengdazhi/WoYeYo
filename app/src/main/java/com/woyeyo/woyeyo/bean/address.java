@@ -3,7 +3,7 @@ package com.woyeyo.woyeyo.bean;
 /**
  * Created by fam_000 on 2016/3/6.
  */
-public class address {
+public class Address {
     private long personId;
     private long addressId;
     private String name;

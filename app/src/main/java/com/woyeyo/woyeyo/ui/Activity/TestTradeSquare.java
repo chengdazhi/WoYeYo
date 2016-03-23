@@ -1,5 +1,7 @@
 package com.woyeyo.woyeyo.ui.Activity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
@@ -9,6 +11,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +34,9 @@ public class TestTradeSquare extends KBaseActivity{
     //TODO get tradeId from intent
     private LinearLayout sellLayout;
     private LinearLayout buyLayout;
+    private Button pubButton;
+    private Context context;
+    private boolean isBuy;
 
     @Override
     public void setResId(){
@@ -45,13 +51,25 @@ public class TestTradeSquare extends KBaseActivity{
         fragments=new ArrayList<Fragment>();
         InitTextView();
         InitViewPager();
+        context=TestTradeSquare.this;
+        isBuy=true;
     }
     private void InitTextView() {
         sellLayout=(LinearLayout)findViewById(R.id.sellLayout);
         buyLayout=(LinearLayout)findViewById(R.id.buyLayout);
         textViewBuy = (TextView) findViewById(R.id.textBuy);
         textViewSell = (TextView) findViewById(R.id.textSell);
+        pubButton=(Button)findViewById(R.id.publish_button);
 
+        pubButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context
+                        , TradeInfoPublishActivity.class);
+                intent.putExtra("isbuy",isBuy);
+                context.startActivity(intent);
+            }
+        });
         textViewBuy.setOnClickListener(new MyOnClickListener(0));
         textViewSell.setOnClickListener(new MyOnClickListener(1));
 
@@ -86,7 +104,7 @@ public class TestTradeSquare extends KBaseActivity{
                                 getResources().getColor(R.color.md_deep_orange_400));
                         sellLayout.setBackgroundColor(
                                 getResources().getColor(R.color.md_deep_orange_100));
-
+                        isBuy=true;
 
                         break;
                     case 1:
@@ -94,6 +112,7 @@ public class TestTradeSquare extends KBaseActivity{
                                 getResources().getColor(R.color.md_deep_orange_100));
                         sellLayout.setBackgroundColor(
                                 getResources().getColor(R.color.md_deep_orange_400));
+                        isBuy=false;
                         break;
                 }
             }
@@ -115,7 +134,7 @@ public class TestTradeSquare extends KBaseActivity{
                 buyLayout.setBackgroundColor(getResources().getColor(R.color.md_deep_orange_100));
                 sellLayout.setBackgroundColor(getResources().getColor(R.color.md_deep_orange_400));
                 viewPager.setCurrentItem(index);
-
+                isBuy=true;
 
 
 
@@ -124,6 +143,7 @@ public class TestTradeSquare extends KBaseActivity{
                 buyLayout.setBackgroundColor(getResources().getColor(R.color.md_deep_orange_400));
                 sellLayout.setBackgroundColor(getResources().getColor(R.color.md_deep_orange_100));
                 viewPager.setCurrentItem(index);
+                isBuy=false;
             }
         }
     }

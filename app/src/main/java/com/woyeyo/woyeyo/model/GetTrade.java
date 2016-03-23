@@ -8,4 +8,5 @@ import com.woyeyo.woyeyo.presenter.OnInfoListener;
  */
 public interface GetTrade {
     void getTradeInfo(final long tradeId,int itemCount,OnInfoListener listener );
+    void getTradeHistory(int itemCount,OnInfoListener listener);
 }
