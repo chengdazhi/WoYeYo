@@ -21,8 +21,8 @@ import com.woyeyo.woyeyo.R;
 public class WholeMainPage extends KBaseActivity {
     private Drawer result;
     public void setResId(){
-        mainResId= R.layout.activity_test_whole_main_page;
-        toolbarResId=R.id.test_main_page_toolbar;
+        mainResId = R.layout.activity_test_whole_main_page;
+        toolbarResId = R.id.test_main_page_toolbar;
     }
     public void setToolBarTitle(){
         title=R.string.mainpage_title;

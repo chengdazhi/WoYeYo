@@ -18,7 +18,16 @@ android {
         }
     }
 
-    
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs', 'libs-sdk']
+
+        }
+
+    }
+
+
+
 }
 
 
@@ -52,4 +61,7 @@ dependencies {
     compile files('libs/httpmime-4.5.jar')
     compile files('libs/jna-4.1.0.jar')
     compile files('libs/jna-platform-4.1.0.jar')
+    compile files('libs/nim-sdk-2.0.1.jar')
+    compile files('libs/nrtc-sdk-1.1.0.jar')
+    compile files('libs/cosinesdk.jar')
 }

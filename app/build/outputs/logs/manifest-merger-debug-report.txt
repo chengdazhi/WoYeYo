@@ -115,153 +115,405 @@ MERGED from com.android.support:support-v4:23.2.0:22:5
 	android:name
 		ADDED from AndroidManifest.xml:36:9
 meta-data#com.netease.nim.appKey
-ADDED from AndroidManifest.xml:47:9
+ADDED from AndroidManifest.xml:53:9
 	android:name
-		ADDED from AndroidManifest.xml:48:13
-	android:value
-		ADDED from AndroidManifest.xml:49:13
-service#com.netease.nimlib.service.NimService
-ADDED from AndroidManifest.xml:52:9
-	android:process
 		ADDED from AndroidManifest.xml:54:13
+	android:value
+		ADDED from AndroidManifest.xml:55:13
+service#com.netease.nimlib.service.NimService
+ADDED from AndroidManifest.xml:58:9
+	android:process
+		ADDED from AndroidManifest.xml:60:13
 	android:name
-		ADDED from AndroidManifest.xml:53:13
+		ADDED from AndroidManifest.xml:59:13
 service#com.netease.nimlib.service.NimService$Aux
-ADDED from AndroidManifest.xml:55:9
+ADDED from AndroidManifest.xml:61:9
 	android:process
-		ADDED from AndroidManifest.xml:57:13
+		ADDED from AndroidManifest.xml:63:13
 	android:name
-		ADDED from AndroidManifest.xml:56:13
-receiver#com.netease.nimlib.service.NimReceiver
-ADDED from AndroidManifest.xml:63:9
-	android:process
+		ADDED from AndroidManifest.xml:62:13
+uses-library#com.google.android.maps
+ADDED from AndroidManifest.xml:65:9
+	android:required
+		ADDED from AndroidManifest.xml:67:13
+	android:name
 		ADDED from AndroidManifest.xml:66:13
-	android:exported
-		ADDED from AndroidManifest.xml:65:13
-	android:name
-		ADDED from AndroidManifest.xml:64:13
-intent-filter#android.intent.action.BOOT_COMPLETED+android.net.conn.CONNECTIVITY_CHANGE
-ADDED from AndroidManifest.xml:67:13
-action#android.intent.action.BOOT_COMPLETED
-ADDED from AndroidManifest.xml:68:17
-	android:name
-		ADDED from AndroidManifest.xml:68:25
-action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from AndroidManifest.xml:69:17
-	android:name
-		ADDED from AndroidManifest.xml:69:25
-receiver#com.netease.nimlib.service.ResponseReceiver
-ADDED from AndroidManifest.xml:74:9
-	android:name
-		ADDED from AndroidManifest.xml:74:19
-service#com.netease.cosine.core.CosineService
-ADDED from AndroidManifest.xml:77:9
-	android:process
-		ADDED from AndroidManifest.xml:79:13
-	android:name
+activity#com.woyeyo.woyeyo.im.main.activity.WelcomeActivity
+ADDED from AndroidManifest.xml:70:9
+	android:windowSoftInputMode
 		ADDED from AndroidManifest.xml:78:13
-receiver#com.netease.cosine.target.CosineReceiver
-ADDED from AndroidManifest.xml:82:9
-	android:process
-		ADDED from AndroidManifest.xml:85:13
-	android:exported
-		ADDED from AndroidManifest.xml:84:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:76:13
+	android:label
+		ADDED from AndroidManifest.xml:74:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:72:13
+	android:theme
+		ADDED from AndroidManifest.xml:77:13
+	android:hardwareAccelerated
+		ADDED from AndroidManifest.xml:73:13
 	android:name
-		ADDED from AndroidManifest.xml:83:13
-meta-data#com.netease.cosine.target
+		ADDED from AndroidManifest.xml:71:13
+	android:launchMode
+		ADDED from AndroidManifest.xml:75:13
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER+android.intent.category.MULTIWINDOW_LAUNCHER
+ADDED from AndroidManifest.xml:79:13
+action#android.intent.action.MAIN
+ADDED from AndroidManifest.xml:80:17
+	android:name
+		ADDED from AndroidManifest.xml:80:25
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:82:17
+	android:name
+		ADDED from AndroidManifest.xml:82:27
+category#android.intent.category.MULTIWINDOW_LAUNCHER
+ADDED from AndroidManifest.xml:83:17
+	android:name
+		ADDED from AndroidManifest.xml:83:27
+activity#com.woyeyo.woyeyo.im.main.activity.MainActivity
 ADDED from AndroidManifest.xml:88:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:94:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:93:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:90:13
+	android:hardwareAccelerated
+		ADDED from AndroidManifest.xml:91:13
 	android:name
 		ADDED from AndroidManifest.xml:89:13
-	android:value
-		ADDED from AndroidManifest.xml:90:13
-meta-data#com.netease.cosine.target.receiver
-ADDED from AndroidManifest.xml:91:9
-	android:name
+	android:launchMode
 		ADDED from AndroidManifest.xml:92:13
-	android:value
-		ADDED from AndroidManifest.xml:93:13
-activity#com.woyeyo.woyeyo.ui.Activity.ListViewShow
-ADDED from AndroidManifest.xml:95:9
-	android:name
-		ADDED from AndroidManifest.xml:95:19
-activity#com.woyeyo.woyeyo.ui.Activity.TradeSquareActivity
-ADDED from AndroidManifest.xml:96:9
-	android:name
-		ADDED from AndroidManifest.xml:96:19
-activity#com.woyeyo.woyeyo.ui.Activity.TestTradeSquare
-ADDED from AndroidManifest.xml:97:9
-	android:name
-		ADDED from AndroidManifest.xml:97:19
-activity#com.woyeyo.woyeyo.ui.Activity.TestFragmentActivity
+activity#com.woyeyo.woyeyo.im.main.activity.MultiportActivity
 ADDED from AndroidManifest.xml:98:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:102:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:101:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:100:13
 	android:name
-		ADDED from AndroidManifest.xml:98:19
-activity#com.woyeyo.woyeyo.ui.Activity.TestImageLoader
-ADDED from AndroidManifest.xml:99:9
-	android:name
-		ADDED from AndroidManifest.xml:99:19
-activity#com.woyeyo.woyeyo.ui.Activity.AboutActivity
-ADDED from AndroidManifest.xml:100:9
-	android:name
-		ADDED from AndroidManifest.xml:100:19
-activity#com.woyeyo.woyeyo.ui.Activity.AccusationActivity
-ADDED from AndroidManifest.xml:101:9
-	android:name
-		ADDED from AndroidManifest.xml:101:19
-activity#com.woyeyo.woyeyo.ui.Activity.FeedbackActivity
-ADDED from AndroidManifest.xml:102:9
-	android:name
-		ADDED from AndroidManifest.xml:102:19
-activity#com.woyeyo.woyeyo.ui.Activity.GuaranteeInstructionActivity
-ADDED from AndroidManifest.xml:103:9
-	android:name
-		ADDED from AndroidManifest.xml:103:19
-activity#com.woyeyo.woyeyo.ui.Activity.UserInfoActivity
-ADDED from AndroidManifest.xml:104:9
-	android:name
-		ADDED from AndroidManifest.xml:104:19
-activity#com.woyeyo.woyeyo.ui.Activity.MainPageActivity
-ADDED from AndroidManifest.xml:105:9
-	android:name
-		ADDED from AndroidManifest.xml:105:19
-activity#com.woyeyo.woyeyo.ui.Activity.TestActivity
+		ADDED from AndroidManifest.xml:99:13
+activity#com.woyeyo.woyeyo.im.login.LoginActivity
 ADDED from AndroidManifest.xml:106:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:112:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:110:13
+	android:label
+		ADDED from AndroidManifest.xml:109:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:108:13
+	android:theme
+		ADDED from AndroidManifest.xml:111:13
 	android:name
-		ADDED from AndroidManifest.xml:106:19
+		ADDED from AndroidManifest.xml:107:13
+activity#com.woyeyo.woyeyo.im.main.activity.AboutActivity
+ADDED from AndroidManifest.xml:115:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:121:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:119:13
+	android:label
+		ADDED from AndroidManifest.xml:118:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:117:13
+	android:theme
+		ADDED from AndroidManifest.xml:120:13
+	android:name
+		ADDED from AndroidManifest.xml:116:13
+activity#com.woyeyo.woyeyo.im.main.activity.SettingsActivity
+ADDED from AndroidManifest.xml:123:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:127:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:126:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:125:13
+	android:name
+		ADDED from AndroidManifest.xml:124:13
+activity#com.woyeyo.woyeyo.im.main.activity.NoDisturbActivity
+ADDED from AndroidManifest.xml:129:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:133:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:132:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:131:13
+	android:name
+		ADDED from AndroidManifest.xml:130:13
+activity#com.woyeyo.woyeyo.im.contact.activity.AddFriendActivity
+ADDED from AndroidManifest.xml:135:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:139:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:138:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:137:13
+	android:name
+		ADDED from AndroidManifest.xml:136:13
+activity#com.woyeyo.woyeyo.im.contact.activity.UserProfileActivity
+ADDED from AndroidManifest.xml:141:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:145:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:144:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:143:13
+	android:name
+		ADDED from AndroidManifest.xml:142:13
+activity#com.woyeyo.woyeyo.im.contact.activity.UserProfileSettingActivity
+ADDED from AndroidManifest.xml:147:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:151:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:150:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:149:13
+	android:name
+		ADDED from AndroidManifest.xml:148:13
+activity#com.woyeyo.woyeyo.im.contact.activity.UserProfileEditItemActivity
+ADDED from AndroidManifest.xml:153:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:157:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:156:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:155:13
+	android:name
+		ADDED from AndroidManifest.xml:154:13
+activity#com.woyeyo.woyeyo.im.contact.activity.BlackListActivity
+ADDED from AndroidManifest.xml:159:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:163:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:162:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:161:13
+	android:name
+		ADDED from AndroidManifest.xml:160:13
+activity#com.woyeyo.woyeyo.im.main.activity.EditNicknameActivity
+ADDED from AndroidManifest.xml:165:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:169:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:168:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:167:13
+	android:name
+		ADDED from AndroidManifest.xml:166:13
+activity#com.woyeyo.woyeyo.im.main.activity.SystemMessageActivity
+ADDED from AndroidManifest.xml:181:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:186:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:184:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:183:13
+	android:theme
+		ADDED from AndroidManifest.xml:185:13
+	android:name
+		ADDED from AndroidManifest.xml:182:13
+activity#com.woyeyo.woyeyo.im.main.activity.CustomNotificationActivity
+ADDED from AndroidManifest.xml:187:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:192:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:190:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:189:13
+	android:theme
+		ADDED from AndroidManifest.xml:191:13
+	android:name
+		ADDED from AndroidManifest.xml:188:13
+activity#com.woyeyo.woyeyo.im.session.activity.MessageHistoryActivity
+ADDED from AndroidManifest.xml:193:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:198:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:196:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:195:13
+	android:theme
+		ADDED from AndroidManifest.xml:197:13
+	android:name
+		ADDED from AndroidManifest.xml:194:13
+activity#com.woyeyo.woyeyo.im.session.activity.MessageInfoActivity
+ADDED from AndroidManifest.xml:199:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:204:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:202:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:201:13
+	android:theme
+		ADDED from AndroidManifest.xml:203:13
+	android:name
+		ADDED from AndroidManifest.xml:200:13
+activity#com.woyeyo.woyeyo.im.main.activity.GlobalSearchActivity
+ADDED from AndroidManifest.xml:225:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:230:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:228:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:227:13
+	android:theme
+		ADDED from AndroidManifest.xml:229:13
+	android:name
+		ADDED from AndroidManifest.xml:226:13
+activity#com.woyeyo.woyeyo.im.session.activity.WatchSnapChatPictureActivity
+ADDED from AndroidManifest.xml:234:9
+	android:configChanges
+		ADDED from AndroidManifest.xml:236:13
+	android:name
+		ADDED from AndroidManifest.xml:235:13
+activity#com.woyeyo.woyeyo.im.session.search.SearchMessageActivity
+ADDED from AndroidManifest.xml:270:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:275:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:273:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:272:13
+	android:theme
+		ADDED from AndroidManifest.xml:274:13
+	android:name
+		ADDED from AndroidManifest.xml:271:13
+activity#com.woyeyo.woyeyo.im.session.search.DisplayMessageActivity
+ADDED from AndroidManifest.xml:277:9
+	android:windowSoftInputMode
+		ADDED from AndroidManifest.xml:282:13
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:280:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:279:13
+	android:theme
+		ADDED from AndroidManifest.xml:281:13
+	android:name
+		ADDED from AndroidManifest.xml:278:13
+receiver#com.netease.nimlib.service.NimReceiver
+ADDED from AndroidManifest.xml:288:9
+	android:process
+		ADDED from AndroidManifest.xml:291:13
+	android:exported
+		ADDED from AndroidManifest.xml:290:13
+	android:name
+		ADDED from AndroidManifest.xml:289:13
+intent-filter#android.intent.action.BOOT_COMPLETED+android.net.conn.CONNECTIVITY_CHANGE
+ADDED from AndroidManifest.xml:292:13
+action#android.intent.action.BOOT_COMPLETED
+ADDED from AndroidManifest.xml:293:17
+	android:name
+		ADDED from AndroidManifest.xml:293:25
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from AndroidManifest.xml:294:17
+	android:name
+		ADDED from AndroidManifest.xml:294:25
+receiver#com.netease.nimlib.service.ResponseReceiver
+ADDED from AndroidManifest.xml:299:9
+	android:name
+		ADDED from AndroidManifest.xml:299:19
+service#com.netease.cosine.core.CosineService
+ADDED from AndroidManifest.xml:302:9
+	android:process
+		ADDED from AndroidManifest.xml:304:13
+	android:name
+		ADDED from AndroidManifest.xml:303:13
+receiver#com.netease.cosine.target.CosineReceiver
+ADDED from AndroidManifest.xml:307:9
+	android:process
+		ADDED from AndroidManifest.xml:310:13
+	android:exported
+		ADDED from AndroidManifest.xml:309:13
+	android:name
+		ADDED from AndroidManifest.xml:308:13
+meta-data#com.netease.cosine.target
+ADDED from AndroidManifest.xml:313:9
+	android:name
+		ADDED from AndroidManifest.xml:314:13
+	android:value
+		ADDED from AndroidManifest.xml:315:13
+meta-data#com.netease.cosine.target.receiver
+ADDED from AndroidManifest.xml:316:9
+	android:name
+		ADDED from AndroidManifest.xml:317:13
+	android:value
+		ADDED from AndroidManifest.xml:318:13
+activity#com.woyeyo.woyeyo.ui.Activity.ListViewShow
+ADDED from AndroidManifest.xml:320:9
+	android:name
+		ADDED from AndroidManifest.xml:320:19
+activity#com.woyeyo.woyeyo.ui.Activity.TradeSquareActivity
+ADDED from AndroidManifest.xml:321:9
+	android:name
+		ADDED from AndroidManifest.xml:321:19
+activity#com.woyeyo.woyeyo.ui.Activity.TestTradeSquare
+ADDED from AndroidManifest.xml:322:9
+	android:name
+		ADDED from AndroidManifest.xml:322:19
+activity#com.woyeyo.woyeyo.ui.Activity.TestFragmentActivity
+ADDED from AndroidManifest.xml:323:9
+	android:name
+		ADDED from AndroidManifest.xml:323:19
+activity#com.woyeyo.woyeyo.ui.Activity.TestImageLoader
+ADDED from AndroidManifest.xml:324:9
+	android:name
+		ADDED from AndroidManifest.xml:324:19
+activity#com.woyeyo.woyeyo.ui.Activity.AboutActivity
+ADDED from AndroidManifest.xml:325:9
+	android:name
+		ADDED from AndroidManifest.xml:325:19
+activity#com.woyeyo.woyeyo.ui.Activity.AccusationActivity
+ADDED from AndroidManifest.xml:326:9
+	android:name
+		ADDED from AndroidManifest.xml:326:19
+activity#com.woyeyo.woyeyo.ui.Activity.FeedbackActivity
+ADDED from AndroidManifest.xml:327:9
+	android:name
+		ADDED from AndroidManifest.xml:327:19
+activity#com.woyeyo.woyeyo.ui.Activity.GuaranteeInstructionActivity
+ADDED from AndroidManifest.xml:328:9
+	android:name
+		ADDED from AndroidManifest.xml:328:19
+activity#com.woyeyo.woyeyo.ui.Activity.UserInfoActivity
+ADDED from AndroidManifest.xml:329:9
+	android:name
+		ADDED from AndroidManifest.xml:329:19
+activity#com.woyeyo.woyeyo.ui.Activity.MainPageActivity
+ADDED from AndroidManifest.xml:330:9
+	android:name
+		ADDED from AndroidManifest.xml:330:19
+activity#com.woyeyo.woyeyo.ui.Activity.TestActivity
+ADDED from AndroidManifest.xml:331:9
+	android:name
+		ADDED from AndroidManifest.xml:331:19
 activity#com.woyeyo.woyeyo.ui.Activity.TestCouponListViewFragment
-ADDED from AndroidManifest.xml:107:9
+ADDED from AndroidManifest.xml:332:9
 	android:name
-		ADDED from AndroidManifest.xml:107:19
+		ADDED from AndroidManifest.xml:332:19
 activity#com.woyeyo.woyeyo.ui.Activity.TestBaseListViewFragmentActivity
-ADDED from AndroidManifest.xml:108:9
+ADDED from AndroidManifest.xml:333:9
 	android:name
-		ADDED from AndroidManifest.xml:108:19
+		ADDED from AndroidManifest.xml:333:19
 activity#com.woyeyo.woyeyo.ui.Activity.TestDrawerActivity
-ADDED from AndroidManifest.xml:109:9
+ADDED from AndroidManifest.xml:334:9
 	android:name
-		ADDED from AndroidManifest.xml:109:19
+		ADDED from AndroidManifest.xml:334:19
 activity#com.woyeyo.woyeyo.ui.Activity.TestWholeMainPAGE
-ADDED from AndroidManifest.xml:110:9
+ADDED from AndroidManifest.xml:335:9
 	android:name
-		ADDED from AndroidManifest.xml:110:19
+		ADDED from AndroidManifest.xml:335:19
 activity#com.woyeyo.woyeyo.ui.Activity.CategoryCouponActivity
-ADDED from AndroidManifest.xml:112:9
+ADDED from AndroidManifest.xml:337:9
 	android:name
-		ADDED from AndroidManifest.xml:112:19
+		ADDED from AndroidManifest.xml:337:19
 activity#com.woyeyo.woyeyo.ui.Activity.WholeMainPage
-ADDED from AndroidManifest.xml:113:9
+ADDED from AndroidManifest.xml:338:9
 	android:name
-		ADDED from AndroidManifest.xml:113:19
+		ADDED from AndroidManifest.xml:338:19
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:114:13
-action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:115:17
-	android:name
-		ADDED from AndroidManifest.xml:115:25
-category#android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:117:17
-	android:name
-		ADDED from AndroidManifest.xml:117:27
+ADDED from AndroidManifest.xml:339:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.melnykov:floatingactionbutton:1.3.0:8:5

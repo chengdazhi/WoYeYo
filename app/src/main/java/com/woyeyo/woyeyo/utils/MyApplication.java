@@ -40,7 +40,6 @@ import com.woyeyo.woyeyo.im.config.preference.Preferences;
 import com.woyeyo.woyeyo.im.config.preference.UserPreferences;
 import com.woyeyo.woyeyo.im.contact.ContactHelper;
 import com.woyeyo.woyeyo.im.main.activity.WelcomeActivity;
-import com.woyeyo.woyeyo.im.session.NimDemoLocationProvider;
 import com.woyeyo.woyeyo.im.session.SessionHelper;
 
 import java.util.ArrayList;
@@ -334,7 +333,7 @@ public class MyApplication extends Application {
         NimUIKit.init(this, infoProvider, contactProvider);
 
         // 设置地理位置提供者。如果需要发送地理位置消息，该参数必须提供。如果不需要，可以忽略。
-        NimUIKit.setLocationProvider(new NimDemoLocationProvider());
+        //NimUIKit.setLocationProvider(new NimDemoLocationProvider());
 
         // 会话窗口的定制初始化。
         SessionHelper.init();

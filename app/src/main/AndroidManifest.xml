@@ -38,6 +38,12 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+<!--
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="${AMAP_KEY}"/>
+
+           -->
 
         <!-- APP_KEY: 459509bf57b185654107d01090c9de9c -->
         <!--
@@ -55,6 +61,225 @@
         <service
             android:name="com.netease.nimlib.service.NimService$Aux"
             android:process=":core" />
+
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="false"/>
+
+        <!-- 导航页 -->
+        <activity
+            android:name=".im.main.activity.WelcomeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/WelcomeEntranceActionBarTheme"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 主界面 -->
+        <activity
+            android:name=".im.main.activity.MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <!-- 多端登录管理 -->
+        <activity
+            android:name=".im.main.activity.MultiportActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+        </activity>
+
+        <!-- 登录界面 -->
+        <activity
+            android:name=".im.login.LoginActivity"
+            android:configChanges="orientation"
+            android:label="@string/login"
+            android:screenOrientation="portrait"
+            android:theme="@style/BlueActionBarTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+
+        <!-- 关于 -->
+        <activity
+            android:name=".im.main.activity.AboutActivity"
+            android:configChanges="orientation"
+            android:label="@string/about"
+            android:screenOrientation="portrait"
+            android:theme="@style/OverlayBaseActionBarTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <activity
+            android:name=".im.main.activity.SettingsActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name=".im.main.activity.NoDisturbActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <activity
+            android:name=".im.contact.activity.AddFriendActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <activity
+            android:name=".im.contact.activity.UserProfileActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <activity
+            android:name=".im.contact.activity.UserProfileSettingActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <activity
+            android:name=".im.contact.activity.UserProfileEditItemActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <activity
+            android:name=".im.contact.activity.BlackListActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <activity
+            android:name=".im.main.activity.EditNicknameActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+
+        <!-- 文件管理器 -->
+        <!--
+        <activity
+            android:name=".file.browser.FileBrowserActivity"
+            android:configChanges="orientation"
+            android:label="@string/file_browser"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+            -->
+
+        <activity
+            android:name=".im.main.activity.SystemMessageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/OverlayBaseActionBarTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".im.main.activity.CustomNotificationActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/OverlayBaseActionBarTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".im.session.activity.MessageHistoryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/OverlayBaseActionBarTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name=".im.session.activity.MessageInfoActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightBaseActionBarTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+<!--
+        <activity
+            android:name=".team.activity.AdvancedTeamSearchActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+
+        <activity
+            android:name=".team.activity.AdvancedTeamJoinActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+
+        <activity
+            android:name=".im.main.activity.TeamListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+-->
+        <!-- 全局搜索 -->
+        <activity
+            android:name=".im.main.activity.GlobalSearchActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/global_search_bg"
+            android:windowSoftInputMode="stateUnspecified">
+        </activity>
+
+        <!-- 查看阅后即焚 -->
+        <activity
+            android:name=".im.session.activity.WatchSnapChatPictureActivity"
+            android:configChanges="keyboardHidden"/>
+        <!-- map -->
+        <!--
+        <activity
+            android:name=".location.activity.LocationAmapActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/location_map"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".location.activity.NavigationAmapActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/location_navigate"
+            android:screenOrientation="portrait"/>
+            -->
+
+        <!-- 音视频 -->
+        <!--
+        <activity
+            android:name=".avchat.activity.AVChatActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+-->
+        <!-- 白板 -->
+        <!--
+        <activity
+            android:name=".rts.activity.RTSActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+            -->
+
+        <!-- 消息历史搜索 -->
+        <activity
+            android:name=".im.session.search.SearchMessageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/global_search_bg"
+            android:windowSoftInputMode="adjustPan|stateUnspecified"/>
+
+        <activity
+            android:name=".im.session.search.DisplayMessageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/OverlayBaseActionBarTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
 
         <!--
              云信SDK的监视系统启动和网络变化的广播接收器，用户开机自启动以及网络变化时候重新登录，

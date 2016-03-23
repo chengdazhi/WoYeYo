@@ -28,7 +28,6 @@ import com.woyeyo.woyeyo.im.main.model.MainTab;
 import com.woyeyo.woyeyo.im.main.reminder.ReminderManager;
 import com.woyeyo.woyeyo.im.session.SessionHelper;
 import com.woyeyo.woyeyo.im.session.extension.GuessAttachment;
-import com.woyeyo.woyeyo.im.session.extension.RTSAttachment;
 import com.woyeyo.woyeyo.im.session.extension.SnapChatAttachment;
 import com.woyeyo.woyeyo.im.session.extension.StickerAttachment;
 
@@ -214,9 +213,9 @@ public class SessionListFragment extends MainTabFragment {
                 if (attachment instanceof GuessAttachment) {
                     GuessAttachment guess = (GuessAttachment) attachment;
                     return guess.getValue().getDesc();
-                } else if (attachment instanceof RTSAttachment) {
+                }/* else if (attachment instanceof RTSAttachment) {
                     return "[白板]";
-                } else if (attachment instanceof StickerAttachment) {
+                }*/ else if (attachment instanceof StickerAttachment) {
                     return "[贴图]";
                 } else if (attachment instanceof SnapChatAttachment) {
                     return "[阅后即焚]";
