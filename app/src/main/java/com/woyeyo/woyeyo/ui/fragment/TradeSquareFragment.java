@@ -20,10 +20,12 @@ import android.widget.Toast;
 
 import com.melnykov.fab.FloatingActionButton;
 import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.bean.Trade;
 import com.woyeyo.woyeyo.bean.TradeInfo;
 import com.woyeyo.woyeyo.adapter.TradeInfoAdpater;
 import com.woyeyo.woyeyo.presenter.TradeInfoPresenter;
 import com.woyeyo.woyeyo.utils.Clog;
+import com.woyeyo.woyeyo.utils.ToastUtil;
 import com.woyeyo.woyeyo.view.SellView;
 
 import java.util.ArrayList;
@@ -55,6 +57,17 @@ public class TradeSquareFragment extends BaseListViewFragment implements SellVie
     @Override
     protected void initListViewFromResource(){
         listView=(ListView)view.findViewById(R.id.my_ListView);
+    }
+    @Override
+    protected void initOnItemClickListener(){
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                TradeInfo tradeInfo=(TradeInfo)listView.getAdapter().getItem(position);
+                ToastUtil.KToast(context,tradeInfo.getPersonId()+"");
+
+            }
+        });
     }
     @Override
     public void toPullFresh(List<TradeInfo> tradeInfoList){

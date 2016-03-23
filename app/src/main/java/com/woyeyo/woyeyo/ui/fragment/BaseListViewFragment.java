@@ -67,7 +67,7 @@ public abstract class BaseListViewFragment extends Fragment{
         initAdapter();
         initPresenter();
         initListViewFromResource();
-        initOnItemClickListenr();
+        initOnItemClickListener();
         initPtrAndLoad(inflater);
         initFloatButton();
 
@@ -110,7 +110,7 @@ public abstract class BaseListViewFragment extends Fragment{
         initPulltoFresh();
         getNewData();
     }
-    protected void initOnItemClickListenr(){
+    protected void initOnItemClickListener(){
 
     }
     protected void initPtrAndLoad(LayoutInflater inflater){

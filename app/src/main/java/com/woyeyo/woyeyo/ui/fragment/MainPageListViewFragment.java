@@ -34,7 +34,7 @@ public class MainPageListViewFragment extends BaseListViewFragment implements IC
         couponAdapter = new CouponAdapter(context);
     }
     @Override
-    public void initOnItemClickListenr(){
+    public void initOnItemClickListener(){
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

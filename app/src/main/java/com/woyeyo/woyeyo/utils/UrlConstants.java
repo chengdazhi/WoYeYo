@@ -7,6 +7,9 @@ public class UrlConstants {
     private UrlConstants(){
     }
     public static final String userImg="http://cdn.duitang.com/uploads/item/201505/03/20150503170953_5MS8s.png";
+    public static final String[] userAva=new String[]{"http://img5.duitang.com/uploads/item/201408/02/20140802211120_t34dW.thumb.224_0.jpeg",
+            "http://cdn.duitang.com/uploads/item/201408/23/20140823132825_BBjeZ.thumb.224_0.jpeg",
+            "http://cdn.duitang.com/uploads/item/201505/03/20150503170953_5MS8s.png"};
     public static final String[] imgs=new String[]{"http://img2.imgtn.bdimg.com/it/u=1300322116,1329382048&fm=21&gp=0.jpg",
         "http://pic41.nipic.com/20140529/8814365_144247117337_2.jpg",
         "http://img0.imgtn.bdimg.com/it/u=2077508803,104479247&fm=21&gp=0.jpg",

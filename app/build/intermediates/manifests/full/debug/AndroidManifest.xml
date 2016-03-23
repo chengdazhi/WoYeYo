@@ -51,15 +51,17 @@
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.SellerInfoActivity" >
         </activity>
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.TradeHistoryActivity" >
+        </activity>
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.UserAgreementActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.CommentListActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.woyeyo.woyeyo.ui.Activity.UserAgreementActivity" />
-        <activity android:name="com.woyeyo.woyeyo.ui.Activity.CommentDetailActivity" />
-        <activity android:name="com.woyeyo.woyeyo.ui.Activity.CommentActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.CommentActivity" >
+        </activity>
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.PersonCommentActivity" />
     </application>
 

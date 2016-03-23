@@ -36,7 +36,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="0px"
-                android:layout_weight="2">
+                android:layout_weight="3.5">
                 <ImageView
                     android:id="@+id/coupon_activity_image"
                     android:layout_width="match_parent"
@@ -46,21 +46,18 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.5"
+                    android:layout_weight="1.2"
                     android:gravity="center"
                     android:text="这里是昵称"
                     android:id="@+id/nickname" />
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0px"
-                    android:layout_weight="0.5"
-                    android:src="@drawable/fivestar"/>
-                <TextView
-                    android:layout_width="match_parent"
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_weight="0.5"
-                    android:gravity="center"
-                    android:text="楼上是5颗星"/>
+                    android:numStars="5"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1.5"/>
             </LinearLayout>
 
 
@@ -158,7 +155,7 @@
             <LinearLayout
                 android:layout_height="0px"
                 android:layout_width="match_parent"
-                android:layout_weight="4">
+                android:layout_weight="3">
             </LinearLayout>
             <LinearLayout
                 android:layout_height="0px"

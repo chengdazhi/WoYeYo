@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -62,9 +63,19 @@ public class UserInfoActivity extends KBaseActivity implements IUserInfoView{
         }
         TextView comment=(TextView)findViewById(R.id.userCommentContent);
         int com=user.getCommentNum();
-        String mComment=com+"条评价";
+        final String mComment=com+"条评价";
         comment.setText(mComment);
-        //TODO:还差星的显示
+
+        LinearLayout userComment=(LinearLayout)findViewById(R.id.userComment);
+        userComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(mContext,CommentListActivity.class);
+                mContext.startActivity(intent);
+            }
+        });
+        RatingBar ratingBar=(RatingBar)findViewById(R.id.ratingBar);
+        ratingBar.setRating(user.getStarNum());
 
     }
     @Override

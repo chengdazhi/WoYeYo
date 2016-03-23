@@ -103,6 +103,10 @@
     <string name="comment_submit">提交评价</string>
     <string name="comment_title">评价</string>
     <string name="person_comment_title">个人评价</string>
+    <string name="submit_comment_succ">评价成功</string>
+    <string name="no_network">请检查网络后重试</string>
+    <string name="empty_starNum">请评价星级</string>
+    <string name="empty_comment">请输入评价内容</string>
     <string name="status_orderd_button">取消发布</string>
     <string name="status_paid_button"></string>
     <string name="status_sent_button"></string>

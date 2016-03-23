@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <android.support.v7.widget.Toolbar
-        android:id="@+id/test_main_page_toolbar"
+        android:id="@+id/base_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
         <TextView
@@ -84,7 +84,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="0.7"
                 android:text="@string/comment_submit"
-                />
+                android:id="@+id/submit" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"

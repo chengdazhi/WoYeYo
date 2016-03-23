@@ -8,4 +8,5 @@ import com.woyeyo.woyeyo.presenter.OnSendInfoListener;
 public interface ISendText {
     void sendAccusation(String accusation,String contact,OnSendInfoListener listener);
     void sendFeedBack(String feedback,String contact,OnSendInfoListener listener);
+    void sendComment(String comment,float rating,OnSendInfoListener listener);
 }
