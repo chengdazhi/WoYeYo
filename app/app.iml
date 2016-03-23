@@ -94,31 +94,40 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="iconics-core-2.5.7" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-23.1.1" level="project" />
-    <orderEntry type="library" exported="" name="design-23.1.1" level="project" />
-    <orderEntry type="library" exported="" name="timber-4.1.1" level="project" />
-    <orderEntry type="library" exported="" name="okio-1.5.0" level="project" />
-    <orderEntry type="library" exported="" name="ultra-ptr-1.0.11" level="project" />
-    <orderEntry type="library" exported="" name="floatingactionbutton-1.3.0" level="project" />
-    <orderEntry type="library" exported="" name="materialdrawer-5.0.4" level="project" />
-    <orderEntry type="library" exported="" name="universal-image-loader-1.9.5" level="project" />
-    <orderEntry type="library" exported="" name="convenientbanner-2.0.5" level="project" />
-
-    <orderEntry type="library" exported="" name="floatingactionbutton-1.3.0" level="project" />
-    <orderEntry type="library" exported="" name="design-23.1.1" level="project" />
-    <orderEntry type="library" exported="" name="ultra-ptr-1.0.11" level="project" />
-    <orderEntry type="library" exported="" name="recyclerview-v7-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="support-v4-23.2.0" level="project" />
-    <orderEntry type="library" exported="" name="fastadapter-1.1.1" level="project" />
-    <orderEntry type="library" exported="" name="timber-4.1.1" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-23.2.0" level="project" />
+    <orderEntry type="library" exported="" name="design-23.1.1" level="project" />
+    <orderEntry type="library" exported="" name="cosinesdk" level="project" />
+    <orderEntry type="library" exported="" name="ultra-ptr-1.0.11" level="project" />
     <orderEntry type="library" exported="" name="okio-1.5.0" level="project" />
+    <orderEntry type="library" exported="" name="materialdrawer-5.0.4" level="project" />
+    <orderEntry type="library" exported="" name="commons-logging-1.2" level="project" />
+    <orderEntry type="library" exported="" name="fastadapter-1.1.1" level="project" />
+    <orderEntry type="library" exported="" name="support-annotations-23.2.0" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="materialize-0.8.2" level="project" />
+    <orderEntry type="library" exported="" name="commons-codec-1.9" level="project" />
+    <orderEntry type="library" exported="" name="universal-image-loader-1.9.5" level="project" />
     <orderEntry type="library" exported="" name="library-2.4.0" level="project" />
+    <orderEntry type="library" exported="" name="jna-4.1.0" level="project" />
+    <orderEntry type="library" exported="" name="httpclient-4.5" level="project" />
+    <orderEntry type="library" exported="" name="fluent-hc-4.5" level="project" />
+    <orderEntry type="library" exported="" name="httpclient-cache-4.5" level="project" />
+    <orderEntry type="library" exported="" name="timber-4.1.1" level="project" />
+    <orderEntry type="library" exported="" name="floatingactionbutton-1.3.0" level="project" />
+    <orderEntry type="library" exported="" name="nim-sdk-2.0.0" level="project" />
+    <orderEntry type="library" exported="" name="convenientbanner-2.0.5" level="project" />
+    <orderEntry type="library" exported="" name="httpmime-4.5" level="project" />
+    <orderEntry type="library" exported="" name="recyclerview-v7-23.1.1" level="project" />
+    <orderEntry type="library" exported="" name="httpclient-win-4.5" level="project" />
+    <orderEntry type="library" exported="" name="okhttp-2.4.0" level="project" />
+    <orderEntry type="library" exported="" name="nrtc-sdk-1.1.0" level="project" />
+    <orderEntry type="library" exported="" name="jna-platform-4.1.0" level="project" />
+    <orderEntry type="library" exported="" name="httpcore-4.4.1" level="project" />
+    <orderEntry type="module" module-name="uikit" exported="" />
   </component>
 </module>
