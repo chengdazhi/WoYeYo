@@ -37,6 +37,7 @@ public class TestTradeSquare extends KBaseActivity{
     private Button pubButton;
     private Context context;
     private boolean isBuy;
+    private long  couponId;
 
     @Override
     public void setResId(){
@@ -53,6 +54,8 @@ public class TestTradeSquare extends KBaseActivity{
         InitViewPager();
         context=TestTradeSquare.this;
         isBuy=true;
+        Intent intent=getIntent();
+        couponId=intent.getLongExtra("couponId",-1);
     }
     private void InitTextView() {
         sellLayout=(LinearLayout)findViewById(R.id.sellLayout);

@@ -50,6 +50,7 @@ public class WholeMainPage extends KBaseActivity {
                     @Override
                     public boolean onProfileImageClick(View view, IProfile profile, boolean current){
                         Intent intent=new Intent(mContext,UserInfoActivity.class);
+                        intent.putExtra("isMe",true);
                         mContext.startActivity(intent);
                         return true;
                     }

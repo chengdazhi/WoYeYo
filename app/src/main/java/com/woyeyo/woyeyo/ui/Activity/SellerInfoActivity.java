@@ -66,13 +66,21 @@ public class SellerInfoActivity extends KBaseActivity implements IUserInfoView {
     }
     @Override
     public void showUserInfo(User user){
-        dealNumText.setText(user.getDealNum()+"");
-        commentNumText.setText(user.getCommentNum()+"");
+        dealNumText.setText(user.getDealNum() + "");
+        commentNumText.setText(user.getCommentNum() + "");
         nickName.setText(user.getNickName());
-        ImageUtil.displayMyImage(user.getImageUrl(),photo);
+        ImageUtil.displayMyImage(user.getImageUrl(), photo);
     }
     @Override
     public void showError(){
+
+    }
+    @Override
+    public void showChangeSucc(){
+
+    }
+    @Override
+    public void showChangeFail(){
 
     }
 

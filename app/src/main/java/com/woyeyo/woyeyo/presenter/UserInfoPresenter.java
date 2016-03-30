@@ -1,5 +1,6 @@
 package com.woyeyo.woyeyo.presenter;
 
+import android.graphics.Bitmap;
 import android.os.Handler;
 
 import com.woyeyo.woyeyo.bean.User;
@@ -59,6 +60,52 @@ public class UserInfoPresenter {
                     @Override
                     public void run() {
                         iUserInfoView.showError();
+                    }
+                });
+            }
+        });
+    }
+    public void changeSex(boolean isMan){
+        iGetUserInfo.changeUserSex(isMan, new OnSendInfoListener() {
+            @Override
+            public void sendInfoSuccess() {
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        iUserInfoView.showChangeSucc();
+                    }
+                });
+            }
+
+            @Override
+            public void sendInfoFailed() {
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        iUserInfoView.showChangeFail();
+                    }
+                });
+            }
+        });
+    }
+    public void changePhoto(Bitmap bitmap){
+        iGetUserInfo.changeUserPhoto(bitmap, new OnSendInfoListener() {
+            @Override
+            public void sendInfoSuccess() {
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        iUserInfoView.showChangeSucc();
+                    }
+                });
+            }
+
+            @Override
+            public void sendInfoFailed() {
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        iUserInfoView.showChangeFail();
                     }
                 });
             }

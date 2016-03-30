@@ -1036,6 +1036,8 @@
     <eat-comment/>
     <string name="buy_category">购物优惠</string>
     <string name="buy_right_now">马上购买</string>
+    <string name="change_fail">修改失败，请检查网络后重试</string>
+    <string name="change_succ">修改成功</string>
     <!-- From: file:/C:/Users/fam_000/Documents/GitHub/WoYeYo/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
@@ -1098,6 +1100,7 @@
     <string name="empty_price">价格不能为空</string>
     <string name="empty_sell_desc">请输入商品描述</string>
     <string name="empty_starNum">请评价星级</string>
+    <string name="fail_to_get_photo">获取相册失败</string>
     <string name="feedback_content_hint">请输入反馈内容...</string>
     <string name="feedback_content_send">发送</string>
     <string name="feedback_no_content">请输入反馈内容</string>
@@ -1200,11 +1203,17 @@
     <string name="material_drawer_open">Open</string>
     <!-- From: file:/C:/Users/fam_000/Documents/GitHub/WoYeYo/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="menu_man">男♂</string>
+    <string name="menu_woman">女♀</string>
     <string name="message_button">消息</string>
     <string name="mov_category">电影优惠</string>
+    <string name="no_fit_view_activity">没有可以跳转的浏览器</string>
     <string name="no_mobile_number">请输入手机号码</string>
     <string name="no_network">请检查网络后重试</string>
+    <string name="no_sd_card">没有检测到SD卡</string>
+    <string name="no_sd_card_permission">请允许应用读取SD卡的权限</string>
     <string name="person_comment_title">个人评价</string>
+    <string name="pick_photo">从相册中选择</string>
     <string name="publish_button">立即发布</string>
     <string name="seller_info_accusation">举报</string>
     <string name="seller_info_button">发送消息</string>
@@ -1229,6 +1238,7 @@
     <string name="status_recived_button"/>
     <string name="status_sent_button"/>
     <string name="submit_comment_succ">评价成功</string>
+    <string name="take_photo">拍照</string>
     <string name="tiao">条</string>
     <string name="tradeSquare">交易广场</string>
     <string name="trade_history_contact_buyer">联系买家</string>

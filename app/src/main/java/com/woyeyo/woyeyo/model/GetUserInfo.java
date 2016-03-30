@@ -1,6 +1,11 @@
 package com.woyeyo.woyeyo.model;
+import android.graphics.Bitmap;
+
 import com.woyeyo.woyeyo.bean.User;
 import com.woyeyo.woyeyo.presenter.OnGetUserInfoListener;
+import com.woyeyo.woyeyo.presenter.OnSendInfoListener;
+import com.woyeyo.woyeyo.utils.Clog;
+import com.woyeyo.woyeyo.utils.Token;
 
 
 /**
@@ -62,5 +67,54 @@ public class GetUserInfo implements IGetUserInfo {
             }
         }.start();
 
+    }
+    public void changeUserSex(final boolean isMan,final OnSendInfoListener listener){
+        String token= Token.getToken();
+        new Thread(){
+            @Override
+            public void run(){
+                try{
+                    Thread.sleep(1000);
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+                if(true){
+
+                   if(isMan){
+                       Clog.d("change to man");
+                   }else{
+                       Clog.d("change to woman");
+                   }
+
+                    listener.sendInfoSuccess();
+                }
+                else {
+                    listener.sendInfoFailed();
+                }
+            }
+        }.start();
+
+    }
+    public void changeUserPhoto(Bitmap bitmap,final OnSendInfoListener listener){
+        String token= Token.getToken();
+        new Thread(){
+            @Override
+            public void run(){
+                try{
+                    Thread.sleep(1000);
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+                if(true){
+
+
+
+                    listener.sendInfoSuccess();
+                }
+                else {
+                    listener.sendInfoFailed();
+                }
+            }
+        }.start();
     }
 }

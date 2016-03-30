@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.woyeyo.woyeyo.R;
@@ -30,7 +31,7 @@ public class LoadeMore_TradeInfoAdapter extends KBaseAdapter<TradeInfo>{
             viewHolder.description=(TextView)view.findViewById(R.id.good_detail_description_sell);
             viewHolder.price=(TextView)view.findViewById(R.id.good_description_sell_price);
             viewHolder.Photo=(ImageView)view.findViewById(R.id.good_description_sell_user_image);
-            viewHolder.Star=(ImageView)view.findViewById(R.id.good_description_sell_user_star);
+            viewHolder.Star=(RatingBar)view.findViewById(R.id.good_description_sell_user_star);
             view.setTag(viewHolder);
         }
         else   {
@@ -43,12 +44,12 @@ public class LoadeMore_TradeInfoAdapter extends KBaseAdapter<TradeInfo>{
         viewHolder.Photo.setImageBitmap(tradeInfo.getPhoto());
         int StarNum=tradeInfo.getStarNum();
         //TODO switch starNum to drawable star
-        viewHolder.Star.setImageBitmap(BitmapResource.getBitmapFromResource(R.drawable.fivestar));
+        viewHolder.Star.setRating(3);
         return view;
     }
     private class ViewHolder{
         ImageView Photo;
-        ImageView Star;
+        RatingBar Star;
         TextView description;
         TextView price;
     }

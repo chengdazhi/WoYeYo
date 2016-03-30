@@ -39,7 +39,8 @@ public class GetTradeInfo implements GetTrade{
                         tradeInfo.setDescription("好东西" +formatter.format(curDate) );
                         tradeInfo.setPhoto(BitmapResource.getBitmapFromResource(R.drawable.userimage));
                         tradeInfo.setStarNum(i%5);
-                        tradeInfo.setPersonId(123312313);
+                        tradeInfo.setPersonId(123312313+i);
+                        tradeInfo.setSquareId(tradeId);
                         list.add(tradeInfo);
                     }
                     listener.getInfoSuccess(list);

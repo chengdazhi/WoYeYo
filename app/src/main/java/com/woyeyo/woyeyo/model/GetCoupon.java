@@ -92,8 +92,9 @@ public class GetCoupon implements IGetCoupon {
                             imgs[(int)couponId%UrlConstants.imgs.length]);
                     coupon.setCouponDetail(couponId+"detail");
                     coupon.setMerchantName("Uber");
-                    coupon.setCouponJumpUrl("www.baidu.com");
-
+                    //注意一定要以http开头
+                    coupon.setCouponJumpUrl("http://www.baidu.com");
+                    coupon.setCouponId(13123312);
                     listener.getInfoSuccess(coupon);
                 }else{
                     listener.getInfoFailed();
@@ -130,6 +131,7 @@ public class GetCoupon implements IGetCoupon {
                         SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss ");
                         Date curDate=new Date(System.currentTimeMillis()+itemCount*1000);
                         coupon.setCouponDesc("good!" +formatter.format(curDate) );
+                        coupon.setCouponId(123123142);
                         list.add(coupon);
                     }
                     listener.getInfoSuccess(list);

@@ -8,4 +8,6 @@ import com.woyeyo.woyeyo.bean.User;
 public interface IUserInfoView {
     void showUserInfo(User user);
     void showError();
+    void showChangeSucc();
+    void showChangeFail();
 }

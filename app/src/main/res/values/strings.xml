@@ -115,4 +115,14 @@
     <string name="status_complete_button"></string>
     <string name="status_close_button"></string>
 
+    <string name="no_fit_view_activity">没有可以跳转的浏览器</string>
+    <string name="change_succ">修改成功</string>
+    <string name="change_fail">修改失败，请检查网络后重试</string>
+    <string name="menu_man">男♂</string>
+    <string name="menu_woman">女♀</string>
+    <string name="pick_photo">从相册中选择</string>
+    <string name="take_photo">拍照</string>
+    <string name="no_sd_card">没有检测到SD卡</string>
+    <string name="no_sd_card_permission">请允许应用读取SD卡的权限</string>
+    <string name="fail_to_get_photo">获取相册失败</string>
 </resources>

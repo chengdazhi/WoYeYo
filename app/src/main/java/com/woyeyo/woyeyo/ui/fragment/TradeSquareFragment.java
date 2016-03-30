@@ -45,6 +45,7 @@ public class TradeSquareFragment extends BaseListViewFragment implements SellVie
     @Override
     protected void inflateViewFromResource(){
         view=inflater.inflate(R.layout.test_tradeinfo_listview,container,false);
+        tradeId=getActivity().getIntent().getLongExtra("couponId",-1);
     }
     @Override
     protected void initPresenter(){
@@ -74,6 +75,7 @@ public class TradeSquareFragment extends BaseListViewFragment implements SellVie
         tradeInfoAdpater.setItems(tradeInfoList);
         listView.setAdapter(tradeInfoAdpater);
         ptrFrameLayout.refreshComplete();
+        Clog.d(tradeInfoList.get(1).getSquareId()+"");
     }
     @Override
     public void toLoadMore(List<TradeInfo> tradeInfoList) {
