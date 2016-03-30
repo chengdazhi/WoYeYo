@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/skin_global_bg" >
 
-    <com.netease.nim.demo.common.ui.viewpager.PagerSlidingTabStrip
+    <com.woyeyo.woyeyo.im.common.ui.viewpager.PagerSlidingTabStrip
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="@dimen/pager_sliding_tab_strip_height"

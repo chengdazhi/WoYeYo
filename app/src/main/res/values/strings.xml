@@ -12,7 +12,6 @@
     <string name="coupon_category_move_title">电影优惠</string>
     <string name="mainpage_title">我也有</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
-
     <string name="title_activity_main">MainActivity</string>
     <string name="empty"></string>
     <string name="main_tab_session">会话</string>
@@ -88,6 +87,7 @@
     <string name="input_panel_file">发送文件</string>
     <string name="input_panel_RTS">白 板</string>
     <string name="input_panel_snapchat">阅后即焚</string>
+    <string name="input_panel_tip">Tip</string>
     <string name="message_history_query">云消息记录</string>
     <string name="message_search_title">搜索本地消息记录</string>
     <string name="message_clear">清空本地消息记录</string>
@@ -238,4 +238,5 @@
     <string name="head_update_success">头像设置成功</string>
     <string name="head_update_failed">头像设置失败，请重试</string>
     <string name="nickname_empty">昵称不能为空</string>
+    <string name="title_activity_test_launcher">TestLauncherActivity</string>
 </resources>

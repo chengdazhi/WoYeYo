@@ -6,7 +6,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:orientation="vertical"
-    tools:context="com.netease.nim.demo.test.AddBuddyActivity">
+    tools:context="com.woyeyo.woyeyo.im.test.AddBuddyActivity">
 
     <EditText
         android:id="@+id/account_editor"

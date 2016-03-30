@@ -1,11 +1,11 @@
 package com.woyeyo.woyeyo.im.session.activity;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.ActionBar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
@@ -84,7 +84,7 @@ public class WatchSnapChatPictureActivity extends TActionBarActivity {
         alertDialog = new CustomAlertDialog(this);
         loadingLayout = findViewById(R.id.loading_layout);
         image = (BaseZoomableImageView) findViewById(R.id.watch_image_view);
-        actionBar = getSupportActionBar();
+        actionBar = getActionBar();
         actionBar.hide();
     }
 

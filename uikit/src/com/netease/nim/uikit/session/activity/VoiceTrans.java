@@ -1,8 +1,8 @@
 package com.netease.nim.uikit.session.activity;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
-import android.support.v7.app.ActionBar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +54,7 @@ public class VoiceTrans {
 
     private void hideActionBar() {
         if (baseActivity instanceof TActionBarActivity) {
-            actionBar = ((TActionBarActivity) baseActivity).getSupportActionBar();
+            actionBar = ((TActionBarActivity) baseActivity).getActionBar();
         }
     }
 

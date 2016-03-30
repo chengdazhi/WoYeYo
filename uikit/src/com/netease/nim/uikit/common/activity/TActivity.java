@@ -1,21 +1,22 @@
 package com.netease.nim.uikit.common.activity;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 import com.netease.nim.uikit.common.fragment.TFragment;
-import com.netease.nim.uikit.common.util.sys.ReflectionUtil;
 import com.netease.nim.uikit.common.util.log.LogUtil;
+import com.netease.nim.uikit.common.util.sys.ReflectionUtil;
 
-public abstract class TActivity extends FragmentActivity {
+
+public abstract class TActivity extends Activity {
 
     private boolean destroyed = false;
 
@@ -104,7 +105,7 @@ public abstract class TActivity extends FragmentActivity {
     }
 
     protected void switchFragmentContent(TFragment fragment) {
-        FragmentManager fm = getSupportFragmentManager();
+        FragmentManager fm = getFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
         transaction.replace(fragment.getContainerId(), fragment);
         try {

@@ -1,6 +1,6 @@
 package com.netease.nim.uikit.common.util.sys;
 
-import android.support.v7.app.ActionBar;
+import android.app.ActionBar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +31,7 @@ public class ActionBarUtil {
 	 * @param text
 	 */
 	public static TextView addRightClickableTextViewOnActionBar(TActionBarActivity activity, String text) {
-		ActionBar actionBar = activity.getSupportActionBar();
+		ActionBar actionBar = activity.getActionBar();
 		actionBar.setDisplayShowCustomEnabled(true);
 		actionBar.setDisplayShowTitleEnabled(true);
         View view = LayoutInflater.from(activity).inflate(R.layout.nim_action_bar_right_clickable_tv, null);
@@ -59,7 +59,7 @@ public class ActionBarUtil {
 	 * @return
 	 */
 	public static View addRightCustomViewOnActionBar(TActionBarActivity activity, int layoutID, int width, int height) {
-		ActionBar actionBar = activity.getSupportActionBar();
+		ActionBar actionBar = activity.getActionBar();
 		actionBar.setDisplayShowCustomEnabled(true);
 		actionBar.setDisplayShowTitleEnabled(true);
         View view = LayoutInflater.from(activity).inflate(layoutID, null);
@@ -79,7 +79,7 @@ public class ActionBarUtil {
 	}
 
 	public static void setTextViewEnable(TActionBarActivity activity, boolean enable) {
-		ActionBar actionBar = activity.getSupportActionBar();
+		ActionBar actionBar = activity.getActionBar();
 		View view = actionBar.getCustomView();
 
 		if (view != null) {
@@ -91,7 +91,7 @@ public class ActionBarUtil {
 	}
 
 	public static void setTextViewVisible(TActionBarActivity activity, boolean visible) {
-		ActionBar actionBar = activity.getSupportActionBar();
+		ActionBar actionBar = activity.getActionBar();
 		View view = actionBar.getCustomView();
 
 		if (view != null) {

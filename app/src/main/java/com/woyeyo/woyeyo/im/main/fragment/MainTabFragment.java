@@ -44,8 +44,6 @@ public abstract class MainTabFragment extends TabFragment {
             loaded = true;
             onInit();
         }
-
-
     }
 
     private boolean loadRealLayout() {

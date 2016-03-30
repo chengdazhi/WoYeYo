@@ -1,5 +1,6 @@
 package com.netease.nim.uikit.session.activity;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -10,7 +11,6 @@ import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.ActionBar;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.SurfaceHolder;
@@ -184,7 +184,7 @@ public class WatchVideoActivity extends TActionBarActivity implements Callback {
             }
         });
 
-        actionBar = getSupportActionBar();
+        actionBar = getActionBar();
     }
 
     private void initVideoSize() {

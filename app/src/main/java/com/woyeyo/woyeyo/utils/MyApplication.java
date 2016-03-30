@@ -17,22 +17,29 @@ import com.netease.nim.uikit.cache.FriendDataCache;
 import com.netease.nim.uikit.cache.NimUserInfoCache;
 import com.netease.nim.uikit.cache.TeamDataCache;
 import com.netease.nim.uikit.contact.ContactProvider;
-import com.netease.nim.uikit.contact.core.query.PinYin;
 import com.netease.nim.uikit.session.viewholder.MsgViewHolderThumbBase;
 import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.NimStrings;
+import com.netease.nimlib.sdk.Observer;
 import com.netease.nimlib.sdk.SDKOptions;
 import com.netease.nimlib.sdk.StatusBarNotificationConfig;
 import com.netease.nimlib.sdk.auth.LoginInfo;
+import com.netease.nimlib.sdk.avchat.AVChatManager;
+import com.netease.nimlib.sdk.avchat.model.AVChatData;
+import com.netease.nimlib.sdk.avchat.model.AVChatRingerConfig;
 import com.netease.nimlib.sdk.msg.MessageNotifierCustomization;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
+import com.netease.nimlib.sdk.rts.RTSManager;
+import com.netease.nimlib.sdk.rts.model.RTSData;
 import com.netease.nimlib.sdk.uinfo.UserInfoProvider;
 import com.netease.nimlib.sdk.uinfo.model.NimUserInfo;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.woyeyo.woyeyo.R;
 import com.woyeyo.woyeyo.im.DemoCache;
+import com.woyeyo.woyeyo.im.avchat.AVChatProfile;
+import com.woyeyo.woyeyo.im.avchat.activity.AVChatActivity;
 import com.woyeyo.woyeyo.im.common.util.crash.AppCrashHandler;
 import com.woyeyo.woyeyo.im.common.util.sys.SystemUtil;
 import com.woyeyo.woyeyo.im.config.ExtraOptions;
@@ -40,6 +47,8 @@ import com.woyeyo.woyeyo.im.config.preference.Preferences;
 import com.woyeyo.woyeyo.im.config.preference.UserPreferences;
 import com.woyeyo.woyeyo.im.contact.ContactHelper;
 import com.woyeyo.woyeyo.im.main.activity.WelcomeActivity;
+import com.woyeyo.woyeyo.im.rts.activity.RTSActivity;
+import com.woyeyo.woyeyo.im.session.NimDemoLocationProvider;
 import com.woyeyo.woyeyo.im.session.SessionHelper;
 
 import java.util.ArrayList;
@@ -57,7 +66,6 @@ public class MyApplication extends Application {
         context = getApplicationContext();
         initImageLoader(getApplicationContext());
 
-        //init nim
         DemoCache.setContext(this);
 
         NIMClient.init(this, getLoginInfo(), getOptions());
@@ -69,8 +77,8 @@ public class MyApplication extends Application {
 
         if (inMainProcess()) {
             // init pinyin
-            PinYin.init(this);
-            PinYin.validate();
+        //    PinYin.init(this);
+        //    PinYin.validate();
 
             // 初始化UIKit模块
             initUIKit();
@@ -79,14 +87,15 @@ public class MyApplication extends Application {
             NIMClient.toggleNotification(UserPreferences.getNotificationToggle());
 
             // 注册网络通话来电
-//            enableAVChat();
+            enableAVChat();
 
             // 注册白板会话
-//            enableRTS();
+            enableRTS();
 
             // 注册语言变化监听
             registerLocaleReceiver(true);
         }
+
 
     }
 
@@ -161,6 +170,7 @@ public class MyApplication extends Application {
         return context;
     }
 
+
     private LoginInfo getLoginInfo() {
         String account = Preferences.getUserAccount();
         String token = Preferences.getUserToken();
@@ -172,7 +182,6 @@ public class MyApplication extends Application {
             return null;
         }
     }
-
 
     private SDKOptions getOptions() {
         SDKOptions options = new SDKOptions();
@@ -189,6 +198,7 @@ public class MyApplication extends Application {
         // 通知铃声的uri字符串
         config.notificationSound = "android.resource://com.netease.nim.demo/raw/msg";
         options.statusBarNotificationConfig = config;
+        DemoCache.setNotificationConfig(config);
         UserPreferences.setStatusConfig(config);
 
         // 配置保存图片，文件，log等数据的目录
@@ -232,14 +242,11 @@ public class MyApplication extends Application {
     /**
      * 音视频通话配置与监听
      */
-    /*
     private void enableAVChat() {
         setupAVChat();
         registerAVChatIncomingCallObserver(true);
     }
-    */
 
-/*
     private void setupAVChat() {
         AVChatRingerConfig config = new AVChatRingerConfig();
         config.res_connecting = R.raw.avchat_connecting;
@@ -249,29 +256,27 @@ public class MyApplication extends Application {
         config.res_ring = R.raw.avchat_ring;
         AVChatManager.getInstance().setRingerConfig(config); // 设置铃声配置
     }
-    */
 
-    /*
     private void registerAVChatIncomingCallObserver(boolean register) {
         AVChatManager.getInstance().observeIncomingCall(new Observer<AVChatData>() {
             @Override
             public void onEvent(AVChatData data) {
+//                String extra = data.getExtra();
+//                Log.e("Extra", "Extra Message->" + extra);
                 // 有网络来电打开AVChatActivity
                 AVChatProfile.getInstance().setAVChatting(true);
                 AVChatActivity.launch(DemoCache.getContext(), data, AVChatActivity.FROM_BROADCASTRECEIVER);
             }
         }, register);
     }
-*/
+
     /**
      * 白板实时时会话配置与监听
      */
-    /*
     private void enableRTS() {
         //setupRTS();
         registerRTSIncomingObserver(true);
     }
-    */
 
 //    private void setupRTS() {
 //        RTSRingerConfig config = new RTSRingerConfig();
@@ -282,7 +287,7 @@ public class MyApplication extends Application {
 //        config.res_ring = R.raw.avchat_ring;
 //        RTSManager.getInstance().setRingerConfig(config); // 设置铃声配置
 //    }
-/*
+
     private void registerRTSIncomingObserver(boolean register) {
         RTSManager.getInstance().observeIncomingSession(new Observer<RTSData>() {
             @Override
@@ -291,7 +296,6 @@ public class MyApplication extends Application {
             }
         }, register);
     }
-    */
 
     private void registerLocaleReceiver(boolean register) {
         if (register) {
@@ -303,14 +307,14 @@ public class MyApplication extends Application {
         }
     }
 
-    private BroadcastReceiver localeReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (intent.getAction().equals(Intent.ACTION_LOCALE_CHANGED)) {
-                updateLocale();
-            }
+private BroadcastReceiver localeReceiver = new BroadcastReceiver() {
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        if (intent.getAction().equals(Intent.ACTION_LOCALE_CHANGED)) {
+            updateLocale();
         }
-    };
+    }
+};
 
     private void updateLocale() {
         NimStrings strings = new NimStrings();
@@ -333,7 +337,7 @@ public class MyApplication extends Application {
         NimUIKit.init(this, infoProvider, contactProvider);
 
         // 设置地理位置提供者。如果需要发送地理位置消息，该参数必须提供。如果不需要，可以忽略。
-        //NimUIKit.setLocationProvider(new NimDemoLocationProvider());
+        NimUIKit.setLocationProvider(new NimDemoLocationProvider());
 
         // 会话窗口的定制初始化。
         SessionHelper.init();
@@ -370,6 +374,9 @@ public class MyApplication extends Application {
 
         @Override
         public Bitmap getAvatarForMessageNotifier(String account) {
+            /**
+             * 注意：这里最好从缓存里拿，如果读取本地头像可能导致UI进程阻塞，导致通知栏提醒延时弹出。
+             */
             UserInfo user = getUserInfo(account);
             if (user != null && !TextUtils.isEmpty(user.getAvatar())) {
                 return ImageLoaderKit.getBitmapFromCache(user.getAvatar(), R.dimen.avatar_size_default, R.dimen
@@ -433,5 +440,4 @@ public class MyApplication extends Application {
             return null; // 采用SDK默认文案
         }
     };
-
 }

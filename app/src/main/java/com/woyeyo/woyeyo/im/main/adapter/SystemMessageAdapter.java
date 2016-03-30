@@ -6,7 +6,6 @@ import android.view.ViewGroup;
 
 import com.netease.nim.uikit.common.adapter.TAdapter;
 import com.netease.nim.uikit.common.adapter.TAdapterDelegate;
-import com.woyeyo.woyeyo.im.main.activity.SystemMessageActivity;
 import com.woyeyo.woyeyo.im.main.viewholder.SystemMessageViewHolder;
 
 import java.util.List;
@@ -16,7 +15,7 @@ public class SystemMessageAdapter extends TAdapter {
     private SystemMessageViewHolder.SystemMessageListener systemMessageListener;
 
     public SystemMessageAdapter(Context context, List<?> items, TAdapterDelegate delegate,
-                                SystemMessageActivity listener) {
+                                SystemMessageViewHolder.SystemMessageListener listener) {
         super(context, items, delegate);
         this.systemMessageListener = listener;
     }

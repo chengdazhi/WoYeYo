@@ -13,7 +13,7 @@
         android:paddingBottom="13dp"
         android:paddingTop="13dp">
 
-        <com.netease.nim.demo.chatroom.widget.ChatRoomImageView
+        <com.woyeyo.woyeyo.im.chatroom.widget.ChatRoomImageView
             android:id="@+id/master_head_image"
             android:layout_width="@dimen/avatar_size_in_profile"
             android:layout_height="@dimen/avatar_size_in_profile"

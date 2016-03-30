@@ -19,6 +19,7 @@ import com.woyeyo.woyeyo.R;
 import com.woyeyo.woyeyo.im.DemoCache;
 import com.woyeyo.woyeyo.im.contact.activity.BlackListActivity;
 import com.woyeyo.woyeyo.im.main.activity.SystemMessageActivity;
+import com.woyeyo.woyeyo.im.main.activity.TeamListActivity;
 import com.woyeyo.woyeyo.im.main.helper.SystemMessageUnreadManager;
 import com.woyeyo.woyeyo.im.main.model.MainTab;
 import com.woyeyo.woyeyo.im.main.reminder.ReminderId;
@@ -141,11 +142,11 @@ public class ContactListFragment extends MainTabFragment {
         static void handle(Context context, AbsContactItem item) {
             if (item == VERIFY) {
                 SystemMessageActivity.start(context);
-            }/* else if (item == NORMAL_TEAM) {
+            } else if (item == NORMAL_TEAM) {
                 TeamListActivity.start(context, ItemTypes.TEAMS.NORMAL_TEAM);
             } else if (item == ADVANCED_TEAM) {
                 TeamListActivity.start(context, ItemTypes.TEAMS.ADVANCED_TEAM);
-            }*/ else if (item == MY_COMPUTER) {
+            } else if (item == MY_COMPUTER) {
                 SessionHelper.startP2PSession(context, DemoCache.getAccount());
             } else if (item == BLACK_LIST) {
                 BlackListActivity.start(context);

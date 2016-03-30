@@ -38,7 +38,9 @@ android {
 
     }
 
-
+    dexOptions {
+        jumboMode true
+    }
 
 }
 

@@ -28,6 +28,7 @@ import com.woyeyo.woyeyo.im.main.model.MainTab;
 import com.woyeyo.woyeyo.im.main.reminder.ReminderManager;
 import com.woyeyo.woyeyo.im.session.SessionHelper;
 import com.woyeyo.woyeyo.im.session.extension.GuessAttachment;
+import com.woyeyo.woyeyo.im.session.extension.RTSAttachment;
 import com.woyeyo.woyeyo.im.session.extension.SnapChatAttachment;
 import com.woyeyo.woyeyo.im.session.extension.StickerAttachment;
 
@@ -59,8 +60,6 @@ public class SessionListFragment extends MainTabFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         onCurrent();
-
-        sendMessage();
     }
 
     @Override
@@ -213,9 +212,9 @@ public class SessionListFragment extends MainTabFragment {
                 if (attachment instanceof GuessAttachment) {
                     GuessAttachment guess = (GuessAttachment) attachment;
                     return guess.getValue().getDesc();
-                }/* else if (attachment instanceof RTSAttachment) {
+                } else if (attachment instanceof RTSAttachment) {
                     return "[白板]";
-                }*/ else if (attachment instanceof StickerAttachment) {
+                } else if (attachment instanceof StickerAttachment) {
                     return "[贴图]";
                 } else if (attachment instanceof SnapChatAttachment) {
                     return "[阅后即焚]";
@@ -241,49 +240,5 @@ public class SessionListFragment extends MainTabFragment {
                 return null;
             }
         });
-    }
-
-
-    public void sendMessage(){
-        /*
-        String msg = "test message";
-        String receiverId = "huyuqian";
-        if(msg.equals("") || receiverId.equals("")) {
-            Toast.makeText(getActivity(), "信息为空", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-        // 创建文本消息
-        IMMessage message = MessageBuilder.createTextMessage(
-                receiverId, // 聊天对象的 ID，如果是单聊，为用户帐号，如果是群聊，为群组 ID
-                SessionTypeEnum.P2P, // 聊天类型，单聊或群组
-                msg // 文本内容
-        );
-        // 发送消息。如果需要关心发送结果，可设置回调函数。发送完成时，会收到回调。如果失败，会有具体的错误码。
-        NIMClient.getService(MsgService.class).sendMessage(message, true);
-
-        // 监听消息发送状态的变化通知
-        NIMClient.getService(MsgServiceObserve.class).observeMsgStatus(
-                new Observer<IMMessage>() {
-                    public void onEvent(IMMessage message) {
-                        // 参数为有状态发生改变的消息对象，其 msgStatus 和 attachStatus 均为最新状态。
-                        // 发送消息和接收消息的状态监听均可以通过此接口完成。
-                        Log.i("tag", "send status:" + message.getStatus().getValue());
-                        Toast.makeText(getActivity(), "发送成功", Toast.LENGTH_SHORT).show();
-                    }
-                }
-                , true);
-                */
-
-        /*
-        Map<String, Object> content = new HashMap<>(1);
-        content.put("content", "对方已付款，请尽快发货");
-        IMMessage msg = MessageBuilder.createTipMessage("huyuqian", SessionTypeEnum.P2P, content);
-        CustomMessageConfig config = new CustomMessageConfig();
-        config.enableUnreadCount = false;
-        msg.setConfig(config);
-        msg.setStatus(MsgStatusEnum.success);
-        NIMClient.getService(MsgService.class).saveMessageToLocal(msg, true);
-        */
     }
 }

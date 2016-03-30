@@ -73,6 +73,42 @@
             android:name="com.google.android.maps"
             android:required="false" />
 
+        <!--
+             云信SDK的监视系统启动和网络变化的广播接收器，用户开机自启动以及网络变化时候重新登录，
+            保持和 NimService 同一进程
+        -->
+        <receiver
+            android:name="com.netease.nimlib.service.NimReceiver"
+            android:exported="false"
+            android:process=":core" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 云信进程间通信 Receiver -->
+        <receiver android:name="com.netease.nimlib.service.ResponseReceiver" />
+
+        <!-- 安卓保活配置 -->
+        <service
+            android:name="com.netease.cosine.core.CosineService"
+            android:process=":cosine" >
+        </service>
+
+        <receiver
+            android:name="com.netease.cosine.target.CosineReceiver"
+            android:exported="true"
+            android:process=":cosine" >
+        </receiver>
+
+        <meta-data
+            android:name="com.netease.cosine.target"
+            android:value="" />
+        <meta-data
+            android:name="com.netease.cosine.target.receiver"
+            android:value="com.netease.nimlib.service.NimReceiver" />
+
         <!-- 导航页 -->
         <activity
             android:name="com.woyeyo.woyeyo.im.main.activity.WelcomeActivity"
@@ -168,15 +204,12 @@
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
 
         <!-- 文件管理器 -->
-        <!--
         <activity
-            android:name=".file.browser.FileBrowserActivity"
+            android:name="com.woyeyo.woyeyo.im.file.browser.FileBrowserActivity"
             android:configChanges="orientation"
             android:label="@string/file_browser"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
-        -->
-
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
         <activity
             android:name="com.woyeyo.woyeyo.im.main.activity.SystemMessageActivity"
             android:configChanges="keyboardHidden|orientation"
@@ -201,25 +234,22 @@
             android:screenOrientation="portrait"
             android:theme="@style/LightBaseActionBarTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" />
-        <!--
         <activity
-            android:name=".team.activity.AdvancedTeamSearchActivity"
+            android:name="com.woyeyo.woyeyo.im.team.activity.AdvancedTeamSearchActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.woyeyo.woyeyo.im.team.activity.AdvancedTeamJoinActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.woyeyo.woyeyo.im.main.activity.TeamListActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
 
-        <activity
-            android:name=".team.activity.AdvancedTeamJoinActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize"/>
-
-        <activity
-            android:name=".im.main.activity.TeamListActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustPan"/>
-        -->
         <!-- 全局搜索 -->
         <activity
             android:name="com.woyeyo.woyeyo.im.main.activity.GlobalSearchActivity"
@@ -234,38 +264,31 @@
             android:name="com.woyeyo.woyeyo.im.session.activity.WatchSnapChatPictureActivity"
             android:configChanges="keyboardHidden" />
         <!-- map -->
-        <!--
         <activity
-            android:name=".location.activity.LocationAmapActivity"
+            android:name="com.woyeyo.woyeyo.im.location.activity.LocationAmapActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/location_map"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".location.activity.NavigationAmapActivity"
+            android:name="com.woyeyo.woyeyo.im.location.activity.NavigationAmapActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/location_navigate"
-            android:screenOrientation="portrait"/>
-        -->
-
+            android:screenOrientation="portrait" />
 
         <!-- 音视频 -->
-        <!--
         <activity
-            android:name=".avchat.activity.AVChatActivity"
+            android:name="com.woyeyo.woyeyo.im.avchat.activity.AVChatActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
-        -->
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
         <!-- 白板 -->
-        <!--
         <activity
-            android:name=".rts.activity.RTSActivity"
+            android:name="com.woyeyo.woyeyo.im.rts.activity.RTSActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
-        -->
-
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
         <!-- 消息历史搜索 -->
         <activity
@@ -281,41 +304,50 @@
             android:theme="@style/OverlayBaseActionBarTheme"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
-        <!--
-             云信SDK的监视系统启动和网络变化的广播接收器，用户开机自启动以及网络变化时候重新登录，
-            保持和 NimService 同一进程
-        -->
+        <!-- 聊天室 -->
+        <activity
+            android:name="com.woyeyo.woyeyo.im.chatroom.activity.ChatRoomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 申明自定义通知的广播接收器，第三方APP集成时，action中的com.netease.nim.demo请替换为自己的包名 -->
+        <!-- 需要权限申明 <uses-permission android:name="com.netease.nim.demo.permission.RECEIVE_MSG"/> -->
         <receiver
-            android:name="com.netease.nimlib.service.NimReceiver"
-            android:exported="false"
-            android:process=":core" >
+            android:name="com.woyeyo.woyeyo.im.receiver.CustomNotificationReceiver"
+            android:enabled="true"
+            android:exported="false" >
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.woyeyo.woyeyo.ACTION.RECEIVE_CUSTOM_NOTIFICATION" />
             </intent-filter>
         </receiver>
 
-        <!-- 云信进程间通信 Receiver -->
-        <receiver android:name="com.netease.nimlib.service.ResponseReceiver" />
-
-        <!-- 安卓保活配置 -->
-        <service
-            android:name="com.netease.cosine.core.CosineService"
-            android:process=":cosine" >
-        </service>
-
+        <!-- 申明实时音视频来电通知的广播接收器，第三方APP集成时，action中的com.netease.nim.demo请替换为自己的包名 -->
         <receiver
-            android:name="com.netease.cosine.target.CosineReceiver"
-            android:exported="true"
-            android:process=":cosine" >
+            android:name="com.netease.nimlib.receiver.AVChatBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.woyeyo.woyeyo.ACTION.RECEIVE_AVCHAT_CALL_NOTIFICATION" />
+            </intent-filter>
         </receiver>
 
-        <meta-data
-            android:name="com.netease.cosine.target"
-            android:value="" />
-        <meta-data
-            android:name="com.netease.cosine.target.receiver"
-            android:value="com.netease.nimlib.service.NimReceiver" />
+        <!-- 申明白板会话的广播接收器，第三方APP集成时，action中的com.netease.nim.demo请替换为自己的包名 -->
+        <receiver
+            android:name="com.netease.nimlib.receiver.RTSBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.woyeyo.woyeyo.ACTION.RECEIVE_RTS_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 申明本地电话状态（通话状态）的广播接收器，第三方APP集成时音视频模块时，如果需要网络通话与本地电话互斥，请加上此接收器 -->
+        <receiver android:name="com.netease.nimlib.receiver.IncomingCallReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
 
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.ListViewShow" />
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.TradeSquareActivity" />
@@ -336,6 +368,18 @@
         </activity>
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.CategoryCouponActivity" />
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.WholeMainPage" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.woyeyo.woyeyo.ui.Activity.TestLauncherActivity"
+            android:label="@string/title_activity_test_launcher" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -141,8 +141,6 @@ public class NimHttpClient {
             return;
         }
 
-
-
         // init thread pool
         executor = new NimTaskExecutor("NIM_HTTP_TASK_EXECUTOR", new NimTaskExecutor.Config(1, 3, 10 * 1000, true));
 

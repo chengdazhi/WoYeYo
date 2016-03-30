@@ -1,5 +1,6 @@
 package com.woyeyo.woyeyo.im.session.activity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +20,9 @@ import com.netease.nimlib.sdk.NIMClient;
 import com.netease.nimlib.sdk.RequestCallback;
 import com.netease.nimlib.sdk.friend.FriendService;
 import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.DemoCache;
 import com.woyeyo.woyeyo.im.contact.activity.UserProfileActivity;
+import com.woyeyo.woyeyo.im.team.TeamCreateHelper;
 
 import java.util.ArrayList;
 
@@ -139,7 +142,7 @@ public class MessageInfoActivity extends TActionBarActivity {
         ContactSelectActivity.Option option = TeamHelper.getCreateContactSelectOption(memberAccounts, 50);
         NimUIKit.startContactSelect(this, option, REQUEST_CODE_NORMAL);// 创建群
     }
-/*
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -169,5 +172,4 @@ public class MessageInfoActivity extends TActionBarActivity {
             }
         }
     }
-    */
 }

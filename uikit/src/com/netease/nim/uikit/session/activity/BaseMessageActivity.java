@@ -1,8 +1,8 @@
 package com.netease.nim.uikit.session.activity;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,7 +36,7 @@ public abstract class BaseMessageActivity extends TActionBarActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        supportRequestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
+        requestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
 
         setContentView(getContentViewId());
         parseIntent();
@@ -79,26 +79,30 @@ public abstract class BaseMessageActivity extends TActionBarActivity {
             return;
         }
 
-        ActionBar actionBar = activity.getSupportActionBar();
-        actionBar.setDisplayShowCustomEnabled(true);
-        actionBar.setDisplayShowTitleEnabled(true);
+        ActionBar actionBar = activity.getActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayShowCustomEnabled(true);
+            actionBar.setDisplayShowTitleEnabled(true);
 
-        LinearLayout view = (LinearLayout) LayoutInflater.from(activity).inflate(R.layout.nim_action_bar_custom_view, null);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        for (final SessionCustomization.OptionsButton button : buttons) {
-            ImageButton imageView = new ImageButton(activity);
-            imageView.setImageResource(button.iconId);
-            imageView.setBackgroundResource(R.drawable.nim_nim_action_bar_button_selector);
-            imageView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    button.onClick(BaseMessageActivity.this, v, sessionId);
-                }
-            });
-            view.addView(imageView, params);
+
+            LinearLayout view = (LinearLayout) LayoutInflater.from(activity).inflate(R.layout.nim_action_bar_custom_view, null);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            for (final SessionCustomization.OptionsButton button : buttons) {
+                ImageButton imageView = new ImageButton(activity);
+                imageView.setImageResource(button.iconId);
+                imageView.setBackgroundResource(R.drawable.nim_nim_action_bar_button_selector);
+                imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        button.onClick(BaseMessageActivity.this, v, sessionId);
+                    }
+                });
+                view.addView(imageView, params);
+            }
+
+            actionBar.setCustomView(view, new ActionBar.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT, Gravity.RIGHT | Gravity.CENTER));
+
         }
-
-        actionBar.setCustomView(view, new ActionBar.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT, Gravity.RIGHT | Gravity.CENTER));
     }
 
 }

@@ -19,7 +19,10 @@ import com.netease.nim.uikit.session.helper.MessageListPanelHelper;
 import com.netease.nim.uikit.team.model.TeamExtras;
 import com.netease.nim.uikit.team.model.TeamRequestCode;
 import com.netease.nimlib.sdk.NIMClient;
+import com.netease.nimlib.sdk.avchat.constant.AVChatType;
+import com.netease.nimlib.sdk.avchat.model.AVChatAttachment;
 import com.netease.nimlib.sdk.msg.MsgService;
+import com.netease.nimlib.sdk.msg.attachment.FileAttachment;
 import com.netease.nimlib.sdk.msg.attachment.MsgAttachment;
 import com.netease.nimlib.sdk.msg.constant.SessionTypeEnum;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
@@ -27,18 +30,26 @@ import com.netease.nimlib.sdk.team.model.Team;
 import com.woyeyo.woyeyo.R;
 import com.woyeyo.woyeyo.im.DemoCache;
 import com.woyeyo.woyeyo.im.contact.activity.UserProfileActivity;
+import com.woyeyo.woyeyo.im.session.action.AVChatAction;
+import com.woyeyo.woyeyo.im.session.action.FileAction;
 import com.woyeyo.woyeyo.im.session.action.GuessAction;
+import com.woyeyo.woyeyo.im.session.action.RTSAction;
 import com.woyeyo.woyeyo.im.session.action.SnapChatAction;
+import com.woyeyo.woyeyo.im.session.action.TipAction;
 import com.woyeyo.woyeyo.im.session.activity.MessageHistoryActivity;
 import com.woyeyo.woyeyo.im.session.activity.MessageInfoActivity;
 import com.woyeyo.woyeyo.im.session.extension.CustomAttachParser;
 import com.woyeyo.woyeyo.im.session.extension.CustomAttachment;
 import com.woyeyo.woyeyo.im.session.extension.GuessAttachment;
+import com.woyeyo.woyeyo.im.session.extension.RTSAttachment;
 import com.woyeyo.woyeyo.im.session.extension.SnapChatAttachment;
 import com.woyeyo.woyeyo.im.session.extension.StickerAttachment;
 import com.woyeyo.woyeyo.im.session.search.SearchMessageActivity;
+import com.woyeyo.woyeyo.im.session.viewholder.MsgViewHolderAVChat;
 import com.woyeyo.woyeyo.im.session.viewholder.MsgViewHolderDefCustom;
+import com.woyeyo.woyeyo.im.session.viewholder.MsgViewHolderFile;
 import com.woyeyo.woyeyo.im.session.viewholder.MsgViewHolderGuess;
+import com.woyeyo.woyeyo.im.session.viewholder.MsgViewHolderRTS;
 import com.woyeyo.woyeyo.im.session.viewholder.MsgViewHolderSnapChat;
 import com.woyeyo.woyeyo.im.session.viewholder.MsgViewHolderSticker;
 import com.woyeyo.woyeyo.im.session.viewholder.MsgViewHolderTip;
@@ -115,8 +126,13 @@ public class SessionHelper {
 
             // 定制加号点开后可以包含的操作， 默认已经有图片，视频等消息了
             ArrayList<BaseAction> actions = new ArrayList<>();
+            actions.add(new AVChatAction(AVChatType.AUDIO));
+            actions.add(new AVChatAction(AVChatType.VIDEO));
+            actions.add(new RTSAction());
             actions.add(new SnapChatAction());
             actions.add(new GuessAction());
+            actions.add(new FileAction());
+            actions.add(new TipAction());
             p2pCustomization.actions = actions;
             p2pCustomization.withSticker = true;
 
@@ -186,6 +202,7 @@ public class SessionHelper {
             ArrayList<BaseAction> actions = new ArrayList<>();
             actions.add(new SnapChatAction());
             actions.add(new GuessAction());
+            actions.add(new FileAction());
             myP2pCustomization.actions = actions;
             myP2pCustomization.withSticker = true;
             // 定制ActionBar右边的按钮，可以加多个
@@ -231,6 +248,8 @@ public class SessionHelper {
             // 定制加号点开后可以包含的操作， 默认已经有图片，视频等消息了
             ArrayList<BaseAction> actions = new ArrayList<>();
             actions.add(new GuessAction());
+            actions.add(new FileAction());
+            actions.add(new TipAction());
             teamCustomization.actions = actions;
 
             // 定制ActionBar右边的按钮，可以加多个
@@ -266,10 +285,13 @@ public class SessionHelper {
     }
 
     private static void registerViewHolders() {
+        NimUIKit.registerMsgItemViewHolder(FileAttachment.class, MsgViewHolderFile.class);
+        NimUIKit.registerMsgItemViewHolder(AVChatAttachment.class, MsgViewHolderAVChat.class);
         NimUIKit.registerMsgItemViewHolder(GuessAttachment.class, MsgViewHolderGuess.class);
         NimUIKit.registerMsgItemViewHolder(CustomAttachment.class, MsgViewHolderDefCustom.class);
         NimUIKit.registerMsgItemViewHolder(StickerAttachment.class, MsgViewHolderSticker.class);
         NimUIKit.registerMsgItemViewHolder(SnapChatAttachment.class, MsgViewHolderSnapChat.class);
+        NimUIKit.registerMsgItemViewHolder(RTSAttachment.class, MsgViewHolderRTS.class);
         NimUIKit.registerTipMsgViewHolder(MsgViewHolderTip.class);
     }
 

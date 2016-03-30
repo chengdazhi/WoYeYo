@@ -32,8 +32,6 @@ public class SettingsAdapter extends BaseAdapter {
     private SwitchButton.OnChangedListener onchangeListener;
     private SwitchChangeListener switchChangeListener;
 
-
-
     public interface SwitchChangeListener {
         void onSwitchChange(SettingTemplate item, boolean checkState);
     }

@@ -21,11 +21,16 @@ import com.netease.nimlib.sdk.NimIntent;
 import com.netease.nimlib.sdk.Observer;
 import com.netease.nimlib.sdk.msg.model.IMMessage;
 import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.im.avchat.AVChatProfile;
+import com.woyeyo.woyeyo.im.avchat.activity.AVChatActivity;
+import com.woyeyo.woyeyo.im.chatroom.helper.ChatRoomHelper;
 import com.woyeyo.woyeyo.im.contact.activity.AddFriendActivity;
 import com.woyeyo.woyeyo.im.login.LoginActivity;
 import com.woyeyo.woyeyo.im.login.LogoutHelper;
 import com.woyeyo.woyeyo.im.main.fragment.HomeFragment;
 import com.woyeyo.woyeyo.im.session.SessionHelper;
+import com.woyeyo.woyeyo.im.team.TeamCreateHelper;
+import com.woyeyo.woyeyo.im.team.activity.AdvancedTeamSearchActivity;
 
 import java.util.ArrayList;
 
@@ -97,7 +102,7 @@ public class MainActivity extends TActionBarActivity {
         showMainFragment();
 
         // 聊天室初始化
-//        ChatRoomHelper.init();
+        ChatRoomHelper.init();
     }
 
     @Override
@@ -147,7 +152,7 @@ public class MainActivity extends TActionBarActivity {
                 NimUIKit.startContactSelect(MainActivity.this, advancedOption, REQUEST_CODE_ADVANCED);
                 break;
             case R.id.search_advanced_team:
-//                AdvancedTeamSearchActivity.start(MainActivity.this);
+                AdvancedTeamSearchActivity.start(MainActivity.this);
                 break;
             case R.id.add_buddy:
                 AddFriendActivity.start(MainActivity.this);
@@ -178,13 +183,13 @@ public class MainActivity extends TActionBarActivity {
         } else if (intent.hasExtra(EXTRA_APP_QUIT)) {
             onLogout();
             return;
-        }/* else if (intent.hasExtra(AVChatActivity.INTENT_ACTION_AVCHAT)) {
+        } else if (intent.hasExtra(AVChatActivity.INTENT_ACTION_AVCHAT)) {
             if (AVChatProfile.getInstance().isAVChatting()) {
                 Intent localIntent = new Intent();
                 localIntent.setClass(this, AVChatActivity.class);
                 startActivity(localIntent);
             }
-        }*/ else if (intent.hasExtra(com.woyeyo.woyeyo.im.main.model.Extras.EXTRA_JUMP_P2P)) {
+        } else if (intent.hasExtra(com.woyeyo.woyeyo.im.main.model.Extras.EXTRA_JUMP_P2P)) {
             Intent data = intent.getParcelableExtra(com.woyeyo.woyeyo.im.main.model.Extras.EXTRA_DATA);
             String account = data.getStringExtra(com.woyeyo.woyeyo.im.main.model.Extras.EXTRA_ACCOUNT);
             if (!TextUtils.isEmpty(account)) {
@@ -207,13 +212,13 @@ public class MainActivity extends TActionBarActivity {
             if (requestCode == REQUEST_CODE_NORMAL) {
                 final ArrayList<String> selected = data.getStringArrayListExtra(ContactSelectActivity.RESULT_DATA);
                 if (selected != null && !selected.isEmpty()) {
-//                    TeamCreateHelper.createNormalTeam(MainActivity.this, selected, false, null);
+                    TeamCreateHelper.createNormalTeam(MainActivity.this, selected, false, null);
                 } else {
                     Toast.makeText(MainActivity.this, "请选择至少一个联系人！", Toast.LENGTH_SHORT).show();
                 }
             } else if (requestCode == REQUEST_CODE_ADVANCED) {
                 final ArrayList<String> selected = data.getStringArrayListExtra(ContactSelectActivity.RESULT_DATA);
-//                TeamCreateHelper.createAdvancedTeam(MainActivity.this, selected);
+                TeamCreateHelper.createAdvancedTeam(MainActivity.this, selected);
             }
         }
 

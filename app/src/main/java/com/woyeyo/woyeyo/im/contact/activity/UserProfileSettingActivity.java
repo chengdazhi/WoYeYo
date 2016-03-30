@@ -63,6 +63,7 @@ public class UserProfileSettingActivity extends TActionBarActivity implements Vi
     private TextView emailText;
     private TextView signatureText;
 
+
     // data
     AbortableFuture<String> uploadAvatarFuture;
     private NimUserInfo userInfo;

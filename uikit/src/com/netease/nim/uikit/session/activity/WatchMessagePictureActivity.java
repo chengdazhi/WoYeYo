@@ -1,5 +1,6 @@
 package com.netease.nim.uikit.session.activity;
 
+import android.app.ActionBar;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +12,6 @@ import android.provider.MediaStore;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -146,7 +146,7 @@ public class WatchMessagePictureActivity extends TActionBarActivity {
 
         imageViewPager = (ViewPager) findViewById(R.id.view_pager_image);
 
-        actionBar = getSupportActionBar();
+        actionBar = getActionBar();
         actionBar.hide();
     }
 

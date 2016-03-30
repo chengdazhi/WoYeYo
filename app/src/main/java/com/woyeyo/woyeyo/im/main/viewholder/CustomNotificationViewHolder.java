@@ -57,7 +57,7 @@ public class CustomNotificationViewHolder extends TViewHolder {
     }
 
     private void updateMsgLabel() {
-        JSONObject jsonObj = com.alibaba.fastjson.JSONObject.parseObject(notification.getContent());
+        JSONObject jsonObj = JSONObject.parseObject(notification.getContent());
         String id = jsonObj.getString("id");
         String content;
         if (id != null && id.equals("1")) {

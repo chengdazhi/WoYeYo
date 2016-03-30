@@ -18,11 +18,12 @@ android {
             jniLibs.srcDirs = ['libs', 'libs-sdk']
         }
     }
+
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:19.1.0'
-    compile fileTree(dir: 'libs', include: '*.jar', exclude: ['universal*.jar'])
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile fileTree(dir: 'libs', exclude: ['universal*.jar'], include: '*.jar')
     compile fileTree(dir: 'libs-sdk', include: ['*.jar'])
     //
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'

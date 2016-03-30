@@ -171,7 +171,7 @@ public class CaptureVideoActivity extends TActionBarActivity implements SurfaceH
     }
 
     private void initActionBar() {
-        getSupportActionBar().hide();
+        getActionBar().hide();
         checkMultiCamera();
     }
 
