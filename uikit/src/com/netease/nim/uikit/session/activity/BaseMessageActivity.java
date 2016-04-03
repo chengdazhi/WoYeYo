@@ -35,8 +35,8 @@ public abstract class BaseMessageActivity extends TActionBarActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
+        super.onCreate(savedInstanceState);
 
         setContentView(getContentViewId());
         parseIntent();
