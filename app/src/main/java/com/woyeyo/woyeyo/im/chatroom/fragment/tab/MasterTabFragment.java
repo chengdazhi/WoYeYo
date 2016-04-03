@@ -12,7 +12,7 @@ public class MasterTabFragment extends ChatRoomTabFragment {
     private MasterFragment fragment;
     @Override
     protected void onInit() {
-        fragment = (MasterFragment) getActivity().getFragmentManager().findFragmentById(R.id.master_fragment);
+        fragment = (MasterFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.master_fragment);
     }
 
     @Override

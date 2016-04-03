@@ -18,7 +18,7 @@ public class ChatRoomListFragment extends MainTabFragment {
     @Override
     protected void onInit() {
         // 采用静态集成，这里不需要做什么了
-        fragment = (ChatRoomsFragment) getActivity().getFragmentManager().findFragmentById(R.id.chat_rooms_fragment);
+        fragment = (ChatRoomsFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.chat_rooms_fragment);
     }
 
     @Override

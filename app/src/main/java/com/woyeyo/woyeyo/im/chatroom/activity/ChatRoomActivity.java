@@ -179,7 +179,7 @@ public class ChatRoomActivity extends TActivity {
     };
 
     private void initChatRoomFragment() {
-        fragment = (ChatRoomFragment) getFragmentManager().findFragmentById(R.id.chat_rooms_fragment);
+        fragment = (ChatRoomFragment) getSupportFragmentManager().findFragmentById(R.id.chat_rooms_fragment);
         if (fragment != null) {
             fragment.updateView();
         } else {
@@ -194,7 +194,7 @@ public class ChatRoomActivity extends TActivity {
     }
 
     private void initMessageFragment() {
-        messageFragment = (ChatRoomMessageFragment) getFragmentManager().findFragmentById(R.id.chat_room_message_fragment);
+        messageFragment = (ChatRoomMessageFragment) getSupportFragmentManager().findFragmentById(R.id.chat_room_message_fragment);
         if (messageFragment != null) {
             messageFragment.init(roomId);
         } else {

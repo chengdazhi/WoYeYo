@@ -50,6 +50,6 @@ public class MessageTabFragment extends ChatRoomTabFragment {
     }
 
     private void findViews() {
-        fragment = (ChatRoomMessageFragment) getActivity().getFragmentManager().findFragmentById(R.id.chat_room_message_fragment);
+        fragment = (ChatRoomMessageFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.chat_room_message_fragment);
     }
 }

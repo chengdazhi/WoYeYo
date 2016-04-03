@@ -1,13 +1,13 @@
 package com.netease.nim.uikit.common.activity;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
@@ -16,7 +16,7 @@ import com.netease.nim.uikit.common.util.log.LogUtil;
 import com.netease.nim.uikit.common.util.sys.ReflectionUtil;
 
 
-public abstract class TActivity extends Activity {
+public abstract class TActivity extends FragmentActivity {
 
     private boolean destroyed = false;
 
@@ -100,12 +100,12 @@ public abstract class TActivity extends Activity {
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     private void invokeFragmentManagerNoteStateNotSaved() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            ReflectionUtil.invokeMethod(getFragmentManager(), "noteStateNotSaved", null);
+            ReflectionUtil.invokeMethod(getSupportFragmentManager(), "noteStateNotSaved", null);
         }
     }
 
     protected void switchFragmentContent(TFragment fragment) {
-        FragmentManager fm = getFragmentManager();
+        FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
         transaction.replace(fragment.getContainerId(), fragment);
         try {

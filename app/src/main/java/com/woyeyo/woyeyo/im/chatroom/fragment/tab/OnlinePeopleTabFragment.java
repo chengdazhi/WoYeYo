@@ -25,6 +25,6 @@ public class OnlinePeopleTabFragment extends ChatRoomTabFragment {
     }
 
     private void findViews() {
-        fragment = (OnlinePeopleFragment) getActivity().getFragmentManager().findFragmentById(R.id.online_people_fragment);
+        fragment = (OnlinePeopleFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.online_people_fragment);
     }
 }
