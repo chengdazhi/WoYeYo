@@ -1,6 +1,7 @@
 package com.woyeyo.woyeyo.ui.Activity;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,7 @@ import com.woyeyo.woyeyo.utils.Clog;
  * Created by fam_000 on 2016/3/12.
  */
 public abstract class KBaseActivity extends AppCompatActivity {
+    protected Context mContext=this;
     protected int mainResId=0;
     protected int toolbarResId=0;
     protected int menuResId=0;
@@ -32,7 +34,13 @@ public abstract class KBaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setResId();
         setContentView(mainResId);
-        toolbar=(Toolbar)findViewById(toolbarResId);
+
+        if(toolbarResId!=0){
+            toolbar=(Toolbar)findViewById(toolbarResId);
+        }
+        else{
+            toolbar=(Toolbar)findViewById(R.id.base_toolbar);
+        }
 
         titleTextView=(TextView)findViewById(R.id.my_toolbar_title);
 
@@ -43,7 +51,7 @@ public abstract class KBaseActivity extends AppCompatActivity {
         else{
             titleTextView.setText(title);
         }
-
+        toolbar.setBackgroundColor(getResources().getColor(R.color.orange));
         setSupportActionBar(toolbar);
 
         ActionBar actionBar=getSupportActionBar();

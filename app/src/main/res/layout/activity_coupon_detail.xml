@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/test_main_page_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toolbar Title"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/my_toolbar_title" />
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="15" >
+
+            <ImageView
+                android:id="@+id/coupon_activity_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/userimage"/>
+
+            <LinearLayout
+                android:background="@color/gainsboro"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:gravity="center_vertical"
+                    android:text="@string/coupon_detail_activity_description"
+                    />
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.6"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:text="这是一个活动描述"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@color/gainsboro"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:layout_height="match_parent"
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:text="@string/coupon_detail_seller"
+                    />
+                <ImageView
+                    android:id="@+id/merchantImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:src="@drawable/userimage"
+                    />
+                <TextView
+                    android:id="@+id/merchantName"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
+                    android:text="商家一号"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="0px"
+                android:layout_width="match_parent"
+                android:layout_weight="0.2">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/coupon_activity_details"
+                    android:background="@color/gainsboro"
+                    android:gravity="center"
+                    android:layout_weight="4"
+                    android:layout_height="match_parent"
+                    android:layout_width="0px"
+                    android:padding="8dp"
+                    android:textSize="20sp"
+                    android:hint="@string/coupon_detail_activity_details" />
+                <TextView
+                    android:id="@+id/coupon_trade_rules"
+                    android:background="@color/gainsboro"
+                    android:gravity="center"
+                    android:layout_weight="4"
+                    android:layout_height="match_parent"
+                    android:layout_width="0px"
+                    android:layout_marginLeft="4dp"
+                    android:padding="8dp"
+                    android:textSize="20sp"
+                    android:hint="@string/coupon_detail_trade_rules" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_height="0px"
+                android:layout_width="match_parent"
+                android:layout_weight="5">
+            </TextView>
+            <LinearLayout
+                android:layout_height="0px"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/buttonGet"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="@string/coupon_detail_button_get"/>
+                <Button
+                    android:id="@+id/buttonTrade"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="@string/coupon_detail_button_trade"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

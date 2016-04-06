@@ -6,10 +6,18 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <include
-        android:id="@+id/originTitle"
-        layout="@layout/origin_title">
-    </include>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/test_main_page_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toolbar Title"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/my_toolbar_title" />
+    </android.support.v7.widget.Toolbar>
     <LinearLayout
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
@@ -35,7 +43,7 @@
                 android:gravity="center"
                 android:textSize="28sp"
                 android:textStyle="bold"
-                android:text="担保说明"
+                android:text="@string/guarantee_content_title"
                 />
             <TextView
                 android:id="@+id/guaranteeContent"
@@ -45,7 +53,7 @@
                 android:layout_height="0px"
                 android:padding="8dp"
                 android:textSize="20sp"
-                android:hint="担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明担保说明" />
+                android:text="@string/guarantee_content" />
 
 
         </LinearLayout>

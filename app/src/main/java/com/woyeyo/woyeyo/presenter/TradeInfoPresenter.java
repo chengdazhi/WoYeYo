@@ -26,24 +26,30 @@ public class TradeInfoPresenter implements BaseListPresenter{
     }
     public void getInfoIntoView(long tradeId, final int itemCount){
         getTrade.getTradeInfo(tradeId,itemCount,new OnInfoListener() {
-            @Override
-            public void getInfoSuccess(final List tradeInfoList) {
-                mHandler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        if(itemCount==0){
-                            sellView.toPullFresh(tradeInfoList);
+                @Override
+                public void getInfoSuccess(final List tradeInfoList) {
+                    mHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            if(itemCount==0){
+                                sellView.toPullFresh(tradeInfoList);
+                            }
+                            else{
+                                sellView.toLoadMore(tradeInfoList);
+                            }
                         }
-                        else{
-                            sellView.toLoadMore(tradeInfoList);
-                        }
-                    }
-                });
-            }
+                    });
+                }
 
             @Override
             public void getInfoFailed() {
-                sellView.showFailedError();
+                mHandler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        sellView.showFailedError();
+                    }
+                });
+
             }
         });
     }

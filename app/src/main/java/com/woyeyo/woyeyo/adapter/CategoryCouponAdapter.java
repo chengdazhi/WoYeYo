@@ -42,7 +42,7 @@ public class CategoryCouponAdapter extends KBaseAdapter<Coupon> {
         displayCouponImage(coupon, viewHolder);
         return view;
     }
-    class ViewHolder{
+    private class ViewHolder{
         ImageView imageView;
         TextView textView;
     }
