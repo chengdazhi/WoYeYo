@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/chengdazhi/AndroidStudioProjects/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/values-sw600dp-v13/values-sw600dp-v13.xml -->
+    <!-- From: file:/E:/GitHub/ToolBar/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/values-sw600dp-v13/values-sw600dp-v13.xml -->
     <eat-comment/>
     <dimen name="material_drawer_vertical_padding">24dp</dimen>
-    <!-- From: file:/Users/chengdazhi/AndroidStudioProjects/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialize/0.8.2/res/values-sw600dp-v13/values-sw600dp-v13.xml -->
+    <!-- From: file:/E:/GitHub/ToolBar/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialize/0.8.2/res/values-sw600dp-v13/values-sw600dp-v13.xml -->
     <eat-comment/>
     <dimen name="materialize_screen_edge">24dp</dimen>
 </resources>

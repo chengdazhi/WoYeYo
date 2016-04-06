@@ -5,32 +5,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.mikepenz.materialdrawer.Drawer;
 import com.woyeyo.woyeyo.R;
 
 /**
  * Created by DongBaishun on 2016/3/4.
  */
-public class AccusationActivity extends AppCompatActivity {
+public class AccusationActivity extends KBaseActivity {
+    private Drawer result;
 
-    ///标题栏
-    private TextView titleText;
-    private ImageButton titleImageBack;
-    private ImageButton titleImageShare;
-    private ImageButton titleImageMessage;
-
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accusation);
-        InitTextTitle();
+    public void setResId() {
+        mainResId = R.layout.activity_accusation;
+        toolbarResId = R.id.test_main_page_toolbar;
     }
 
-    private void InitTextTitle() {
-        titleText = (TextView) findViewById(R.id.titleText);
-        titleText.setText("举报");
-        titleImageBack = (ImageButton)this.findViewById(R.id.titleImgBack);
-        titleImageBack.setImageDrawable(getResources().getDrawable(R.drawable.back_icon));
-        titleImageMessage = (ImageButton)this.findViewById(R.id.titleImgMessage);
-        titleImageMessage.setImageDrawable(getResources().getDrawable(R.drawable.message));
+    public void setToolBarTitle() {
+        title = R.string.accusation_title;
     }
 
 }

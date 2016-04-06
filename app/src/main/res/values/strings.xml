@@ -11,4 +11,34 @@
     <string name="message_button">消息</string>
     <string name="coupon_category_move_title">电影优惠</string>
     <string name="mainpage_title">我也有</string>
+    <string name="setting_title">设置</string>
+    <string name="about_title">关于我们</string>
+    <string name="accusation_title">举报</string>
+    <string name="feedback_content_hint">请输入反馈内容...</string>
+    <string name="accusation_content_hint">请输入举报原因...</string>
+    <string name="content_contact_hint">电话/邮箱</string>
+    <string name="feedback_content_send">发送</string>
+    <string name="accusation_content_send">发送</string>
+    <string name="guarantee_title">担保</string>
+    <string name="guarantee_content_title">担保说明</string>
+    <string name="guarantee_content">担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保担保</string>
+    <string name="trade_info_price">价格</string>
+    <string name="trade_info_need_price">6元</string>
+    <string name="trade_info_need_hint">推荐价格+20%</string>
+    <string name="trade_info_need_description">需求描述</string>
+    <string name="trade_info_need_send">发布</string>
+    <string name="trade_info_publish_price">4.5元</string>
+    <string name="trade_info_publish_hint">推荐价格-10%</string>
+    <string name="trade_info_publish_description">商品描述</string>
+    <string name="trade_info_publish_send">发布</string>
+    <string name="user_info_title">个人信息</string>
+    <string name="about_content_title">公司介绍</string>
+    <string name="about_content">关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们关于我们</string>
+    <string name="setting_password">密码管理</string>
+    <string name="setting_clear">清除缓存</string>
+    <string name="setting_good">亲，给个好评吧~</string>
+    <string name="setting_logout">退出登录</string>
+    <string name="foot_view_more">加载更多</string>
+    <string name="foot_view_wait">加载中...请稍后</string>
+
 </resources>

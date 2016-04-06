@@ -67,4 +67,4 @@
         android:textOn=""
         android:textSize="@dimen/material_drawer_item_primary_text"
         app:showText="false" />
-</LinearLayout><!-- From: file:/Users/chengdazhi/AndroidStudioProjects/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/layout/material_drawer_item_switch.xml -->
+</LinearLayout><!-- From: file:/E:/GitHub/ToolBar/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/layout/material_drawer_item_switch.xml -->
