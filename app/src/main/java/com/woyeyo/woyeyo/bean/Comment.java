@@ -8,6 +8,26 @@ public class Comment {
     private String review;
     private long buyerId;
     private long sellerId;
+    private String personImgUrl;
+    private String personNickname;
+    public String getPersonNickname() {
+        return personNickname;
+    }
+
+    public void setPersonNickname(String personNickname) {
+        this.personNickname = personNickname;
+    }
+
+
+    public String getPersonImgUrl() {
+        return personImgUrl;
+    }
+
+    public void setPersonImgUrl(String personImgUrl) {
+        this.personImgUrl = personImgUrl;
+    }
+
+
 
     public int getStarNum() {
         return starNum;

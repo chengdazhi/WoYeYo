@@ -12,6 +12,7 @@ public class User {
     private String gender;
     private int starNum;
     private int commentNum;
+    private int DealNum;
 
     public long getPersonId() {
         return personId;
@@ -76,5 +77,11 @@ public class User {
     public void setCommentNum(int commentNum) {
         this.commentNum = commentNum;
     }
+    public int getDealNum() {
+        return DealNum;
+    }
 
+    public void setDealNum(int dealNum) {
+        DealNum = dealNum;
+    }
 }

@@ -33,8 +33,7 @@
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.TestCouponListViewFragment" />
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.TestBaseListViewFragmentActivity" />
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.TestDrawerActivity" />
-        <activity android:name="com.woyeyo.woyeyo.ui.Activity.TestWholeMainPAGE" >
-        </activity>
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.TestWholeMainPAGE" />
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.CategoryCouponActivity" />
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.WholeMainPage" >
             <intent-filter>
@@ -44,6 +43,26 @@
             </intent-filter>
         </activity>
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.SettingActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.TradeInfoPublishActivity" >
+        </activity>
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.CouponDetailActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.ChooseAddressActivity" >
+        </activity>
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.SellerInfoActivity" >
+        </activity>
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.TradeHistoryActivity" >
+        </activity>
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.UserAgreementActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.CommentListActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.CommentActivity" >
+        </activity>
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.PersonCommentActivity" />
     </application>
 
 </manifest>

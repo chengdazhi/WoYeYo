@@ -29,10 +29,12 @@ public abstract class KBaseAdapter<T> extends BaseAdapter {
     }
     public void addItem(List<T> newList){
         itemList.addAll(newList);
+        notifyDataSetChanged();
     }
     public void setItems(List<T> itemList){
         this.itemList.clear();
         this.itemList=itemList;
+        notifyDataSetChanged();
     }
     public void clearItems(){
         itemList.clear();

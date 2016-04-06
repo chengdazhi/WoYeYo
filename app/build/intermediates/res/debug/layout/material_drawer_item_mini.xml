@@ -32,4 +32,4 @@
         android:singleLine="true"
         android:textSize="@dimen/material_mini_drawer_item_badge_text"
         tools:text="99" />
-</FrameLayout><!-- From: file:/E:/GitHub/ToolBar/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/layout/material_drawer_item_mini.xml -->
+</FrameLayout><!-- From: file:/Users/chengdazhi/AndroidStudioProjects/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/layout/material_drawer_item_mini.xml -->

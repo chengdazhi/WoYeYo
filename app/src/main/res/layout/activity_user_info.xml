@@ -2,11 +2,12 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:id="@+id/outLayout"
     android:layout_width="match_parent"
     android:layout_height="fill_parent">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/test_main_page_toolbar"
+        android:id="@+id/base_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
         <TextView
@@ -118,30 +119,38 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_marginBottom="6dp"
-                android:background="@color/gainsboro">
+                android:background="@color/gainsboro"
+                android:weightSum="1">
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
                     android:gravity="center_vertical"
                     android:layout_marginLeft="40dp"
                     android:textSize="24sp"
                     android:text="评价"
                     />
 
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_gravity="center_vertical"
+                     />
+
                 <TextView
                     android:id="@+id/userCommentContent"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center_vertical"
-                    android:layout_width="0dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:text="五条评价"
                     />
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/usereedback"
+                android:id="@+id/user_feed_back"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"

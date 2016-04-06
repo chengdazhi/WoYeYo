@@ -27,30 +27,40 @@
                 android:id="@+id/good_description_sell_user_image"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_marginTop="3dp"
                 android:src="@drawable/userimage"
-                />
-            <ImageView
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <RatingBar
                 android:id="@+id/good_description_sell_user_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_gravity="center_vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:layout_below="@+id/good_description_sell_user_image"
-                android:layout_width="38dp"
-                android:layout_height="12dp"
-                android:src="@drawable/fivestar"/>
+                android:layout_alignRight="@+id/good_description_sell_user_image"
+                android:layout_alignEnd="@+id/good_description_sell_user_image" />
+
         </RelativeLayout>
 
         <TextView
             android:id="@+id/good_detail_description_sell"
-            android:layout_width="230dp"
+            android:layout_width="156dp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="商品描述" />
+            android:text="@string/trade_info_publish_description" />
         <TextView
             android:id="@+id/good_description_sell_price"
             android:layout_width="70dp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="价格" />
+            android:text="@string/trade_info_price" />
 
     </LinearLayout>
 </LinearLayout>
-<!-- From: file:/E:/GitHub/ToolBar/WoYeYo/app/src/main/res/layout/trade_info_item.xml -->
+<!-- From: file:/Users/chengdazhi/AndroidStudioProjects/WoYeYo/app/src/main/res/layout/trade_info_item.xml -->

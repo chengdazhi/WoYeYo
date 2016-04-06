@@ -17,11 +17,23 @@ public class AboutActivity extends KBaseActivity {
 
     public void setResId() {
         mainResId = R.layout.activity_about;
+<<<<<<< HEAD
         toolbarResId = R.id.test_main_page_toolbar;
+=======
     }
 
     public void setToolBarTitle() {
         title = R.string.about_title;
+>>>>>>> 0ffee4e8562465803705cfdabf66123b2d9f3a88
+    }
+    public void initSpecialView(){
+        //TODO:get view from resource xml
+
+<<<<<<< HEAD
+    public void setToolBarTitle() {
+        title = R.string.about_title;
+=======
+>>>>>>> 0ffee4e8562465803705cfdabf66123b2d9f3a88
     }
 
 }

@@ -37,11 +37,11 @@ public class CategoryFragment extends  BaseListViewFragment implements ICategory
     protected void initAdapter(){
         adapter = new CategoryCouponAdapter(context);
     }
-    protected void initPrensenter(){
+    protected void initPresenter(){
         presenter = new CategoryCouponPresenter(this);
     }
     protected void load() {
-        int count=adapter.getCount()+1;
+        int count=adapter.getCount();
         couponTopId=adapter.getCouponTopId();
         presenter.getInfoIntoView(couponTopId,category,count);
     }
@@ -61,6 +61,7 @@ public class CategoryFragment extends  BaseListViewFragment implements ICategory
         adapter.addItem(list);
         adapter.notifyDataSetChanged();
         loading.setVisibility(View.GONE);
+        isLoadMore=false;
     }
     @Override
     public void showFailedError(){

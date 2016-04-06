@@ -15,7 +15,14 @@ public class CategoryCouponActivity extends KBaseActivity {
        toolbarResId=R.id.category_coupon_toolbar;
    }
    public void setToolBarTitle(){
-       title=R.string.coupon_category_move_title;
+       String flag=getIntent().getStringExtra("category");
+       switch (flag){
+           case "mov":title=R.string.mov_category;
+               break;
+           case "buy":title=R.string.buy_category;
+               break;
+           default:break;
+       }
    }
 
 

@@ -4,6 +4,7 @@ import com.woyeyo.woyeyo.R;
 import com.woyeyo.woyeyo.bean.Coupon;
 import com.woyeyo.woyeyo.bean.TradeInfo;
 import com.woyeyo.woyeyo.presenter.OnCategoryCouponListener;
+import com.woyeyo.woyeyo.presenter.OnCouponDetailListener;
 import com.woyeyo.woyeyo.presenter.OnCouponInfoListener;
 import com.woyeyo.woyeyo.presenter.OnInfoListener;
 import com.woyeyo.woyeyo.utils.BitmapResource;
@@ -74,8 +75,32 @@ public class GetCoupon implements IGetCoupon {
             }
         }.start();
     }
-    public void getCouponDetail(final long couponId){
-
+    public void getCouponDetail(final long couponId,final OnCouponDetailListener listener){
+        new Thread(){
+            @Override
+            public void run(){
+                try{
+                    Thread.sleep(1000);
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+                if(true){
+                    //TODO:get couponDeatil by ID
+                    Coupon coupon=new Coupon();
+                    coupon.setCouponDesc(couponId+"test");
+                    coupon.setCouponImageUrl(UrlConstants.
+                            imgs[(int)couponId%UrlConstants.imgs.length]);
+                    coupon.setCouponDetail(couponId+"detail");
+                    coupon.setMerchantName("Uber");
+                    //注意一定要以http开头
+                    coupon.setCouponJumpUrl("http://www.baidu.com");
+                    coupon.setCouponId(13123312);
+                    listener.getInfoSuccess(coupon);
+                }else{
+                    listener.getInfoFailed();
+                }
+            }
+        }.start();
     }
     public void getTopCoupon(){
 
@@ -106,6 +131,7 @@ public class GetCoupon implements IGetCoupon {
                         SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss ");
                         Date curDate=new Date(System.currentTimeMillis()+itemCount*1000);
                         coupon.setCouponDesc("good!" +formatter.format(curDate) );
+                        coupon.setCouponId(123123142);
                         list.add(coupon);
                     }
                     listener.getInfoSuccess(list);

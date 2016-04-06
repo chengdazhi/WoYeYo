@@ -93,11 +93,11 @@ public class CouponAdapter extends KBaseAdapter<Coupon> {
         }
         return view;
     }
-    class ViewHolder{
+    private class ViewHolder{
         ImageView imageView;
         TextView textView;
     }
-    class ViewPagerHolder{
+    private class ViewPagerHolder{
         ViewPager viewPager;
     }
     public void displayCouponImage(Coupon coupon,ViewHolder viewHolder){

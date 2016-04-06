@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.woyeyo.woyeyo.SelectAddressActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/test_main_page_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toolbar Title"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/my_toolbar_title" />
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:id="@+id/selectAddressList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+        <LinearLayout
+            android:id="@+id/selectAddressItem"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:padding="10dp"
+            android:background="@color/gainsboro">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="5dp">
+                <TextView
+                    android:id="@+id/addressUserName"
+                    android:layout_marginLeft="26dp"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:textSize="22sp"
+                    android:text="姓名1" />
+                <TextView
+                    android:id="@+id/addressUserPhone"
+                    android:layout_marginLeft="30dp"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:textSize="22sp"
+                    android:text="13800138000"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/addressUserAddress"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="8dp"
+                android:textSize="14sp"
+                android:text="北京市海淀区紫竹园区中关村南大街5号北京理工大学北京市海淀区紫竹园区中关村南大街5号北京理工大学"/>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="确定"
+        />
+</LinearLayout>

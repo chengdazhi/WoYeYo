@@ -21,4 +21,4 @@
         android:paddingRight="@dimen/material_drawer_vertical_padding"
         android:singleLine="true"
         android:textSize="@dimen/material_drawer_item_section_text" />
-</LinearLayout><!-- From: file:/E:/GitHub/ToolBar/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/layout/material_drawer_item_section.xml -->
+</LinearLayout><!-- From: file:/Users/chengdazhi/AndroidStudioProjects/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/layout/material_drawer_item_section.xml -->

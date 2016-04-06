@@ -36,9 +36,11 @@
                     android:src="@drawable/button_up"
                     fab:fab_colorNormal="@color/primary"
                     fab:fab_colorPressed="@color/primary_pressed"
-                    fab:fab_colorRipple="@color/ripple" />
+                    fab:fab_colorRipple="@color/ripple"
+                    android:visibility="invisible"/>
             </FrameLayout>
         </LinearLayout>
     </in.srain.cube.views.ptr.PtrFrameLayout>
+
 
 </LinearLayout>

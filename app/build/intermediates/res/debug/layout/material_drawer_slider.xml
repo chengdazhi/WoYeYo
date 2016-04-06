@@ -20,4 +20,4 @@
         android:layout_alignParentStart="false"
         android:background="@drawable/material_drawer_shadow_left"
         android:visibility="gone" />
-</com.mikepenz.materialize.view.ScrimInsetsRelativeLayout><!-- From: file:/E:/GitHub/ToolBar/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/layout/material_drawer_slider.xml -->
+</com.mikepenz.materialize.view.ScrimInsetsRelativeLayout><!-- From: file:/Users/chengdazhi/AndroidStudioProjects/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/layout/material_drawer_slider.xml -->

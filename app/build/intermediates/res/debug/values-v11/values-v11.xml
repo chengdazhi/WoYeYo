@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/E:/GitHub/ToolBar/WoYeYo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v11/values-v11.xml -->
+    <!-- From: file:/Users/chengdazhi/AndroidStudioProjects/WoYeYo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v11/values-v11.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat.Inverse">
         <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
@@ -54,7 +54,7 @@
     </style>
     <style name="Base.Widget.AppCompat.ProgressBar.Horizontal" parent="android:Widget.Holo.ProgressBar.Horizontal">
     </style>
-    <!-- From: file:/E:/GitHub/ToolBar/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialize/0.8.2/res/values-v11/values-v11.xml -->
+    <!-- From: file:/Users/chengdazhi/AndroidStudioProjects/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialize/0.8.2/res/values-v11/values-v11.xml -->
     <eat-comment/>
     <style name="MaterialBaseTheme" parent="MaterialBaseBaseTheme">
         <!--
@@ -107,7 +107,7 @@
         <item name="windowActionBar">true</item>
         <item name="windowNoTitle">false</item>
     </style>
-    <!-- From: file:/E:/GitHub/ToolBar/WoYeYo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v11/values-v11.xml -->
+    <!-- From: file:/Users/chengdazhi/AndroidStudioProjects/WoYeYo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v11/values-v11.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="Platform.V11.AppCompat"/>
     <style name="Platform.AppCompat.Light" parent="Platform.V11.AppCompat.Light"/>

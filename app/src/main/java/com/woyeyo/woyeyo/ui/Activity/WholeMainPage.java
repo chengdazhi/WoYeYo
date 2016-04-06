@@ -14,6 +14,7 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.woyeyo.woyeyo.R;
+import com.woyeyo.woyeyo.utils.CategoryValue;
 
 /**
  * Created by fam_000 on 2016/3/12.
@@ -44,6 +45,22 @@ public class WholeMainPage extends KBaseActivity {
                                 withEmail("mikepenz@gmail.com").withIcon(getResources().
                                 getDrawable(R.drawable.userimage))
                 )
+                .withOnAccountHeaderProfileImageListener(new AccountHeader.
+                        OnAccountHeaderProfileImageListener(){
+                    @Override
+                    public boolean onProfileImageClick(View view, IProfile profile, boolean current){
+                        Intent intent=new Intent(mContext,UserInfoActivity.class);
+                        intent.putExtra("isMe",true);
+                        mContext.startActivity(intent);
+                        return true;
+                    }
+                    @Override
+                    public boolean onProfileImageLongClick(View view,
+                                                           IProfile profile, boolean current){
+                        return onProfileImageClick(view,profile,current);
+                    }
+
+                })
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
                     public boolean onProfileChanged(View view, IProfile profile, boolean currentProfile) {
@@ -83,12 +100,12 @@ public class WholeMainPage extends KBaseActivity {
                                     } else if (drawerItem.getIdentifier() == 1) {
                                         intent = new Intent(
                                                 WholeMainPage.this, CategoryCouponActivity.class);
-                                        intent.putExtra("category","buy");
+                                        intent.putExtra("category","mov");
                                     }
                                     else if(drawerItem.getIdentifier()==2){
                                         intent = new Intent(WholeMainPage.this,
                                                 CategoryCouponActivity.class);
-                                        intent.putExtra("category","mov");
+                                        intent.putExtra("category","buy");
                                     }
                                     if (intent != null) {
                                         WholeMainPage.this.startActivity(intent);

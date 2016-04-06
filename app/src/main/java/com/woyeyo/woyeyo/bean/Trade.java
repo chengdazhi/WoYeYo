@@ -10,6 +10,14 @@ public class Trade {
     private long couponId;
     private long squareId;
 
+
+    //以下用于在交易记录中显示,均为对方的
+    private String nickname;//TODO:判断是seller 还是buyer
+    private String couponImageUrl;
+    private String userImageUrl;
+    private String desc;
+    private float price;
+
     //private static final int STATE_INPUBLISH=0;
     private int tradeState;
     private static final int STATE_ORDER=0;
@@ -104,6 +112,45 @@ public class Trade {
 
     public void setReciveTime(long reciveTime) {
         this.reciveTime = reciveTime;
+    }
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public String getCouponImageUrl() {
+        return couponImageUrl;
+    }
+
+    public void setCouponImageUrl(String couponImageUrl) {
+        this.couponImageUrl = couponImageUrl;
+    }
+
+    public String getUserImageUrl() {
+        return userImageUrl;
+    }
+
+    public void setUserImageUrl(String userImageUrl) {
+        this.userImageUrl = userImageUrl;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
     }
 
 }

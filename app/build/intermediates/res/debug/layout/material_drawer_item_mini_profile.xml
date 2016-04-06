@@ -16,4 +16,4 @@
         android:layout_marginTop="@dimen/material_drawer_item_profile_icon_padding"
         android:clickable="false"
         android:elevation="1dp" />
-</LinearLayout><!-- From: file:/E:/GitHub/ToolBar/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/layout/material_drawer_item_mini_profile.xml -->
+</LinearLayout><!-- From: file:/Users/chengdazhi/AndroidStudioProjects/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/layout/material_drawer_item_mini_profile.xml -->

@@ -77,4 +77,4 @@
             android:textSize="@dimen/material_drawer_item_primary_text"
             tools:text="99" />
     </LinearLayout>
-</LinearLayout><!-- From: file:/E:/GitHub/ToolBar/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/layout/material_drawer_item_primary.xml -->
+</LinearLayout><!-- From: file:/Users/chengdazhi/AndroidStudioProjects/WoYeYo/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/5.0.4/res/layout/material_drawer_item_primary.xml -->
