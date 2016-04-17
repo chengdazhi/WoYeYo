@@ -13,7 +13,7 @@ public class CheckEditText {
                 .compile(strPattern);
         Matcher m = p.matcher(mobileNum);
         return m.matches();
-    }
+}
     public static boolean isEmailAdress(String emailAd){
         String strPattern = "^[a-zA-Z][\\w\\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\\w\\.-]*[a-zA-Z0-9]\\.[a-zA-Z][a-zA-Z\\.]*[a-zA-Z]$";
         Pattern p = Pattern.compile(strPattern);

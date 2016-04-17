@@ -14,7 +14,6 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import com.woyeyo.woyeyo.R;
-import com.woyeyo.woyeyo.utils.CategoryValue;
 
 /**
  * Created by fam_000 on 2016/3/12.
@@ -115,6 +114,7 @@ public class WholeMainPage extends KBaseActivity {
                             }
                         }).build();
     }
+
     @Override
     public void onBackPressed() {
         //handle the back press :D close the drawer first and if the drawer is closed close the activity

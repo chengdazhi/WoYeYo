@@ -1,10 +1,7 @@
 package com.woyeyo.woyeyo.ui.Activity;
 
-<<<<<<< HEAD
-=======
 import android.annotation.TargetApi;
 import android.content.ContentUris;
-import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -26,10 +23,7 @@ import android.widget.Toast;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
-import com.nostra13.universalimageloader.core.listener.ImageLoadingProgressListener;
->>>>>>> 0ffee4e8562465803705cfdabf66123b2d9f3a88
 import com.woyeyo.woyeyo.R;
-import com.woyeyo.woyeyo.bean.Trade;
 import com.woyeyo.woyeyo.bean.User;
 import com.woyeyo.woyeyo.presenter.UserInfoPresenter;
 import com.woyeyo.woyeyo.ui.CustomUi.PopupGenderMenu;
@@ -38,19 +32,11 @@ import com.woyeyo.woyeyo.utils.ToastUtil;
 import com.woyeyo.woyeyo.utils.Token;
 import com.woyeyo.woyeyo.view.IUserInfoView;
 
-<<<<<<< HEAD
-public class UserInfoActivity extends KBaseActivity {
-
-    public void setResId() {
-        mainResId = R.layout.activity_user_info;
-        toolbarResId = R.id.test_main_page_toolbar;
-=======
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Properties;
 
-public class UserInfoActivity extends KBaseActivity implements IUserInfoView{
+public class UserInfoActivity extends KBaseActivity implements IUserInfoView {
     private Uri imageUri;
     private ImageView photo;
     public static final int TAKE_PHOTO=0;
@@ -191,17 +177,11 @@ public class UserInfoActivity extends KBaseActivity implements IUserInfoView{
     @Override
     public void showError(){
         Toast.makeText(UserInfoActivity.this, "获取失败", Toast.LENGTH_SHORT).show();
->>>>>>> 0ffee4e8562465803705cfdabf66123b2d9f3a88
     }
     @Override
     public void showChangeSucc(){
         ToastUtil.KToast(mContext, R.string.change_succ);
 
-<<<<<<< HEAD
-    public void setToolBarTitle() {
-        title = R.string.user_info_title;
-    }
-=======
     }
     @Override
     public void showChangeFail(){
@@ -303,6 +283,4 @@ public class UserInfoActivity extends KBaseActivity implements IUserInfoView{
             ToastUtil.KToast(mContext,R.string.fail_to_get_photo);
         }
     }
->>>>>>> 0ffee4e8562465803705cfdabf66123b2d9f3a88
-
 }

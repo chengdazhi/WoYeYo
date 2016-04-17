@@ -5,7 +5,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.mikepenz.materialdrawer.Drawer;
 import com.woyeyo.woyeyo.R;
 import com.woyeyo.woyeyo.presenter.AccusationPresenter;
 import com.woyeyo.woyeyo.utils.CheckEditText;
@@ -14,14 +13,6 @@ import com.woyeyo.woyeyo.view.ISendInfoView;
 /**
  * Created by DongBaishun on 2016/3/4.
  */
-<<<<<<< HEAD
-public class AccusationActivity extends KBaseActivity {
-    private Drawer result;
-
-    public void setResId() {
-        mainResId = R.layout.activity_accusation;
-        toolbarResId = R.id.test_main_page_toolbar;
-=======
 
 public class AccusationActivity extends KBaseActivity implements ISendInfoView{
     private AccusationPresenter presenter;
@@ -30,7 +21,6 @@ public class AccusationActivity extends KBaseActivity implements ISendInfoView{
     }
     public void setToolBarTitle(){
         title=R.string.accusation_title;
->>>>>>> 0ffee4e8562465803705cfdabf66123b2d9f3a88
     }
     public void initSpecialView(){
         final EditText contentText=(EditText)findViewById(R.id.accusationContent);
@@ -61,11 +51,6 @@ public class AccusationActivity extends KBaseActivity implements ISendInfoView{
             }
         });
 
-<<<<<<< HEAD
-    public void setToolBarTitle() {
-        title = R.string.accusation_title;
-=======
->>>>>>> 0ffee4e8562465803705cfdabf66123b2d9f3a88
     }
     @Override
     public void showSendSuccess(){

@@ -4,20 +4,17 @@ package com.woyeyo.woyeyo.bean;
  * Created by fam_000 on 2016/3/6.
  */
 public class Coupon {
+
     private long couponId;
-    //coupon state
-    private static final int ABLE=1;
-    private static final int DISABLE=0;
     private String couponImageUrl;
-    private int couponState;
     private String couponDesc;
     private String merchantName;
     private String merchantLogoUrl;
     private String merchantJumpUrl;
     private String couponJumpUrl;
-    private String couponDetail;
-    private String bargainRule;
-    private String category;
+    private String couponDetail;//活动详情
+    private String bargainRule;//交易规则
+    private int category;//类别，有待添加具体类目
 
     public long getCouponId() {
         return couponId;
@@ -33,14 +30,6 @@ public class Coupon {
 
     public void setCouponImageUrl(String couponImageUrl) {
         this.couponImageUrl = couponImageUrl;
-    }
-
-    public int getCouponState() {
-        return couponState;
-    }
-
-    public void setCouponState(int couponState) {
-        this.couponState = couponState;
     }
 
     public String getCouponDesc() {
@@ -99,16 +88,12 @@ public class Coupon {
         this.bargainRule = bargainRule;
     }
 
-    public String getCategory() {
+    public int getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(int category) {
         this.category = category;
     }
-
-
-
-
 
 }
