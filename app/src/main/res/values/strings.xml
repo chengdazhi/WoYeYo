@@ -125,4 +125,10 @@
     <string name="no_sd_card">没有检测到SD卡</string>
     <string name="no_sd_card_permission">请允许应用读取SD卡的权限</string>
     <string name="fail_to_get_photo">获取相册失败</string>
+    <string name="setting">设置</string>
+
+    <string name="account_title">我的账户</string>
+    <string name="account_getmoney">提现</string>
+    <string name="account_trade_history">交易记录</string>
+    <string name="account_address_manager">地址管理</string>
 </resources>

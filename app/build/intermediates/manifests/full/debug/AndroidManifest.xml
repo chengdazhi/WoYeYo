@@ -73,6 +73,7 @@
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.CommentActivity" >
         </activity>
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.PersonCommentActivity" />
+        <activity android:name="com.woyeyo.woyeyo.ui.Activity.MyAccountActivity" />
     </application>
 
 </manifest>

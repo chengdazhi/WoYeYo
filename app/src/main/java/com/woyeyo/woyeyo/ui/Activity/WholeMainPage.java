@@ -38,11 +38,13 @@ public class WholeMainPage extends KBaseActivity {
 
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
-                        //.withHeaderBackground(R.drawable.header)
+                .withHeaderBackground(R.drawable.header)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Mike Penz").
-                                withEmail("mikepenz@gmail.com").withIcon(getResources().
-                                getDrawable(R.drawable.userimage))
+                        new ProfileDrawerItem().withName("Mike Penz")
+                                //.withEmail("mikepenz@gmail.com")
+                                .withIcon(getResources().
+                                getDrawable(R.drawable.profile6))
+
                 )
                 .withOnAccountHeaderProfileImageListener(new AccountHeader.
                         OnAccountHeaderProfileImageListener(){
@@ -77,7 +79,7 @@ public class WholeMainPage extends KBaseActivity {
                         new DividerDrawerItem(),
                         item2,
                         item3,
-                        new PrimaryDrawerItem().withName(R.string.app_name)
+                        new PrimaryDrawerItem().withName(R.string.app_name).withIdentifier(5)
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
@@ -105,6 +107,10 @@ public class WholeMainPage extends KBaseActivity {
                                         intent = new Intent(WholeMainPage.this,
                                                 CategoryCouponActivity.class);
                                         intent.putExtra("category","buy");
+                                    }
+                                    else if(drawerItem.getIdentifier()==5){
+                                        intent = new Intent(
+                                                WholeMainPage.this, MyAccountActivity.class);
                                     }
                                     if (intent != null) {
                                         WholeMainPage.this.startActivity(intent);

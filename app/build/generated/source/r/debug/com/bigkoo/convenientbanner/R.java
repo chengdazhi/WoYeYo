@@ -354,7 +354,7 @@ public final class R {
 		public static final int activity_chooser_view_content = 0x7f0c0056;
 		public static final int always = 0x7f0c0049;
 		public static final int beginning = 0x7f0c0047;
-		public static final int cbLoopViewPager = 0x7f0c00e8;
+		public static final int cbLoopViewPager = 0x7f0c00ea;
 		public static final int cb_item_tag = 0x7f0c0004;
 		public static final int checkbox = 0x7f0c006b;
 		public static final int collapseActionView = 0x7f0c004a;
@@ -372,7 +372,7 @@ public final class R {
 		public static final int image = 0x7f0c0058;
 		public static final int listMode = 0x7f0c0022;
 		public static final int list_item = 0x7f0c005a;
-		public static final int loPageTurningPoint = 0x7f0c00e9;
+		public static final int loPageTurningPoint = 0x7f0c00eb;
 		public static final int middle = 0x7f0c0048;
 		public static final int never = 0x7f0c004c;
 		public static final int none = 0x7f0c0027;
@@ -428,8 +428,8 @@ public final class R {
 		public static final int abc_screen_toolbar = 0x7f040015;
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f040016;
 		public static final int abc_search_view = 0x7f040017;
-		public static final int include_viewpager = 0x7f04004c;
-		public static final int support_simple_spinner_dropdown_item = 0x7f040070;
+		public static final int include_viewpager = 0x7f04004d;
+		public static final int support_simple_spinner_dropdown_item = 0x7f040071;
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f060000;

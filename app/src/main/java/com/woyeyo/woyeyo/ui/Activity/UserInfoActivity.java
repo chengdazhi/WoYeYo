@@ -11,7 +11,10 @@ import android.os.Build;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -283,4 +286,38 @@ public class UserInfoActivity extends KBaseActivity implements IUserInfoView {
             ToastUtil.KToast(mContext,R.string.fail_to_get_photo);
         }
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        if(menuResId!=0){
+            getMenuInflater().inflate(menuResId, menu);
+            return true;
+        }
+        //set baseToolBar for default
+        else {
+            getMenuInflater().inflate(R.menu.user_info_toolbar, menu);
+            return true;
+        }
+    }
+    @Override
+    public Toolbar.OnMenuItemClickListener setOnMenuItemClickListener(){
+        Toolbar.OnMenuItemClickListener listener=new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.toolbar_message:
+                        Toast.makeText(getApplicationContext()
+                                ,"not ready",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.edit:
+                        Intent intent=new Intent(UserInfoActivity.this,SettingActivity.class);
+                        startActivity(intent);
+                }
+                return true;
+            }
+        };
+        return listener;
+    }
+
+
 }

@@ -12,6 +12,7 @@ import com.woyeyo.woyeyo.adapter.CouponAdapter;
 import com.woyeyo.woyeyo.bean.Coupon;
 import com.woyeyo.woyeyo.presenter.CouponListPresenter;
 import com.woyeyo.woyeyo.ui.Activity.CouponDetailActivity;
+import com.woyeyo.woyeyo.utils.Clog;
 import com.woyeyo.woyeyo.view.ICouponListView;
 
 import java.util.List;
@@ -39,10 +40,14 @@ public class MainPageListViewFragment extends BaseListViewFragment implements IC
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Coupon coupon=(Coupon)listView.getAdapter().getItem(position);
-                long sendId=coupon.getCouponId();
-                Intent sendIntent=new Intent(context, CouponDetailActivity.class);
-                sendIntent.putExtra("couponId",sendId);
-                context.startActivity(sendIntent);
+                Clog.d(position+""+" "+listView.getAdapter().getCount());
+                if(position!=listView.getAdapter().getCount()-1){
+                    long sendId=coupon.getCouponId();
+                    Intent sendIntent=new Intent(context, CouponDetailActivity.class);
+                    sendIntent.putExtra("couponId",sendId);
+                    context.startActivity(sendIntent);
+                }
+
             }
         });
     }
