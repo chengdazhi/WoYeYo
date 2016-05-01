@@ -72,6 +72,7 @@
         </activity>
         <activity android:name="com.woyeyo.woyeyo.ui.Activity.PersonCommentActivity" />
 <activity android:name=".ui.Activity.MyAccountActivity"></activity>
+        <activity android:name=".ui.Activity.TestProgressBarActivity"/>
     </application>
 
 </manifest>

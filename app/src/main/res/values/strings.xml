@@ -131,4 +131,8 @@
     <string name="account_getmoney">提现</string>
     <string name="account_trade_history">交易记录</string>
     <string name="account_address_manager">地址管理</string>
+    <string name="not_ready">敬请期待</string>
+    <string name="money_in_future">即将到账：</string>
+    <string name="money_now">可用余额：</string>
+    <string name="yuan">元</string>
 </resources>

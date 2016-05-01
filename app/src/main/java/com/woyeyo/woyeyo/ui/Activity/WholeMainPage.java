@@ -79,6 +79,7 @@ public class WholeMainPage extends KBaseActivity {
                         new DividerDrawerItem(),
                         item2,
                         item3,
+                        new PrimaryDrawerItem().withName("测试一下").withIdentifier(9),
                         new PrimaryDrawerItem().withName(R.string.app_name).withIdentifier(5)
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
@@ -111,6 +112,9 @@ public class WholeMainPage extends KBaseActivity {
                                     else if(drawerItem.getIdentifier()==5){
                                         intent = new Intent(
                                                 WholeMainPage.this, MyAccountActivity.class);
+                                    }
+                                    else if(drawerItem.getIdentifier()==9){
+                                        //for test
                                     }
                                     if (intent != null) {
                                         WholeMainPage.this.startActivity(intent);

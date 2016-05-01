@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/test_main_page_toolbar"
+        android:id="@+id/base_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
         <TextView
@@ -15,6 +17,84 @@
             android:layout_gravity="center"
             android:id="@+id/my_toolbar_title" />
     </android.support.v7.widget.Toolbar>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.woyeyo.woyeyo.ui.CustomUi.CustomCircle
+        android:id="@+id/customCircle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:circlePandding="10dp"
+        app:circleTextColor="@color/black"
+        app:circleTextSize="20sp"
+        app:circleWidth="18dp"
+        app:firstCircleColor="@color/md_orange_500"
+        app:secondCircleColor="@color/md_orange_200"/>
+</RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/orange_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/money_now"/>
+            <TextView
+                android:id="@+id/now_money_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="291.5"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yuan"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/yellow_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/money_in_future"/>
+            <TextView
+                android:id="@+id/future_money_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50.5"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yuan"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -22,10 +102,11 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/get_money_ll"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.8"
             android:layout_marginTop="5dp"
             android:background="@color/gainsboro">
             <TextView
@@ -46,10 +127,11 @@
                 android:layout_weight="1"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/trade_history_ll"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.8"
             android:layout_marginTop="5dp"
             android:background="@color/gainsboro">
             <TextView
@@ -70,10 +152,11 @@
                 android:layout_weight="1"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/address_manage_ll"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.8"
             android:layout_marginTop="5dp"
             android:background="@color/gainsboro">
             <TextView

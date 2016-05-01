@@ -665,6 +665,7 @@
     <declare-styleable name="ConvenientBanner"><attr format="boolean" name="canLoop"/></declare-styleable>
     <declare-styleable name="CoordinatorLayout"><attr format="reference" name="keylines"/><attr format="reference" name="statusBarBackground"/></declare-styleable>
     <declare-styleable name="CoordinatorLayout_LayoutParams"><attr name="android:layout_gravity"/><attr format="string" name="layout_behavior"/><attr format="reference" name="layout_anchor"/><attr format="integer" name="layout_keyline"/><attr name="layout_anchorGravity"><flag name="top" value="0x30"/><flag name="bottom" value="0x50"/><flag name="left" value="0x03"/><flag name="right" value="0x05"/><flag name="center_vertical" value="0x10"/><flag name="fill_vertical" value="0x70"/><flag name="center_horizontal" value="0x01"/><flag name="fill_horizontal" value="0x07"/><flag name="center" value="0x11"/><flag name="fill" value="0x77"/><flag name="clip_vertical" value="0x80"/><flag name="clip_horizontal" value="0x08"/><flag name="start" value="0x00800003"/><flag name="end" value="0x00800005"/></attr></declare-styleable>
+    <declare-styleable name="CustomCircle"><attr format="dimension" name="circleTextSize"/><attr format="color" name="circleTextColor"/><attr format="dimension" name="circleWidth"/><attr format="color" name="firstCircleColor"/><attr format="color" name="secondCircleColor"/><attr format="dimension" name="circleProgress"/><attr format="dimension" name="circlePandding"/></declare-styleable>
     <declare-styleable name="DrawerArrowToggle"><attr format="color" name="color"/><attr format="boolean" name="spinBars"/><attr format="dimension" name="drawableSize"/><attr format="dimension" name="gapBetweenBars"/><attr format="dimension" name="arrowHeadLength"/><attr format="dimension" name="arrowShaftLength"/><attr format="dimension" name="barLength"/><attr format="dimension" name="thickness"/></declare-styleable>
     <declare-styleable name="FloatingActionButton"><attr name="backgroundTint"/><attr name="backgroundTintMode"/><attr format="color" name="rippleColor"/><attr name="fabSize"><enum name="normal" value="0"/><enum name="mini" value="1"/></attr><attr name="elevation"/><attr format="dimension" name="pressedTranslationZ"/><attr format="dimension" name="borderWidth"/><attr format="color" name="fab_colorPressed"/><attr format="color" name="fab_colorNormal"/><attr format="color" name="fab_colorRipple"/><attr format="color" name="fab_colorDisabled"/><attr format="boolean" name="fab_shadow"/><attr format="enum" name="fab_type"><enum name="normal" value="0"/><enum name="mini" value="1"/></attr></declare-styleable>
     <declare-styleable name="ForegroundLinearLayout"><attr name="android:foreground"/><attr name="android:foregroundGravity"/><attr format="boolean" name="foregroundInsidePadding"/></declare-styleable>
@@ -1210,12 +1211,15 @@
     <string name="menu_man">男♂</string>
     <string name="menu_woman">女♀</string>
     <string name="message_button">消息</string>
+    <string name="money_in_future">即将到账：</string>
+    <string name="money_now">可用余额：</string>
     <string name="mov_category">电影优惠</string>
     <string name="no_fit_view_activity">没有可以跳转的浏览器</string>
     <string name="no_mobile_number">请输入手机号码</string>
     <string name="no_network">请检查网络后重试</string>
     <string name="no_sd_card">没有检测到SD卡</string>
     <string name="no_sd_card_permission">请允许应用读取SD卡的权限</string>
+    <string name="not_ready">敬请期待</string>
     <string name="person_comment_title">个人评价</string>
     <string name="pick_photo">从相册中选择</string>
     <string name="publish_button">立即发布</string>
@@ -1274,6 +1278,7 @@
     <string name="user_info_title">个人信息</string>
     <string name="wrong_mobile_number">请输入正确的手机号码</string>
     <string name="wrong_price">请输入适当的价格</string>
+    <string name="yuan">元</string>
     <!-- From: file:/C:/Users/fam_000/Documents/dev2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

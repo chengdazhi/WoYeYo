@@ -14,7 +14,7 @@ public class SettingActivity extends KBaseActivity {
     private Drawer result;
     public void setResId(){
         mainResId= R.layout.activity_setting;
-        toolbarResId=R.id.test_main_page_toolbar;
+
     }
     public void setToolBarTitle(){
         title=R.string.setting_title;

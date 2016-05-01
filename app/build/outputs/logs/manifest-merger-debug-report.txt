@@ -203,6 +203,10 @@ activity#com.woyeyo.woyeyo.ui.Activity.MyAccountActivity
 ADDED from AndroidManifest.xml:74:1
 	android:name
 		ADDED from AndroidManifest.xml:74:11
+activity#com.woyeyo.woyeyo.ui.Activity.TestProgressBarActivity
+ADDED from AndroidManifest.xml:75:9
+	android:name
+		ADDED from AndroidManifest.xml:75:19
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.melnykov:floatingactionbutton:1.3.0:8:5
